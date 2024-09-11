@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Navegação Lateral</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Estilo para a barra lateral fixa */
+        .sidebar {
+            position: fixed;
+            top: 50%; /* Alinha o topo da barra lateral ao meio da página */
+            right: 0;
+            height: 50%; /* Altura da barra lateral */
+            width: 60px; /* Largura da barra lateral */
+            /* background-color: #f8f9fa;
+            border-left: 1px solid #dee2e6; */
+            z-index: 1000;
+            transform: translateY(-50%); /* Ajusta o alinhamento vertical para o centro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centraliza os botões verticalmente */
+        }
+
+        .sidebar .btn {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            border-radius: 0;
+            font-size: 0.75rem; /* Ajusta o tamanho da fonte para caber no botão */
+            padding: 5px 1px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+
+        <div class="sidebar">
+            <!-- <button class="btn btn-primary" title="Ajuste de Texto">A</button>
+            <button class="btn btn-secondary" title="Modo Escuro">🌙</button>
+            <button class="btn btn-info" title="Acessibilidade">⚙️</button>
+
+            <button class="btn btn-info" title="">Cabeçalho</button> -->
+
+            <button class="btn btn-info" title="">Histórico</button>
+            <button class="btn btn-info" title="">Análise</button>
+            <button class="btn btn-info" title="">Voto</button>
+            <button class="btn btn-info" title="">Ações</button>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Minha Página</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+        <div class="container mt-4">
+            <h1>Bem-vindo à minha página</h1>
+            <p>Conteúdo da página vai aqui. A barra lateral fixa à direita pode ser usada para botões de acessibilidade.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
