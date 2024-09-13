@@ -113,9 +113,9 @@
     <div class="sidebar">
 
         <a href="#navbar" class="btn btn-info" title="">Histórico</a>  <!-- nav -->
-        <a href="#legend_analises_consideracoes" class="btn btn-info" title="">Análise</a>
+        <a href="#div_processo_com_defesa" class="btn btn-info" title="">Análise</a>
         <a href="#legend_voto" class="btn btn-info" title="">Voto</a>
-        <a href="#fieldset_relato_final" class="btn btn-info" title="">Relato</a>
+        <a href="#assinatura_4" class="btn btn-info" title="">Relato</a>
         <a href="#div_botoes" class="btn btn-info" title="">Botões</a>
 
     </div>
@@ -2504,11 +2504,11 @@
                 .filter(checkbox => checkbox.checked).length > 1;
 
             if (razoesSemRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, estando ela ainda irregular e com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular e com a multa não paga.";
             } else if (razoesSomenteRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
             } else if (razoesSomentePagamentoMulta.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, estando ela ainda irregular, mas com a multa paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular, mas com a multa paga.";
             } else if (maisDeUmSelecionado) {
                 areaRazoesDecisao.value = "-----------------------------------------------------------------------"; // Verifica se mais de um checkbox foi selecionado simultaneamente
             } else {
