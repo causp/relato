@@ -73,11 +73,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center; /* Centraliza os botões verticalmente */
-            margin-right: 5px;
+            /* margin-right: 5px; */
         }
 
         .sidebar .btn {
-            width: 100%;
+            width: 85%;
             text-align: center;
             margin: 10px 0;
             border-radius: 0;
@@ -101,6 +101,12 @@
                 box-sizing: border-box;
             }
 
+        }
+
+        @media (max-width: 665px) {
+            .sidebar {
+                display: none;
+            }
         }
 
         
@@ -1513,7 +1519,7 @@
                                             </div>
 
                                             <p id="dosimetria_resolucao_4" style="display: none;" contenteditable="true">
-                                                selecione
+                                                
                                             </p>
 
                                         </div>
