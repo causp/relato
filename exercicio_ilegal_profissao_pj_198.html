@@ -3268,12 +3268,19 @@
                 // let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
                 // let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
                 // let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                
                 let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
 
                 // dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
                 // dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
                 // dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
-                dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+
+                if (!checkboxSim_recalculo.checked && !checkboxNao_recalculo.checked){
+                    dosimetria_resolucao_4_final.innerText = ""
+                } else {
+                    dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+                }
+                
 
                 // tabela,
 
