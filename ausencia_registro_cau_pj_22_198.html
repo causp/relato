@@ -159,7 +159,11 @@
                             Tipo de Relato
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="ausencia_registro_cau_pj_22_198.html">Ausência de Registro no CAU PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <a class="dropdown-item" href="ausencia_registro_cau_pj_22_198.html">Ausência de registro no CAU PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <a class="dropdown-item" href="ausencia_registro_cau_e_crea_pj_22_198.html">Ausência de registro no CAU e no CREA PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ausencia_responsavel_tecnico_pj_22_198.html">Ausência de responsável técnico PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_ausencia_responsavel_atividade_22_198.html">Exercício ilegal da profissão (PF) - Ausência de responsável para a atividade <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
                             <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_exploracao_economica_198_22_198.html">Exercício ilegal da profissão (PF) - Exploração econônima <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
                             <!-- <a class="dropdown-item" href="#">Exercício ilegal da profissão PF  (Resoluções nº 22 e 198)</a> -->
@@ -600,6 +604,7 @@
                 <!-- meio de envio -->
                 <select class="selecao_personalizada form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_auto_devolvida_nao"
                     name="select_corresp_auto_devolvida_nao" style="width: 300px !important;">
+                    <option value="Selecione">Selecione</option>
                     <option value="cienciaPessoal">por ciência pessoal</option>
                     <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
                     <option value="editalCAUSP">por edital publicado no site do CAU/SP</option>
@@ -1467,7 +1472,7 @@
                                             <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p>
                                             <input type="text" style="width: 250px; height: 30px;" class="form-control"
                                                 id="valorMultaRes22" value=""
-                                                placeholder="Se necessário, informe o valor...">
+                                                placeholder="Informe o valor da multa...">
                                         </div>
 
                                         <hr>
@@ -1656,10 +1661,15 @@
 
             <div class="card p-2" id="div_multa_paga_voto" style="display: none;">
 
-                <span id="" contenteditable="true">
+                <span id="">
 
-                    <span id="span_multa_paga_voto">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR.</span>
+                    <span id="span_multa_paga_voto" contenteditable="true">
+                        
+                        <span contenteditable="false"></span>
 
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR.
+                    
+                    </span>
 
                 </span>
 
@@ -1691,11 +1701,22 @@
 
                 <div class="card p-2" id="div_alteracao_multa_sim" style="display: none;">
 
-                    <span id="span_corresp_alteracao_multa_sim" contenteditable="true">
-                        <span id="span_corresp_alteracao_multa_sim_1">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para </span>
+                    <span id="span_corresp_alteracao_multa_sim">
 
-                        <span id="span_corresp_alteracao_multa_sim_2" style="font-weight: bold;">R$ XX.XXX,XX (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.)</span>
+                        <span id="span_corresp_alteracao_multa_sim_1" contenteditable="true">
+                            
+                            <span contenteditable="false"></span>
 
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para
+
+                        </span>
+
+                        <span id="span_corresp_alteracao_multa_sim_2" style="font-weight: bold;" contenteditable="true">
+                            
+                            <span contenteditable="false"></span>
+                                
+                            R$ XX.XXX,XX (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.)
+                        </span>
 
                     </span>
 
@@ -1703,11 +1724,15 @@
 
                 </div>
 
-                <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;" contenteditable="true">
+                <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;">
 
-                    <span id="span_alteracao_multa_nao">
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                    <span id="span_alteracao_multa_nao" contenteditable="true">
+
+                        <span contenteditable="false"></span>
+                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
+
+                    <br><br>
 
                     <br><br>
 
@@ -2527,779 +2552,1006 @@
         razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
+
+        // não permite que voto em branco -------------------------------------------------------
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const validacao_preenchimento_span_multa_paga_voto = document.getElementById('span_multa_paga_voto');
+
+        //     if (validacao_preenchimento_span_multa_paga_voto) {
+        //         // Configura o MutationObserver para monitorar alterações no texto do span
+        //         const observer = new MutationObserver(function (mutationsList, observer) {
+        //             mutationsList.forEach(function (mutation) {
+        //                 if (mutation.type === 'childList') {
+        //                     // Verifica se o conteúdo do span está vazio
+        //                     if (validacao_preenchimento_span_multa_paga_voto.innerText === "") {
+        //                         validacao_preenchimento_span_multa_paga_voto.innerText = "-";
+        //                     }
+        //                 }
+        //             });
+        //         });
+
+        //         // Inicia o observer, observando mudanças nos filhos do span (o que inclui o texto)
+        //         observer.observe(validacao_preenchimento_span_multa_paga_voto, { childList: true });
+        //     } else {
+        //         console.error("Elemento span_multa_paga_voto não encontrado.");
+        //     }
+        // });
+
+        
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
         function atualizar() {
 
+            // ---------   validação dos dados ---------------------------------
 
-            // var conteudo_relato_final = document.getElementById("conteudo_relato_final");
-            // conteudo_relato_final.innerText = "";
+            let mensagens = []; // Array para acumular mensagens
 
-            // HISTÓRICO DO PROCESSO
+            // Verifica cada campo e adiciona mensagens ao array se necessário
+            verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
+            verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
+            verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
+            verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
+            verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
+            verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
+            verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
+            verificarCheckboxNotificacaoPreventiva("#input_devolucao_corresp_sim", "#input_devolucao_corresp_nao", "Devolução de correspondência da notificação preventiva incompleto.", mensagens);
+            verificarCheckboxContestacao("#input_notificacao_preventiva", "#input_notificacao_preventiva_checked", "Contestação da notificação preventiva incompleto.", mensagens);
+            verificarCheckboxTentativaRegularizacao("#input_tentativa_regularizacao_nao", "#input_tentativa_regularizacao_sim", "Tentativa de regularização sem informação.", mensagens);
+            verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
+            verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
+            verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
+            verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
+            verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
+            verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
 
-            let legend_historico_processo = document.getElementById("legend_historico_processo");
-            let p_historico_processo_final = document.getElementById("p_historico_processo_final");
-            p_historico_processo_final.innerText = legend_historico_processo.innerText;
-
-            // atualizar dados do processo
-            let input_num_processo = document.getElementById("input_num_processo");
-            let input_interessado = document.getElementById("input_interessado");
-            let input_assunto = document.getElementById("input_assunto");
-            let input_relator = document.getElementById("input_relator");
-
-            let td_num_processo_final = document.getElementById("td_num_processo_final");
-            let td_interessado_final = document.getElementById("td_interessado_final");
-            let td_assunto_final = document.getElementById("td_assunto_final");
-            let td_relator_final = document.getElementById("td_relator_final");
-
-            td_num_processo_final.innerText = input_num_processo.value;
-            td_interessado_final.innerText = input_interessado.value;
-            td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
-            td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
-
-
-            // histórico do processo REMOVIDO NÃO É NECESSÁRIO
-
-            // let area_resumo_fatos = document.getElementById("area_resumo_fatos");
-            // let p_resumo_fatos_final = document.getElementById("p_resumo_fatos_final");
-            // p_resumo_fatos_final.innerText = area_resumo_fatos.value;
-
-
-            // origem da demanda
-
-            let span_origem_demanda_1 = document.getElementById("span_origem_demanda_1");
-            let select_origem_demanda = document.getElementById("select_origem_demanda");
-            // let span_origem_demanda_2 = document.getElementById("span_origem_demanda_2");
-            // let select_regional = document.getElementById("select_regional");
-
-            let span_origem_demanda_1_final = document.getElementById("span_origem_demanda_1_final");
-            let select_origem_demanda_final = document.getElementById("select_origem_demanda_final");
-            // let span_origem_demanda_2_final = document.getElementById("span_origem_demanda_2_final");
-            // let select_regional_final = document.getElementById("select_regional_final");
-            let span_origem_demanda_3_final = document.getElementById("span_origem_demanda_3_final");
-
-
-            span_origem_demanda_1_final.innerText = span_origem_demanda_1.innerText;
-            select_origem_demanda_final.innerText = select_origem_demanda.options[select_origem_demanda.selectedIndex].textContent;
-            // span_origem_demanda_2_final.innerText = span_origem_demanda_2.innerText;
-            // select_regional_final.innerText = select_regional.options[select_regional.selectedIndex].textContent;
-            span_origem_demanda_3_final.textContent = span_origem_demanda_3.innerText;
-
-            // irregularidade
-
-            let area_irregularidade = document.getElementById("area_irregularidade");
-            let area_irregularidade_final = document.getElementById("area_irregularidade_final");
-            area_irregularidade_final.textContent = area_irregularidade.value;
-
-            // Data do Relatório de Fiscalização:
-
-            let span_dt_relatorio_fisc = document.getElementById("span_dt_relatorio_fisc");
-            let input_dt_relatorio_fisc = document.getElementById("input_dt_relatorio_fisc");
-            let span_dt_relatorio_fisc_1 = document.getElementById("span_dt_relatorio_fisc_1");
-
-            let span_dt_relatorio_fisc_final = document.getElementById("span_dt_relatorio_fisc_final");
-            let input_dt_relatorio_fisc_final = document.getElementById("input_dt_relatorio_fisc_final");
-            let span_dt_relatorio_fisc_1_final = document.getElementById("span_dt_relatorio_fisc_1_final");
-
-            span_dt_relatorio_fisc_final.innerText = span_dt_relatorio_fisc.innerText;
-            input_dt_relatorio_fisc_final.innerText = input_dt_relatorio_fisc.value;
-            span_dt_relatorio_fisc_1_final.innerText = span_dt_relatorio_fisc_1.innerText;
-
-            // Data da notificação preventiva:
-
-            let span_dt_notificacao_preventiva = document.getElementById("span_dt_notificacao_preventiva");
-            let input_dt_notificacao_preventiva = document.getElementById("input_dt_notificacao_preventiva");
-            let span_dt_notificacao_preventiva_2 = document.getElementById("span_dt_notificacao_preventiva_2");
-
-            let span_dt_notificacao_preventiva_final = document.getElementById("span_dt_notificacao_preventiva_final");
-            let input_dt_notificacao_preventiva_final = document.getElementById("input_dt_notificacao_preventiva_final");
-            let span_dt_notificacao_preventiva_2_final = document.getElementById("span_dt_notificacao_preventiva_2_final");
-
-            span_dt_notificacao_preventiva_final.innerText = span_dt_notificacao_preventiva.innerText;
-            input_dt_notificacao_preventiva_final.innerText = input_dt_notificacao_preventiva.value;
-            span_dt_notificacao_preventiva_2_final.innerText = span_dt_notificacao_preventiva_2.innerText;
-
-
-
-            // Houve devolução de correspondência? (da Notificação Preventiva)
-
-            // Obter referência para as checkboxes
-            let input_devolucao_corresp_sim = document.getElementById("input_devolucao_corresp_sim");
-            let input_devolucao_corresp_nao = document.getElementById("input_devolucao_corresp_nao");
-
-            // Verificar se a checkbox "Sim" está selecionada
-            if (input_devolucao_corresp_sim.checked) {
-                console.log("A opção 'Sim' está selecionada.");
-                let span_corresp_devolvida_sim_1 = document.getElementById("span_corresp_devolvida_sim_1");
-                let input_corresp_devolvida_sim_1 = document.getElementById("input_corresp_devolvida_sim_1");
-                let span_corresp_devolvida_sim_2 = document.getElementById("span_corresp_devolvida_sim_2");
-                let select_corresp_devolvida_sim = document.getElementById("select_corresp_devolvida_sim");
-                let span_corresp_devolvida_sim_3 = document.getElementById("span_corresp_devolvida_sim_3");
-                let input_corresp_devolvida_sim_2 = document.getElementById("input_corresp_devolvida_sim_2");
-                let span_corresp_devolvida_sim_4 = document.getElementById("span_corresp_devolvida_sim_4");
-
-                let span_corresp_devolvida_sim_1_final = document.getElementById("span_corresp_devolvida_sim_1_final");
-                let input_corresp_devolvida_sim_1_final = document.getElementById("input_corresp_devolvida_sim_1_final");
-                let span_corresp_devolvida_sim_2_final = document.getElementById("span_corresp_devolvida_sim_2_final");
-                let select_corresp_devolvida_sim_final = document.getElementById("select_corresp_devolvida_sim_final");
-                let span_corresp_devolvida_sim_3_final = document.getElementById("span_corresp_devolvida_sim_3_final");
-                let input_corresp_devolvida_sim_2_final = document.getElementById("input_corresp_devolvida_sim_2_final");
-                let span_corresp_devolvida_sim_4_final = document.getElementById("span_corresp_devolvida_sim_4_final");
-
-                span_corresp_devolvida_sim_1_final.innerText = span_corresp_devolvida_sim_1.innerText;
-                input_corresp_devolvida_sim_1_final.innerText = input_corresp_devolvida_sim_1.options[input_corresp_devolvida_sim_1.selectedIndex].textContent;
-                span_corresp_devolvida_sim_2_final.innerText = span_corresp_devolvida_sim_2.innerText;
-                select_corresp_devolvida_sim_final.innerText = select_corresp_devolvida_sim.options[select_corresp_devolvida_sim.selectedIndex].textContent;
-                span_corresp_devolvida_sim_3_final.innerText = span_corresp_devolvida_sim_3.innerText;
-                input_corresp_devolvida_sim_2_final.innerText = input_corresp_devolvida_sim_2.value;
-                span_corresp_devolvida_sim_4_final.innerText = span_corresp_devolvida_sim_4.innerText;
-
-
-            } else {
-                console.log("A opção 'Sim' não está selecionada.");
-                span_corresp_devolvida_sim_1_final.innerText = "";
-                input_corresp_devolvida_sim_1_final.innerText = "";
-                span_corresp_devolvida_sim_2_final.innerText = "";
-                select_corresp_devolvida_sim_final.innerText = "";
-                span_corresp_devolvida_sim_3_final.innerText = "";
-                input_corresp_devolvida_sim_2_final.innerText = "";
-                span_corresp_devolvida_sim_4_final.innerText = "";
-
-            }
-
-            // Verificar se a checkbox "Não" está selecionada
-            if (input_devolucao_corresp_nao.checked) {
-                console.log("Houve devolução de correspondência? A opção 'Não' está selecionada.");
-                let span_corresp_devolvida_nao_1 = document.getElementById("span_corresp_devolvida_nao_1");
-                let select_corresp_devolvida_nao = document.getElementById("select_corresp_devolvida_nao");
-                let span_corresp_devolvida_nao_2 = document.getElementById("span_corresp_devolvida_nao_2");
-                let input_corresp_devolvida_nao_1 = document.getElementById("input_corresp_devolvida_nao_1");
-                let span_corresp_devolvida_nao_3 = document.getElementById("span_corresp_devolvida_nao_3");
-
-                let span_corresp_devolvida_nao_1_final = document.getElementById("span_corresp_devolvida_nao_1_final");
-                let select_corresp_devolvida_nao_final = document.getElementById("select_corresp_devolvida_nao_final");
-                let span_corresp_devolvida_nao_2_final = document.getElementById("span_corresp_devolvida_nao_2_final");
-                let input_corresp_devolvida_nao_1_final = document.getElementById("input_corresp_devolvida_nao_1_final");
-                let span_corresp_devolvida_nao_3_final = document.getElementById("span_corresp_devolvida_nao_3_final");
-
-                span_corresp_devolvida_nao_1_final.innerText = span_corresp_devolvida_nao_1.innerText;
-                select_corresp_devolvida_nao_final.innerText = select_corresp_devolvida_nao.options[select_corresp_devolvida_nao.selectedIndex].textContent;
-                span_corresp_devolvida_nao_2_final.innerText = span_corresp_devolvida_nao_2.innerText;
-                input_corresp_devolvida_nao_1_final.innerText = input_corresp_devolvida_nao_1.value;
-                span_corresp_devolvida_nao_3_final.innerText = span_corresp_devolvida_nao_3.innerText;
-
-            } else {
-                console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
-                span_corresp_devolvida_nao_1_final.innerText = "";
-                select_corresp_devolvida_nao_final.innerText = "";
-                span_corresp_devolvida_nao_2_final.innerText = "";
-                input_corresp_devolvida_nao_1_final.innerText = "";
-                span_corresp_devolvida_nao_3_final.innerText = "";
-
-
-
-
-            }
-
-            // Houve contestação da Notificação Preventiva?
-            let input_notificacao_preventiva = document.getElementById("input_notificacao_preventiva");
-
-            if (input_notificacao_preventiva.checked) {
-                console.log("A opção 'Sim' está selecionada.");
-                let span_notificacao_preventiva_checked_1 = document.getElementById("span_notificacao_preventiva_checked_1");
-                let input_notificacao_preventiva_checked = document.getElementById("input_notificacao_preventiva_checked");
-                let span_notificacao_preventiva_checked_2 = document.getElementById("span_notificacao_preventiva_checked_2");
-
-                let span_notificacao_preventiva_checked_1_final = document.getElementById("span_notificacao_preventiva_checked_1_final");
-                let input_notificacao_preventiva_checked_final = document.getElementById("input_notificacao_preventiva_checked_final");
-                let span_notificacao_preventiva_checked_2_final = document.getElementById("span_notificacao_preventiva_checked_2_final");
-
-                span_notificacao_preventiva_checked_1_final.innerText = span_notificacao_preventiva_checked_1.innerText;
-                input_notificacao_preventiva_checked_final.innerText = input_notificacao_preventiva_checked.value;
-                span_notificacao_preventiva_checked_2_final.innerText = span_notificacao_preventiva_checked_2.innerText;
-
-
-            } else {
-                console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
-                span_notificacao_preventiva_checked_1_final.innerText = "";
-                input_notificacao_preventiva_checked_final.innerText = "";
-                span_notificacao_preventiva_checked_2_final.innerText = "";
-
-            }
-
-
-            // Houve tentativa de regularização?
-
-            // Obter referência para as checkboxes
-            let input_tentativa_regularizacao_nao = document.getElementById("input_tentativa_regularizacao_nao");
-            let input_tentativa_regularizacao_sim = document.getElementById("input_tentativa_regularizacao_sim");
-
-            // Verificar se a checkbox "Não" está selecionada
-            if (input_tentativa_regularizacao_nao.checked) {
-                console.log("A opção 'Nao' está selecionada.");
-                let area_tentativa_regularizacao_nao = document.getElementById("area_tentativa_regularizacao_nao");
-                let area_tentativa_regularizacao_nao_final = document.getElementById("area_tentativa_regularizacao_nao_final");
-                area_tentativa_regularizacao_nao_final.textContent = area_tentativa_regularizacao_nao.value;
-
-
-            } else {
-                area_tentativa_regularizacao_nao_final.textContent = ""
-            }
-
-            // Verificar se a checkbox "Sim" está selecionada
-            if (input_tentativa_regularizacao_sim.checked) {
-                console.log("A opção 'Sim' está selecionada.");
-                let area_tentativa_regularizacao_sim = document.getElementById("area_tentativa_regularizacao_sim");
-                let area_tentativa_regularizacao_sim_final = document.getElementById("area_tentativa_regularizacao_sim_final");
-                area_tentativa_regularizacao_sim_final.textContent = area_tentativa_regularizacao_sim.value;
-
-            } else {
-                area_tentativa_regularizacao_sim_final.textContent = ""
-            }
-
-
-            let span_dt_auto = document.getElementById("span_dt_auto");
-            let input_dt_auto = document.getElementById("input_dt_auto");
-            let span_dt_auto_1 = document.getElementById("span_dt_auto_1");
+            verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
+            verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
             
-            let span_dt_auto_final = document.getElementById("span_dt_auto_final");
-            let input_dt_auto_final = document.getElementById("input_dt_auto_final");
-            let span_dt_auto_1_final = document.getElementById("span_dt_auto_1_final");
-
-            span_dt_auto_final.innerText = span_dt_auto.innerText;
-            input_dt_auto_final.innerText = input_dt_auto.value;
-            span_dt_auto_1_final.innerText = span_dt_auto_1.innerText;
-
-
-
-            // Houve devolução de correspondência? (do AUTO)
-
-            // Obter referência para as checkboxes
-            let input_devolucao_corresp_auto_sim = document.getElementById("input_devolucao_corresp_auto_sim");
-            let input_devolucao_corresp_auto_nao = document.getElementById("input_devolucao_corresp_auto_nao");
-
-            // Verificar se a checkbox "Sim" está selecionada
-            if (input_devolucao_corresp_auto_sim.checked) {
-                console.log("A opção 'Sim' está selecionada.");
-                let span_corresp_auto_devolvida_sim_1 = document.getElementById("span_corresp_auto_devolvida_sim_1");
-                let input_corresp_auto_devolvida_sim_1 = document.getElementById("input_corresp_auto_devolvida_sim_1");
-                let span_corresp_auto_devolvida_sim_2 = document.getElementById("span_corresp_auto_devolvida_sim_2");
-                let select_corresp_auto_devolvida_sim = document.getElementById("select_corresp_auto_devolvida_sim");
-                let span_corresp_devolvida_auto_sim_3 = document.getElementById("span_corresp_devolvida_auto_sim_3");
-                let input_corresp_auto_devolvida_sim_2 = document.getElementById("input_corresp_auto_devolvida_sim_2");
-                let span_corresp_devolvida_auto_sim_4 = document.getElementById("span_corresp_devolvida_auto_sim_4");
-
-                let span_corresp_auto_devolvida_sim_1_final = document.getElementById("span_corresp_auto_devolvida_sim_1_final");
-                let input_corresp_auto_devolvida_sim_1_final = document.getElementById("input_corresp_auto_devolvida_sim_1_final");
-                let span_corresp_auto_devolvida_sim_2_final = document.getElementById("span_corresp_auto_devolvida_sim_2_final");
-                let select_corresp_auto_devolvida_sim_final = document.getElementById("select_corresp_auto_devolvida_sim_final");
-                let span_corresp_devolvida_auto_sim_3_final = document.getElementById("span_corresp_devolvida_auto_sim_3_final");
-                let input_corresp_auto_devolvida_sim_2_final = document.getElementById("input_corresp_auto_devolvida_sim_2_final");
-                let span_corresp_devolvida_auto_sim_4_final = document.getElementById("span_corresp_devolvida_auto_sim_4_final");
-
-                span_corresp_auto_devolvida_sim_1_final.innerText = span_corresp_auto_devolvida_sim_1.innerText;
-                input_corresp_auto_devolvida_sim_1_final.innerText = input_corresp_auto_devolvida_sim_1.options[input_corresp_auto_devolvida_sim_1.selectedIndex].textContent;
-                span_corresp_auto_devolvida_sim_2_final.innerText = span_corresp_auto_devolvida_sim_2.innerText;
-                select_corresp_auto_devolvida_sim_final.innerText = select_corresp_auto_devolvida_sim.options[select_corresp_auto_devolvida_sim.selectedIndex].textContent;
-                span_corresp_devolvida_auto_sim_3_final.innerText = span_corresp_devolvida_auto_sim_3.innerText;
-                input_corresp_auto_devolvida_sim_2_final.innerText = input_corresp_auto_devolvida_sim_2.value;
-                span_corresp_devolvida_auto_sim_4_final.innerText = span_corresp_devolvida_auto_sim_4.innerText;
-
-            } else {
-                console.log("A opção 'Sim' não está selecionada.");
-                span_corresp_auto_devolvida_sim_1_final.innerText = "";
-                input_corresp_auto_devolvida_sim_1_final.innerText = "";
-                span_corresp_auto_devolvida_sim_2_final.innerText = "";
-                select_corresp_auto_devolvida_sim_final.innerText = "";
-                span_corresp_devolvida_auto_sim_3_final.innerText = "";
-                input_corresp_auto_devolvida_sim_2_final.innerText = "";
-                span_corresp_devolvida_auto_sim_4_final.innerText = "";
+            // Se houver mensagens, mostra um alerta com todas
+            if (mensagens.length > 0) {
+                alert(`• Existem campos obrigatórios não preenchidos:\n\n${mensagens.join("\n")}`);
+            }
+            
+            function verificarCampoInput(campoId, mensagem, mensagens) {
+                if (document.querySelector(campoId).value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
             }
 
-
-            // Verificar se a checkbox "Não" está selecionada
-            if (input_devolucao_corresp_auto_nao.checked) {
-                console.log("Houve devolução de correspondência? A opção 'Não' está selecionada.");
-                let span_corresp_auto_devolvida_nao_1 = document.getElementById("span_corresp_auto_devolvida_nao_1");
-                let select_corresp_auto_devolvida_nao = document.getElementById("select_corresp_auto_devolvida_nao");
-                let span_corresp_auto_devolvida_nao_2 = document.getElementById("span_corresp_auto_devolvida_nao_2");
-                let input_corresp_auto_devolvida_nao_1 = document.getElementById("input_corresp_auto_devolvida_nao_1");
-                let span_corresp_auto_devolvida_nao_3 = document.getElementById("span_corresp_auto_devolvida_nao_3");
-
-                let span_corresp_auto_devolvida_nao_1_final = document.getElementById("span_corresp_auto_devolvida_nao_1_final");
-                let select_corresp_auto_devolvida_nao_final = document.getElementById("select_corresp_auto_devolvida_nao_final");
-                let span_corresp_auto_devolvida_nao_2_final = document.getElementById("span_corresp_auto_devolvida_nao_2_final");
-                let input_corresp_auto_devolvida_nao_1_final = document.getElementById("input_corresp_auto_devolvida_nao_1_final");
-                let span_corresp_auto_devolvida_nao_3_final = document.getElementById("span_corresp_auto_devolvida_nao_3_final");
-
-                span_corresp_auto_devolvida_nao_1_final.innerText = span_corresp_auto_devolvida_nao_1.innerText;
-                select_corresp_auto_devolvida_nao_final.innerText = select_corresp_auto_devolvida_nao.options[select_corresp_auto_devolvida_nao.selectedIndex].textContent;
-                span_corresp_auto_devolvida_nao_2_final.innerText = span_corresp_auto_devolvida_nao_2.innerText;
-                input_corresp_auto_devolvida_nao_1_final.innerText = input_corresp_auto_devolvida_nao_1.value;
-                span_corresp_auto_devolvida_nao_3_final.innerText = span_corresp_auto_devolvida_nao_3.innerText;
-
-            } else {
-                console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
-                span_corresp_auto_devolvida_nao_1_final.innerText = "";
-                select_corresp_auto_devolvida_nao_final.innerText = "";
-                span_corresp_auto_devolvida_nao_2_final.innerText = "";
-                input_corresp_auto_devolvida_nao_1_final.innerText = "";
-                span_corresp_auto_devolvida_nao_3_final.innerText = "";
-
+            function verificarOptions(campoId, mensagem, mensagens) {
+                const select = document.querySelector(campoId);
+                if (select.selectedIndex === 0 || select.options[select.selectedIndex].textContent === mensagem) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
             }
 
-
-            // Encaminhamento de processo: Processo à Revelia.
-
-            let input_processo_revelia = document.getElementById("input_processo_revelia");
-
-            if (input_processo_revelia.checked) {
-                console.log("Encaminhamento de processo: Processo à Revelia está selecionado.");
-                let span_processo_revelia = document.getElementById("span_processo_revelia");
-
-                let span_processo_revelia_final = document.getElementById("span_processo_revelia_final");
-
-                span_processo_revelia_final.innerText = span_processo_revelia.innerText;
-
-                // elemento deve aparecer em analises e considerações
-                // let area_processo_revelia_analise = document.getElementById("area_processo_revelia_analise");
-
-                // let area_processo_revelia_analise_final = document.getElementById("area_processo_revelia_analise_final");
-
-                // area_processo_revelia_analise_final.innerText = area_processo_revelia_analise.value;
-
-                // elemento deve aparecer em analises e considerações
-                let p_processo_revelia_checked_resolucoes_1 = document.getElementById("p_processo_revelia_checked_resolucoes_1");
-                let p_processo_revelia_checked_resolucoes_2 = document.getElementById("p_processo_revelia_checked_resolucoes_2");
-
-
-                let p_processo_revelia_checked_resolucoes_1_final = document.getElementById("p_processo_revelia_checked_resolucoes_1_final");
-                let p_processo_revelia_checked_resolucoes_2_final = document.getElementById("p_processo_revelia_checked_resolucoes_2_final");
-
-                p_processo_revelia_checked_resolucoes_1_final.innerText = p_processo_revelia_checked_resolucoes_1.innerText;
-                p_processo_revelia_checked_resolucoes_2_final.innerText = p_processo_revelia_checked_resolucoes_2.innerText;
-
-
-
-            } else {
-                console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
-                span_processo_revelia_final.innerText = "";
-                // area_processo_revelia_analise_final.innerText = "";
-                p_processo_revelia_checked_resolucoes_1_final.innerText = "";
-                p_processo_revelia_checked_resolucoes_2_final.innerText = "";
+            function verificarCheckbox(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select01.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
             }
 
+            function verificarCheckboxNotificacaoPreventiva(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
+                } else if (select01.checked) {
+                    const validar_input_corresp_devolvida_sim_1 = document.querySelector("#input_corresp_devolvida_sim_1");
+                    const validar_select_corresp_devolvida_sim = document.querySelector("#select_corresp_devolvida_sim");
+                    const validar_input_corresp_devolvida_sim_2 = document.querySelector("#input_corresp_devolvida_sim_2");
+                    
+                    if (validar_input_corresp_devolvida_sim_1.selectedIndex === 0 || validar_select_corresp_devolvida_sim.selectedIndex === 0 || validar_input_corresp_devolvida_sim_2.value === "") {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    }
 
-
-
-
-            // Encaminhamento de processo: Processo regularizado..
-
-            let input_processo_regularizado = document.getElementById("input_processo_regularizado");
-
-            if (input_processo_regularizado.checked) {
-                console.log("Encaminhamento de processo: Processo regularizado está selecionado.");
-                let span_processo_regularizado_checked_1 = document.getElementById("span_processo_regularizado_checked_1");
-                let input_processo_regularizado_checked = document.getElementById("input_processo_regularizado_checked");
-                let span_processo_regularizado_checked_2 = document.getElementById("span_processo_regularizado_checked_2");
-                let span_processo_regularizado_checked = document.getElementById("span_processo_regularizado_checked");
-                // let span_processo_regularizado_checked_3 = document.getElementById("span_processo_regularizado_checked_3");
-
-                let span_processo_regularizado_checked_1_final = document.getElementById("span_processo_regularizado_checked_1_final");
-                let input_processo_regularizado_checked_final = document.getElementById("input_processo_regularizado_checked_final");
-                let span_processo_regularizado_checked_2_final = document.getElementById("span_processo_regularizado_checked_2_final");
-                let span_processo_regularizado_checked_final = document.getElementById("span_processo_regularizado_checked_final");
-                // let span_processo_regularizado_checked_3_final = document.getElementById("span_processo_regularizado_checked_3_final");
-
-
-
-                span_processo_regularizado_checked_1_final.innerText = span_processo_regularizado_checked_1.innerText;
-                input_processo_regularizado_checked_final.innerText = input_processo_regularizado_checked.value;
-                span_processo_regularizado_checked_2_final.innerText = span_processo_regularizado_checked_2.innerText;
-                span_processo_regularizado_checked_final.textContent = span_processo_regularizado_checked.value;
-                // span_processo_regularizado_checked_3_final.innerText = span_processo_regularizado_checked_3.innerText;
-
-
-            } else {
-                span_processo_regularizado_checked_1_final.innerText = "";
-                input_processo_regularizado_checked_final.innerText = "";
-                span_processo_regularizado_checked_2_final.innerText = "";
-                span_processo_regularizado_checked_final.innerText = "";
-                // span_processo_regularizado_checked_3_final.innerText = "";
-
-
+                } else if (select02.checked) {
+                    const validar_select_corresp_devolvida_nao = document.querySelector("#select_corresp_devolvida_nao");
+                    const validar_input_corresp_devolvida_nao_1 = document.querySelector("#input_corresp_devolvida_nao_1");
+                    
+                    if (validar_select_corresp_devolvida_nao.selectedIndex === 0 || validar_input_corresp_devolvida_nao_1.value === "") {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    }
+                }   
             }
 
+            function verificarCheckboxContestacao(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            // Encaminhamento de processo: Processo com defesa.
-
-            let processo_com_defesa = document.getElementById("processo_com_defesa");
-
-            if (processo_com_defesa.checked) {
-                console.log("Encaminhamento de processo: Processo com defesa está selecionado.");
-                let span_processo_com_defesa_checked_1 = document.getElementById("span_processo_com_defesa_checked_1");
-                let input_processo_com_defesa_checked = document.getElementById("input_processo_com_defesa_checked");
-                let span_processo_com_defesa_checked_2 = document.getElementById("span_processo_com_defesa_checked_2");
-
-                let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
-                let input_processo_com_defesa_checked_final = document.getElementById("input_processo_com_defesa_checked_final");
-                let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
-
-
-
-                span_processo_com_defesa_checked_1_final.innerText = span_processo_com_defesa_checked_1.innerText;
-                input_processo_com_defesa_checked_final.innerText = input_processo_com_defesa_checked.value;
-                span_processo_com_defesa_checked_2_final.innerText = span_processo_com_defesa_checked_2.innerText;
-
-
-                // elemento deve aparecer em analises e considerações
-                let area_processo_com_defesa_checked_analise = document.getElementById("area_processo_com_defesa_checked_analise");
-
-                let area_processo_com_defesa_checked_analise_final = document.getElementById("area_processo_com_defesa_checked_analise_final");
-
-                area_processo_com_defesa_checked_analise_final.textContent = area_processo_com_defesa_checked_analise.value;
-
-                // elemento deve aparecer em analises e considerações
-                let p_processo_com_defesa_checked_resolucoes_1 = document.getElementById("p_processo_com_defesa_checked_resolucoes_1");
-                let p_processo_com_defesa_checked_resolucoes_2 = document.getElementById("p_processo_com_defesa_checked_resolucoes_2");
-
-
-                let p_processo_com_defesa_checked_resolucoes_1_final = document.getElementById("p_processo_com_defesa_checked_resolucoes_1_final");
-                let p_processo_com_defesa_checked_resolucoes_2_final = document.getElementById("p_processo_com_defesa_checked_resolucoes_2_final");
-
-                p_processo_com_defesa_checked_resolucoes_1_final.innerText = p_processo_com_defesa_checked_resolucoes_1.innerText;
-                p_processo_com_defesa_checked_resolucoes_2_final.innerText = p_processo_com_defesa_checked_resolucoes_2.innerText;
-
-
-            } else {
-
-                span_processo_com_defesa_checked_1_final.innerText = "";
-                input_processo_com_defesa_checked_final.innerText = "";
-                span_processo_com_defesa_checked_2_final.innerText = "";
-                area_processo_com_defesa_checked_analise_final.innerText = "";
-                p_processo_com_defesa_checked_resolucoes_1_final.innerText = "";
-                p_processo_com_defesa_checked_resolucoes_2_final.innerText = "";
+                } 
             }
 
-            // Análises e Considerações
+            function verificarCheckboxTentativaRegularizacao(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
 
-            let legend_analises_consideracoes = document.getElementById("legend_analises_consideracoes");
-            let legend_analises_consideracoes_final = document.getElementById("legend_analises_consideracoes_final");
-            legend_analises_consideracoes_final.innerText = legend_analises_consideracoes.innerText;
+                const validacao_area_tentativa_regularizacao_nao = document.querySelector("#area_tentativa_regularizacao_nao");
+                const validacao_area_tentativa_regularizacao_sim = document.querySelector("#area_tentativa_regularizacao_sim");
 
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            // Sem regularização e sem pagamento de multa:
+                } else if (select01.checked && validacao_area_tentativa_regularizacao_nao.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            let input_sem_regularizacao_sem_pagamento = document.getElementById("input_sem_regularizacao_sem_pagamento");
-
-            if (input_sem_regularizacao_sem_pagamento.checked) {
-                console.log("Sem regularização e sem pagamento de multa: está selecionado.");
-                let span_sem_regularizacao_sem_pagamento_checked_1 = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_1");
-                // let input_sem_regularizacao_sem_pagamento_checked_1 = document.getElementById("input_sem_regularizacao_sem_pagamento_checked_1");
-                // let span_sem_regularizacao_sem_pagamento_checked_2 = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_2");
-
-                let span_sem_regularizacao_sem_pagamento_checked_1_final = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_1_final");
-                // let input_sem_regularizacao_sem_pagamento_checked_1_final = document.getElementById("input_sem_regularizacao_sem_pagamento_checked_1_final");
-                // let span_sem_regularizacao_sem_pagamento_checked_2_final = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_2_final");
-
-
-
-                span_sem_regularizacao_sem_pagamento_checked_1_final.innerText = span_sem_regularizacao_sem_pagamento_checked_1.innerText;
-                // input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = input_sem_regularizacao_sem_pagamento_checked_1.value;
-                // span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = span_sem_regularizacao_sem_pagamento_checked_2.innerText;
-
-            } else {
-                span_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
-                // input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
-                // span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = "";
-
-
+                } else if (select02.checked && validacao_area_tentativa_regularizacao_sim.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
             }
 
-            // Se houve somente a regularização:
+            function verificarCheckboxAutoInfracao(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            let input_somente_regularizacao = document.getElementById("input_somente_regularizacao");
+                } else if (select01.checked) {
+                    const validar_input_corresp_auto_devolvida_sim_1 = document.querySelector("#input_corresp_auto_devolvida_sim_1");
+                    const validar_select_corresp_auto_devolvida_sim = document.querySelector("#select_corresp_auto_devolvida_sim");
+                    const validar_input_corresp_auto_devolvida_sim_2 = document.querySelector("#input_corresp_auto_devolvida_sim_2");
+                    
+                    if (validar_input_corresp_auto_devolvida_sim_1.selectedIndex === 0 || validar_select_corresp_auto_devolvida_sim.selectedIndex === 0 || validar_input_corresp_auto_devolvida_sim_2.value === "") {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    }
 
-            if (input_somente_regularizacao.checked) {
-                console.log("Se houve somente a regularização: está selecionado.");
-                let span_somente_regularizacao_checked_1 = document.getElementById("span_somente_regularizacao_checked_1");
-                let input_somente_regularizacao_checked_1 = document.getElementById("input_somente_regularizacao_checked_1");
-                let span_somente_regularizacao_checked_2 = document.getElementById("span_somente_regularizacao_checked_2");
-                // let input_somente_regularizacao_checked_2 = document.getElementById("input_somente_regularizacao_checked_2");
-                // let span_somente_regularizacao_checked_3 = document.getElementById("span_somente_regularizacao_checked_3");
-
-                let span_somente_regularizacao_checked_1_final = document.getElementById("span_somente_regularizacao_checked_1_final");
-                let input_somente_regularizacao_checked_1_final = document.getElementById("input_somente_regularizacao_checked_1_final");
-                let span_somente_regularizacao_checked_2_final = document.getElementById("span_somente_regularizacao_checked_2_final");
-                // let input_somente_regularizacao_checked_2_final = document.getElementById("input_somente_regularizacao_checked_2_final");
-                // let span_somente_regularizacao_checked_3_final = document.getElementById("span_somente_regularizacao_checked_3_final");
-
-                span_somente_regularizacao_checked_1_final.innerText = span_somente_regularizacao_checked_1.innerText;
-                input_somente_regularizacao_checked_1_final.innerText = input_somente_regularizacao_checked_1.value;
-                span_somente_regularizacao_checked_2_final.innerText = span_somente_regularizacao_checked_2.innerText;
-                // input_somente_regularizacao_checked_2_final.innerText = input_somente_regularizacao_checked_2.value;
-                // span_somente_regularizacao_checked_3_final.innerText = span_somente_regularizacao_checked_3.innerText;
-
-                // elemento deve aparecer em analises e considerações
-                let p_somente_regularizacao_checked_resolucoes_1 = document.getElementById("p_somente_regularizacao_checked_resolucoes_1");
-                let p_somente_regularizacao_checked_resolucoes_2 = document.getElementById("p_somente_regularizacao_checked_resolucoes_2");
-
-
-                let p_somente_regularizacao_checked_resolucoes_1_final = document.getElementById("p_somente_regularizacao_checked_resolucoes_1_final");
-                let p_somente_regularizacao_checked_resolucoes_2_final = document.getElementById("p_somente_regularizacao_checked_resolucoes_2_final");
-
-                p_somente_regularizacao_checked_resolucoes_1_final.innerText = p_somente_regularizacao_checked_resolucoes_1.innerText;
-                p_somente_regularizacao_checked_resolucoes_2_final.innerText = p_somente_regularizacao_checked_resolucoes_2.innerText;
-
-            } else {
-                span_somente_regularizacao_checked_1_final.innerText = "";
-                input_somente_regularizacao_checked_1_final.innerText = "";
-                span_somente_regularizacao_checked_2_final.innerText = "";
-                // input_somente_regularizacao_checked_2_final.innerText = "";
-                // span_somente_regularizacao_checked_3_final.innerText = "";
-                p_somente_regularizacao_checked_resolucoes_1_final.innerText = "";
-                p_somente_regularizacao_checked_resolucoes_2_final.innerText = "";
+                } else if (select02.checked) {
+                    const validar_select_corresp_auto_devolvida_nao = document.querySelector("#select_corresp_auto_devolvida_nao");
+                    const validar_input_corresp_auto_devolvida_nao_1 = document.querySelector("#input_corresp_auto_devolvida_nao_1");
+                    
+                    if (validar_select_corresp_auto_devolvida_nao.selectedIndex === 0 || validar_input_corresp_auto_devolvida_nao_1.value === "") {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    }
+                }   
             }
 
-
-
-
-            // Se houve somente o pagamento da multa:
-
-            let input_somente_pagamento_multa = document.getElementById("input_somente_pagamento_multa");
-
-            if (input_somente_pagamento_multa.checked) {
-                console.log("Se houve somente o pagamento da multa: está selecionado.");
-                let span_somente_pagamento_multa_checked_1 = document.getElementById("span_somente_pagamento_multa_checked_1");
-                let input_somente_pagamento_multa_checked_1 = document.getElementById("input_somente_pagamento_multa_checked_1");
-                let span_somente_pagamento_multa_checked_2 = document.getElementById("span_somente_pagamento_multa_checked_2");
-                // let input_somente_pagamento_multa_checked_2 = document.getElementById("input_somente_pagamento_multa_checked_2");
-                // let span_somente_pagamento_multa_checked_3 = document.getElementById("span_somente_pagamento_multa_checked_3");
-
-                let span_somente_pagamento_multa_checked_1_final = document.getElementById("span_somente_pagamento_multa_checked_1_final");
-                let input_somente_pagamento_multa_checked_1_final = document.getElementById("input_somente_pagamento_multa_checked_1_final");
-                let span_somente_pagamento_multa_checked_2_final = document.getElementById("span_somente_pagamento_multa_checked_2_final");
-                // let input_somente_pagamento_multa_checked_2_final = document.getElementById("input_somente_pagamento_multa_checked_2_final");
-                // let span_somente_pagamento_multa_checked_3_final = document.getElementById("span_somente_pagamento_multa_checked_3_final");
-
-                span_somente_pagamento_multa_checked_1_final.innerText = span_somente_pagamento_multa_checked_1.innerText;
-                input_somente_pagamento_multa_checked_1_final.innerText = input_somente_pagamento_multa_checked_1.value;
-                span_somente_pagamento_multa_checked_2_final.innerText = span_somente_pagamento_multa_checked_2.innerText;
-                // input_somente_pagamento_multa_checked_2_final.innerText = input_somente_pagamento_multa_checked_2.value;
-                // span_somente_pagamento_multa_checked_3_final.innerText = span_somente_pagamento_multa_checked_3.innerText;
-
-                // elemento deve aparecer em analises e considerações
-                let p_somente_pagamento_multa_checked_resolucoes_1 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1");
-                let p_somente_pagamento_multa_checked_resolucoes_2 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2");
-                let p_somente_pagamento_multa_checked_resolucoes_3 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3");
-                let p_somente_pagamento_multa_checked_resolucoes_4 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_4");
-
-
-                let p_somente_pagamento_multa_checked_resolucoes_1_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1_final");
-                let p_somente_pagamento_multa_checked_resolucoes_2_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2_final");
-                let p_somente_pagamento_multa_checked_resolucoes_3_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3_final");
-                let p_somente_pagamento_multa_checked_resolucoes_4_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_4_final");
-
-
-                p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = p_somente_pagamento_multa_checked_resolucoes_1.innerText;
-                p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = p_somente_pagamento_multa_checked_resolucoes_2.innerText;
-                p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = p_somente_pagamento_multa_checked_resolucoes_3.innerText;
-                p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = p_somente_pagamento_multa_checked_resolucoes_4.innerText;
-
-
-                // elemento deve aparecer no voto
-
-                let input_alteracao_multa_sim = document.getElementById("input_alteracao_multa_sim");
-                input_alteracao_multa_sim.checked = false;
-                let input_alteracao_multa_nao = document.getElementById("input_alteracao_multa_nao");
-                input_alteracao_multa_nao.checked = false;
-
-
-
-                let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
-
-
-                let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
-
-
-                span_multa_paga_voto_final.innerText = span_multa_paga_voto.innerText;
-
-
-
-
-            } else {
-
-                span_somente_pagamento_multa_checked_1_final.innerText = "";
-                input_somente_pagamento_multa_checked_1_final.innerText = "";
-                span_somente_pagamento_multa_checked_2_final.innerText = "";
-                // input_somente_pagamento_multa_checked_2_final.innerText = "";
-                // span_somente_pagamento_multa_checked_3_final.innerText = "";
-
-                p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
-                p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
-                p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = "";
-                p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = "";
-
-                span_multa_paga_voto_final.innerText = "";
-
+            function verificarCheckboxProcessoRegularizado(campoId01, campoId02, campoId03, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                const select03 = document.querySelector(campoId03);
+                if (select01.checked && (select02.value === "" || select03.value === "")) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                } 
             }
 
-            // Se houve alteração da multa
+            function verificarCheckboxComDefesa(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-
-            if (input_alteracao_multa_sim.checked) {
-                let span_corresp_alteracao_multa_sim_1 = document.getElementById("span_corresp_alteracao_multa_sim_1");
-                let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
-
-                let span_corresp_alteracao_multa_sim_1_final = document.getElementById("span_corresp_alteracao_multa_sim_1_final");
-                let span_corresp_alteracao_multa_sim_2_final = document.getElementById("span_corresp_alteracao_multa_sim_2_final");
-
-                span_corresp_alteracao_multa_sim_1_final.innerText = span_corresp_alteracao_multa_sim_1.innerText;
-                span_corresp_alteracao_multa_sim_2_final.innerText = span_corresp_alteracao_multa_sim_2.innerText;
-
-            } else {
-
-                span_corresp_alteracao_multa_sim_1_final.innerText = "";
-                span_corresp_alteracao_multa_sim_2_final.innerText = "";
-
+                } 
             }
 
+            function verificarSomenteRegularizacao(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            if (input_alteracao_multa_nao.checked) {
-                let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
-
-                let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
-
-                span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
-
-
-            } else {
-
-                span_alteracao_multa_nao_final.innerText = "";
+                } 
             }
 
+            function verificarSomentePagamentoMulta(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            let div_resolucoes_fixa = document.getElementById("div_resolucoes_fixa");
-
-            let div_resolucoes_fixa_final = document.getElementById("div_resolucoes_fixa_final");
-            div_resolucoes_fixa_final.innerHTML = ""
-
-            div_resolucoes_fixa_final.appendChild(div_resolucoes_fixa.cloneNode(true))
-
-
-            // Calculadora de dosimetria
-
-
-            let div_calculadora = document.getElementById('calculadora');
-
-            if (div_calculadora.classList.contains('show')) {
-
-
-
-                console.log("expandido");
-
-                let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
-                let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
-                let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
-                let dosimetria_resolucao_4 = document.getElementById("dosimetria_resolucao_4");
-
-                let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
-                let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
-                let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
-                let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
-
-                dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
-                dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
-                dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
-                dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
-
-                // tabela,
-
-                let tabela_resumo = document.getElementById("tabela_resumo");
-                let tabela_resumo_final = document.getElementById("tabela_resumo_final");
-                tabela_resumo_final.innerHTML = tabela_resumo.outerHTML;
-
-
-
-                let span_multa_superior_ou_inferior = document.getElementById("span_multa_superior_ou_inferior");
-                let span_multa_superior_ou_inferior_final = document.getElementById("span_multa_superior_ou_inferior_final");
-                span_multa_superior_ou_inferior_final.innerText = span_multa_superior_ou_inferior.innerText;
-
-
-
-
-
-
-
-            } else {
-
-                console.log("não expandido");
-
-                dosimetria_resolucao_1_final.innerText = "";
-                dosimetria_resolucao_2_final.innerText = "";
-                dosimetria_resolucao_3_final.innerText = "";
-                dosimetria_resolucao_4_final.innerText = "";
-
-                tabela_resumo_final.innerHTML = "";
-
-
-
-
-                span_multa_superior_ou_inferior_final.innerText = "";
-
-
-
+                } 
             }
 
+            function verificarAnoNotificacaoPreventiva(campoId01, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const validar_div_calculadora = document.querySelector("#div_calculadora");
+                const div_calculadora = document.getElementById('calculadora');
+                if (select01.selectedIndex === 0 && div_calculadora.classList.contains('show')) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
 
-            // VOTO
+                } 
+            }
 
-            let legend_voto = document.getElementById("legend_voto");
-            let p_voto_final = document.getElementById("p_voto_final");
-            p_voto_final.innerText = legend_voto.innerText;
+            function verificarCheckboxRecalculo(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                const div_calculadora = document.getElementById('calculadora');
+                if (!select01.checked && !select01.checked && div_calculadora.classList.contains('show')) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarCheckboxAlteracaoMultaVoto (campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                const validar_somente_pagamento_multa = document.getElementById('input_somente_pagamento_multa');
+                const validacao_div_multa_paga_voto = document.getElementById('div_multa_paga_voto'); // Certifique-se de que o ID está correto
+                if (!select01.checked && !select02.checked && !validar_somente_pagamento_multa.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                } else if (validar_somente_pagamento_multa.checked && validacao_div_multa_paga_voto.innerText === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            // ------------------- fim da validação -----------------------------------------------
+     
+
+            if (mensagens.length === 0) {
+
+                // var conteudo_relato_final = document.getElementById("conteudo_relato_final");
+                // conteudo_relato_final.innerText = "";
+
+                // HISTÓRICO DO PROCESSO
+
+                let legend_historico_processo = document.getElementById("legend_historico_processo");
+                let p_historico_processo_final = document.getElementById("p_historico_processo_final");
+                p_historico_processo_final.innerText = legend_historico_processo.innerText;
+
+                // atualizar dados do processo
+                let input_num_processo = document.getElementById("input_num_processo");
+                let input_interessado = document.getElementById("input_interessado");
+                let input_assunto = document.getElementById("input_assunto");
+                let input_relator = document.getElementById("input_relator");
+
+                let td_num_processo_final = document.getElementById("td_num_processo_final");
+                let td_interessado_final = document.getElementById("td_interessado_final");
+                let td_assunto_final = document.getElementById("td_assunto_final");
+                let td_relator_final = document.getElementById("td_relator_final");
+
+                td_num_processo_final.innerText = input_num_processo.value;
+                td_interessado_final.innerText = input_interessado.value;
+                td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
+                td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
+
+
+                // histórico do processo REMOVIDO NÃO É NECESSÁRIO
+
+                // let area_resumo_fatos = document.getElementById("area_resumo_fatos");
+                // let p_resumo_fatos_final = document.getElementById("p_resumo_fatos_final");
+                // p_resumo_fatos_final.innerText = area_resumo_fatos.value;
+
+
+                // origem da demanda
+
+                let span_origem_demanda_1 = document.getElementById("span_origem_demanda_1");
+                let select_origem_demanda = document.getElementById("select_origem_demanda");
+                // let span_origem_demanda_2 = document.getElementById("span_origem_demanda_2");
+                // let select_regional = document.getElementById("select_regional");
+
+                let span_origem_demanda_1_final = document.getElementById("span_origem_demanda_1_final");
+                let select_origem_demanda_final = document.getElementById("select_origem_demanda_final");
+                // let span_origem_demanda_2_final = document.getElementById("span_origem_demanda_2_final");
+                // let select_regional_final = document.getElementById("select_regional_final");
+                let span_origem_demanda_3_final = document.getElementById("span_origem_demanda_3_final");
+
+
+                span_origem_demanda_1_final.innerText = span_origem_demanda_1.innerText;
+                select_origem_demanda_final.innerText = select_origem_demanda.options[select_origem_demanda.selectedIndex].textContent;
+                // span_origem_demanda_2_final.innerText = span_origem_demanda_2.innerText;
+                // select_regional_final.innerText = select_regional.options[select_regional.selectedIndex].textContent;
+                span_origem_demanda_3_final.textContent = span_origem_demanda_3.innerText;
+
+                // irregularidade
+
+                let area_irregularidade = document.getElementById("area_irregularidade");
+                let area_irregularidade_final = document.getElementById("area_irregularidade_final");
+                area_irregularidade_final.textContent = area_irregularidade.value;
+
+                // Data do Relatório de Fiscalização:
+
+                let span_dt_relatorio_fisc = document.getElementById("span_dt_relatorio_fisc");
+                let input_dt_relatorio_fisc = document.getElementById("input_dt_relatorio_fisc");
+                let span_dt_relatorio_fisc_1 = document.getElementById("span_dt_relatorio_fisc_1");
+
+                let span_dt_relatorio_fisc_final = document.getElementById("span_dt_relatorio_fisc_final");
+                let input_dt_relatorio_fisc_final = document.getElementById("input_dt_relatorio_fisc_final");
+                let span_dt_relatorio_fisc_1_final = document.getElementById("span_dt_relatorio_fisc_1_final");
+
+                span_dt_relatorio_fisc_final.innerText = span_dt_relatorio_fisc.innerText;
+                input_dt_relatorio_fisc_final.innerText = input_dt_relatorio_fisc.value;
+                span_dt_relatorio_fisc_1_final.innerText = span_dt_relatorio_fisc_1.innerText;
+
+                // Data da notificação preventiva:
+
+                let span_dt_notificacao_preventiva = document.getElementById("span_dt_notificacao_preventiva");
+                let input_dt_notificacao_preventiva = document.getElementById("input_dt_notificacao_preventiva");
+                let span_dt_notificacao_preventiva_2 = document.getElementById("span_dt_notificacao_preventiva_2");
+
+                let span_dt_notificacao_preventiva_final = document.getElementById("span_dt_notificacao_preventiva_final");
+                let input_dt_notificacao_preventiva_final = document.getElementById("input_dt_notificacao_preventiva_final");
+                let span_dt_notificacao_preventiva_2_final = document.getElementById("span_dt_notificacao_preventiva_2_final");
+
+                span_dt_notificacao_preventiva_final.innerText = span_dt_notificacao_preventiva.innerText;
+                input_dt_notificacao_preventiva_final.innerText = input_dt_notificacao_preventiva.value;
+                span_dt_notificacao_preventiva_2_final.innerText = span_dt_notificacao_preventiva_2.innerText;
+
+
+
+                // Houve devolução de correspondência? (da Notificação Preventiva)
+
+                // Obter referência para as checkboxes
+                let input_devolucao_corresp_sim = document.getElementById("input_devolucao_corresp_sim");
+                let input_devolucao_corresp_nao = document.getElementById("input_devolucao_corresp_nao");
+
+                // Verificar se a checkbox "Sim" está selecionada
+                if (input_devolucao_corresp_sim.checked) {
+                    console.log("A opção 'Sim' está selecionada.");
+                    let span_corresp_devolvida_sim_1 = document.getElementById("span_corresp_devolvida_sim_1");
+                    let input_corresp_devolvida_sim_1 = document.getElementById("input_corresp_devolvida_sim_1");
+                    let span_corresp_devolvida_sim_2 = document.getElementById("span_corresp_devolvida_sim_2");
+                    let select_corresp_devolvida_sim = document.getElementById("select_corresp_devolvida_sim");
+                    let span_corresp_devolvida_sim_3 = document.getElementById("span_corresp_devolvida_sim_3");
+                    let input_corresp_devolvida_sim_2 = document.getElementById("input_corresp_devolvida_sim_2");
+                    let span_corresp_devolvida_sim_4 = document.getElementById("span_corresp_devolvida_sim_4");
+
+                    let span_corresp_devolvida_sim_1_final = document.getElementById("span_corresp_devolvida_sim_1_final");
+                    let input_corresp_devolvida_sim_1_final = document.getElementById("input_corresp_devolvida_sim_1_final");
+                    let span_corresp_devolvida_sim_2_final = document.getElementById("span_corresp_devolvida_sim_2_final");
+                    let select_corresp_devolvida_sim_final = document.getElementById("select_corresp_devolvida_sim_final");
+                    let span_corresp_devolvida_sim_3_final = document.getElementById("span_corresp_devolvida_sim_3_final");
+                    let input_corresp_devolvida_sim_2_final = document.getElementById("input_corresp_devolvida_sim_2_final");
+                    let span_corresp_devolvida_sim_4_final = document.getElementById("span_corresp_devolvida_sim_4_final");
+
+                    span_corresp_devolvida_sim_1_final.innerText = span_corresp_devolvida_sim_1.innerText;
+                    input_corresp_devolvida_sim_1_final.innerText = input_corresp_devolvida_sim_1.options[input_corresp_devolvida_sim_1.selectedIndex].textContent;
+                    span_corresp_devolvida_sim_2_final.innerText = span_corresp_devolvida_sim_2.innerText;
+                    select_corresp_devolvida_sim_final.innerText = select_corresp_devolvida_sim.options[select_corresp_devolvida_sim.selectedIndex].textContent;
+                    span_corresp_devolvida_sim_3_final.innerText = span_corresp_devolvida_sim_3.innerText;
+                    input_corresp_devolvida_sim_2_final.innerText = input_corresp_devolvida_sim_2.value;
+                    span_corresp_devolvida_sim_4_final.innerText = span_corresp_devolvida_sim_4.innerText;
+
+
+                } else {
+                    console.log("A opção 'Sim' não está selecionada.");
+                    span_corresp_devolvida_sim_1_final.innerText = "";
+                    input_corresp_devolvida_sim_1_final.innerText = "";
+                    span_corresp_devolvida_sim_2_final.innerText = "";
+                    select_corresp_devolvida_sim_final.innerText = "";
+                    span_corresp_devolvida_sim_3_final.innerText = "";
+                    input_corresp_devolvida_sim_2_final.innerText = "";
+                    span_corresp_devolvida_sim_4_final.innerText = "";
+
+                }
+
+                // Verificar se a checkbox "Não" está selecionada
+                if (input_devolucao_corresp_nao.checked) {
+                    console.log("Houve devolução de correspondência? A opção 'Não' está selecionada.");
+                    let span_corresp_devolvida_nao_1 = document.getElementById("span_corresp_devolvida_nao_1");
+                    let select_corresp_devolvida_nao = document.getElementById("select_corresp_devolvida_nao");
+                    let span_corresp_devolvida_nao_2 = document.getElementById("span_corresp_devolvida_nao_2");
+                    let input_corresp_devolvida_nao_1 = document.getElementById("input_corresp_devolvida_nao_1");
+                    let span_corresp_devolvida_nao_3 = document.getElementById("span_corresp_devolvida_nao_3");
+
+                    let span_corresp_devolvida_nao_1_final = document.getElementById("span_corresp_devolvida_nao_1_final");
+                    let select_corresp_devolvida_nao_final = document.getElementById("select_corresp_devolvida_nao_final");
+                    let span_corresp_devolvida_nao_2_final = document.getElementById("span_corresp_devolvida_nao_2_final");
+                    let input_corresp_devolvida_nao_1_final = document.getElementById("input_corresp_devolvida_nao_1_final");
+                    let span_corresp_devolvida_nao_3_final = document.getElementById("span_corresp_devolvida_nao_3_final");
+
+                    span_corresp_devolvida_nao_1_final.innerText = span_corresp_devolvida_nao_1.innerText;
+                    select_corresp_devolvida_nao_final.innerText = select_corresp_devolvida_nao.options[select_corresp_devolvida_nao.selectedIndex].textContent;
+                    span_corresp_devolvida_nao_2_final.innerText = span_corresp_devolvida_nao_2.innerText;
+                    input_corresp_devolvida_nao_1_final.innerText = input_corresp_devolvida_nao_1.value;
+                    span_corresp_devolvida_nao_3_final.innerText = span_corresp_devolvida_nao_3.innerText;
+
+                } else {
+                    console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
+                    span_corresp_devolvida_nao_1_final.innerText = "";
+                    select_corresp_devolvida_nao_final.innerText = "";
+                    span_corresp_devolvida_nao_2_final.innerText = "";
+                    input_corresp_devolvida_nao_1_final.innerText = "";
+                    span_corresp_devolvida_nao_3_final.innerText = "";
 
 
 
 
-            let area_razoes_decisao = document.getElementById("area_razoes_decisao");
-            let area_razoes_decisao_final = document.getElementById("area_razoes_decisao_final");
-            area_razoes_decisao_final.innerText = area_razoes_decisao.value;
+                }
+
+                // Houve contestação da Notificação Preventiva?
+                let input_notificacao_preventiva = document.getElementById("input_notificacao_preventiva");
+
+                if (input_notificacao_preventiva.checked) {
+                    console.log("A opção 'Sim' está selecionada.");
+                    let span_notificacao_preventiva_checked_1 = document.getElementById("span_notificacao_preventiva_checked_1");
+                    let input_notificacao_preventiva_checked = document.getElementById("input_notificacao_preventiva_checked");
+                    let span_notificacao_preventiva_checked_2 = document.getElementById("span_notificacao_preventiva_checked_2");
+
+                    let span_notificacao_preventiva_checked_1_final = document.getElementById("span_notificacao_preventiva_checked_1_final");
+                    let input_notificacao_preventiva_checked_final = document.getElementById("input_notificacao_preventiva_checked_final");
+                    let span_notificacao_preventiva_checked_2_final = document.getElementById("span_notificacao_preventiva_checked_2_final");
+
+                    span_notificacao_preventiva_checked_1_final.innerText = span_notificacao_preventiva_checked_1.innerText;
+                    input_notificacao_preventiva_checked_final.innerText = input_notificacao_preventiva_checked.value;
+                    span_notificacao_preventiva_checked_2_final.innerText = span_notificacao_preventiva_checked_2.innerText;
+
+
+                } else {
+                    console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
+                    span_notificacao_preventiva_checked_1_final.innerText = "";
+                    input_notificacao_preventiva_checked_final.innerText = "";
+                    span_notificacao_preventiva_checked_2_final.innerText = "";
+
+                }
+
+
+                // Houve tentativa de regularização?
+
+                // Obter referência para as checkboxes
+                let input_tentativa_regularizacao_nao = document.getElementById("input_tentativa_regularizacao_nao");
+                let input_tentativa_regularizacao_sim = document.getElementById("input_tentativa_regularizacao_sim");
+
+                // Verificar se a checkbox "Não" está selecionada
+                if (input_tentativa_regularizacao_nao.checked) {
+                    console.log("A opção 'Nao' está selecionada.");
+                    let area_tentativa_regularizacao_nao = document.getElementById("area_tentativa_regularizacao_nao");
+                    let area_tentativa_regularizacao_nao_final = document.getElementById("area_tentativa_regularizacao_nao_final");
+                    area_tentativa_regularizacao_nao_final.textContent = area_tentativa_regularizacao_nao.value;
+
+
+                } else {
+                    area_tentativa_regularizacao_nao_final.textContent = ""
+                }
+
+                // Verificar se a checkbox "Sim" está selecionada
+                if (input_tentativa_regularizacao_sim.checked) {
+                    console.log("A opção 'Sim' está selecionada.");
+                    let area_tentativa_regularizacao_sim = document.getElementById("area_tentativa_regularizacao_sim");
+                    let area_tentativa_regularizacao_sim_final = document.getElementById("area_tentativa_regularizacao_sim_final");
+                    area_tentativa_regularizacao_sim_final.textContent = area_tentativa_regularizacao_sim.value;
+
+                } else {
+                    area_tentativa_regularizacao_sim_final.textContent = ""
+                }
+
+
+                let span_dt_auto = document.getElementById("span_dt_auto");
+                let input_dt_auto = document.getElementById("input_dt_auto");
+                let span_dt_auto_1 = document.getElementById("span_dt_auto_1");
+                
+                let span_dt_auto_final = document.getElementById("span_dt_auto_final");
+                let input_dt_auto_final = document.getElementById("input_dt_auto_final");
+                let span_dt_auto_1_final = document.getElementById("span_dt_auto_1_final");
+
+                span_dt_auto_final.innerText = span_dt_auto.innerText;
+                input_dt_auto_final.innerText = input_dt_auto.value;
+                span_dt_auto_1_final.innerText = span_dt_auto_1.innerText;
+
+
+
+                // Houve devolução de correspondência? (do AUTO)
+
+                // Obter referência para as checkboxes
+                let input_devolucao_corresp_auto_sim = document.getElementById("input_devolucao_corresp_auto_sim");
+                let input_devolucao_corresp_auto_nao = document.getElementById("input_devolucao_corresp_auto_nao");
+
+                // Verificar se a checkbox "Sim" está selecionada
+                if (input_devolucao_corresp_auto_sim.checked) {
+                    console.log("A opção 'Sim' está selecionada.");
+                    let span_corresp_auto_devolvida_sim_1 = document.getElementById("span_corresp_auto_devolvida_sim_1");
+                    let input_corresp_auto_devolvida_sim_1 = document.getElementById("input_corresp_auto_devolvida_sim_1");
+                    let span_corresp_auto_devolvida_sim_2 = document.getElementById("span_corresp_auto_devolvida_sim_2");
+                    let select_corresp_auto_devolvida_sim = document.getElementById("select_corresp_auto_devolvida_sim");
+                    let span_corresp_devolvida_auto_sim_3 = document.getElementById("span_corresp_devolvida_auto_sim_3");
+                    let input_corresp_auto_devolvida_sim_2 = document.getElementById("input_corresp_auto_devolvida_sim_2");
+                    let span_corresp_devolvida_auto_sim_4 = document.getElementById("span_corresp_devolvida_auto_sim_4");
+
+                    let span_corresp_auto_devolvida_sim_1_final = document.getElementById("span_corresp_auto_devolvida_sim_1_final");
+                    let input_corresp_auto_devolvida_sim_1_final = document.getElementById("input_corresp_auto_devolvida_sim_1_final");
+                    let span_corresp_auto_devolvida_sim_2_final = document.getElementById("span_corresp_auto_devolvida_sim_2_final");
+                    let select_corresp_auto_devolvida_sim_final = document.getElementById("select_corresp_auto_devolvida_sim_final");
+                    let span_corresp_devolvida_auto_sim_3_final = document.getElementById("span_corresp_devolvida_auto_sim_3_final");
+                    let input_corresp_auto_devolvida_sim_2_final = document.getElementById("input_corresp_auto_devolvida_sim_2_final");
+                    let span_corresp_devolvida_auto_sim_4_final = document.getElementById("span_corresp_devolvida_auto_sim_4_final");
+
+                    span_corresp_auto_devolvida_sim_1_final.innerText = span_corresp_auto_devolvida_sim_1.innerText;
+                    input_corresp_auto_devolvida_sim_1_final.innerText = input_corresp_auto_devolvida_sim_1.options[input_corresp_auto_devolvida_sim_1.selectedIndex].textContent;
+                    span_corresp_auto_devolvida_sim_2_final.innerText = span_corresp_auto_devolvida_sim_2.innerText;
+                    select_corresp_auto_devolvida_sim_final.innerText = select_corresp_auto_devolvida_sim.options[select_corresp_auto_devolvida_sim.selectedIndex].textContent;
+                    span_corresp_devolvida_auto_sim_3_final.innerText = span_corresp_devolvida_auto_sim_3.innerText;
+                    input_corresp_auto_devolvida_sim_2_final.innerText = input_corresp_auto_devolvida_sim_2.value;
+                    span_corresp_devolvida_auto_sim_4_final.innerText = span_corresp_devolvida_auto_sim_4.innerText;
+
+                } else {
+                    console.log("A opção 'Sim' não está selecionada.");
+                    span_corresp_auto_devolvida_sim_1_final.innerText = "";
+                    input_corresp_auto_devolvida_sim_1_final.innerText = "";
+                    span_corresp_auto_devolvida_sim_2_final.innerText = "";
+                    select_corresp_auto_devolvida_sim_final.innerText = "";
+                    span_corresp_devolvida_auto_sim_3_final.innerText = "";
+                    input_corresp_auto_devolvida_sim_2_final.innerText = "";
+                    span_corresp_devolvida_auto_sim_4_final.innerText = "";
+                }
+
+
+                // Verificar se a checkbox "Não" está selecionada
+                if (input_devolucao_corresp_auto_nao.checked) {
+                    console.log("Houve devolução de correspondência? A opção 'Não' está selecionada.");
+                    let span_corresp_auto_devolvida_nao_1 = document.getElementById("span_corresp_auto_devolvida_nao_1");
+                    let select_corresp_auto_devolvida_nao = document.getElementById("select_corresp_auto_devolvida_nao");
+                    let span_corresp_auto_devolvida_nao_2 = document.getElementById("span_corresp_auto_devolvida_nao_2");
+                    let input_corresp_auto_devolvida_nao_1 = document.getElementById("input_corresp_auto_devolvida_nao_1");
+                    let span_corresp_auto_devolvida_nao_3 = document.getElementById("span_corresp_auto_devolvida_nao_3");
+
+                    let span_corresp_auto_devolvida_nao_1_final = document.getElementById("span_corresp_auto_devolvida_nao_1_final");
+                    let select_corresp_auto_devolvida_nao_final = document.getElementById("select_corresp_auto_devolvida_nao_final");
+                    let span_corresp_auto_devolvida_nao_2_final = document.getElementById("span_corresp_auto_devolvida_nao_2_final");
+                    let input_corresp_auto_devolvida_nao_1_final = document.getElementById("input_corresp_auto_devolvida_nao_1_final");
+                    let span_corresp_auto_devolvida_nao_3_final = document.getElementById("span_corresp_auto_devolvida_nao_3_final");
+
+                    span_corresp_auto_devolvida_nao_1_final.innerText = span_corresp_auto_devolvida_nao_1.innerText;
+                    select_corresp_auto_devolvida_nao_final.innerText = select_corresp_auto_devolvida_nao.options[select_corresp_auto_devolvida_nao.selectedIndex].textContent;
+                    span_corresp_auto_devolvida_nao_2_final.innerText = span_corresp_auto_devolvida_nao_2.innerText;
+                    input_corresp_auto_devolvida_nao_1_final.innerText = input_corresp_auto_devolvida_nao_1.value;
+                    span_corresp_auto_devolvida_nao_3_final.innerText = span_corresp_auto_devolvida_nao_3.innerText;
+
+                } else {
+                    console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
+                    span_corresp_auto_devolvida_nao_1_final.innerText = "";
+                    select_corresp_auto_devolvida_nao_final.innerText = "";
+                    span_corresp_auto_devolvida_nao_2_final.innerText = "";
+                    input_corresp_auto_devolvida_nao_1_final.innerText = "";
+                    span_corresp_auto_devolvida_nao_3_final.innerText = "";
+
+                }
+
+
+                // Encaminhamento de processo: Processo à Revelia.
+
+                let input_processo_revelia = document.getElementById("input_processo_revelia");
+
+                if (input_processo_revelia.checked) {
+                    console.log("Encaminhamento de processo: Processo à Revelia está selecionado.");
+                    let span_processo_revelia = document.getElementById("span_processo_revelia");
+
+                    let span_processo_revelia_final = document.getElementById("span_processo_revelia_final");
+
+                    span_processo_revelia_final.innerText = span_processo_revelia.innerText;
+
+                    // elemento deve aparecer em analises e considerações
+                    // let area_processo_revelia_analise = document.getElementById("area_processo_revelia_analise");
+
+                    // let area_processo_revelia_analise_final = document.getElementById("area_processo_revelia_analise_final");
+
+                    // area_processo_revelia_analise_final.innerText = area_processo_revelia_analise.value;
+
+                    // elemento deve aparecer em analises e considerações
+                    let p_processo_revelia_checked_resolucoes_1 = document.getElementById("p_processo_revelia_checked_resolucoes_1");
+                    let p_processo_revelia_checked_resolucoes_2 = document.getElementById("p_processo_revelia_checked_resolucoes_2");
+
+
+                    let p_processo_revelia_checked_resolucoes_1_final = document.getElementById("p_processo_revelia_checked_resolucoes_1_final");
+                    let p_processo_revelia_checked_resolucoes_2_final = document.getElementById("p_processo_revelia_checked_resolucoes_2_final");
+
+                    p_processo_revelia_checked_resolucoes_1_final.innerText = p_processo_revelia_checked_resolucoes_1.innerText;
+                    p_processo_revelia_checked_resolucoes_2_final.innerText = p_processo_revelia_checked_resolucoes_2.innerText;
+
+
+
+                } else {
+                    console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
+                    span_processo_revelia_final.innerText = "";
+                    // area_processo_revelia_analise_final.innerText = "";
+                    p_processo_revelia_checked_resolucoes_1_final.innerText = "";
+                    p_processo_revelia_checked_resolucoes_2_final.innerText = "";
+                }
 
 
 
 
-            let assinatura_1 = document.getElementById("assinatura_1");
-            let assinatura_2 = document.getElementById("assinatura_2");
-            let assinatura_3 = document.getElementById("assinatura_3");
-            let assinatura_4 = document.getElementById("assinatura_4");
-            let assinatura_5 = document.getElementById("assinatura_5");
-
-            let assinatura_1_final = document.getElementById("assinatura_1_final");
-            let assinatura_2_final = document.getElementById("assinatura_2_final");
-            let assinatura_3_final = document.getElementById("assinatura_3_final");
-            let assinatura_4_final = document.getElementById("assinatura_4_final");
-            let assinatura_5_final = document.getElementById("assinatura_5_final");
 
 
-            assinatura_1_final.innerText = assinatura_1.innerText;
-            assinatura_2_final.innerText = assinatura_2.innerText;
-            assinatura_3_final.innerText = assinatura_3.innerText;
-            assinatura_4_final.innerText = assinatura_4.innerText;
-            assinatura_5_final.innerText = assinatura_5.innerText;
+                // Encaminhamento de processo: Processo regularizado..
 
+                let input_processo_regularizado = document.getElementById("input_processo_regularizado");
 
+                if (input_processo_regularizado.checked) {
+                    console.log("Encaminhamento de processo: Processo regularizado está selecionado.");
+                    let span_processo_regularizado_checked_1 = document.getElementById("span_processo_regularizado_checked_1");
+                    let input_processo_regularizado_checked = document.getElementById("input_processo_regularizado_checked");
+                    let span_processo_regularizado_checked_2 = document.getElementById("span_processo_regularizado_checked_2");
+                    let span_processo_regularizado_checked = document.getElementById("span_processo_regularizado_checked");
+                    // let span_processo_regularizado_checked_3 = document.getElementById("span_processo_regularizado_checked_3");
 
+                    let span_processo_regularizado_checked_1_final = document.getElementById("span_processo_regularizado_checked_1_final");
+                    let input_processo_regularizado_checked_final = document.getElementById("input_processo_regularizado_checked_final");
+                    let span_processo_regularizado_checked_2_final = document.getElementById("span_processo_regularizado_checked_2_final");
+                    let span_processo_regularizado_checked_final = document.getElementById("span_processo_regularizado_checked_final");
+                    // let span_processo_regularizado_checked_3_final = document.getElementById("span_processo_regularizado_checked_3_final");
 
 
 
+                    span_processo_regularizado_checked_1_final.innerText = span_processo_regularizado_checked_1.innerText;
+                    input_processo_regularizado_checked_final.innerText = input_processo_regularizado_checked.value;
+                    span_processo_regularizado_checked_2_final.innerText = span_processo_regularizado_checked_2.innerText;
+                    span_processo_regularizado_checked_final.textContent = span_processo_regularizado_checked.value;
+                    // span_processo_regularizado_checked_3_final.innerText = span_processo_regularizado_checked_3.innerText;
+
+
+                } else {
+                    span_processo_regularizado_checked_1_final.innerText = "";
+                    input_processo_regularizado_checked_final.innerText = "";
+                    span_processo_regularizado_checked_2_final.innerText = "";
+                    span_processo_regularizado_checked_final.innerText = "";
+                    // span_processo_regularizado_checked_3_final.innerText = "";
+
+
+                }
+
+
+                // Encaminhamento de processo: Processo com defesa.
+
+                let processo_com_defesa = document.getElementById("processo_com_defesa");
+
+                if (processo_com_defesa.checked) {
+                    console.log("Encaminhamento de processo: Processo com defesa está selecionado.");
+                    let span_processo_com_defesa_checked_1 = document.getElementById("span_processo_com_defesa_checked_1");
+                    let input_processo_com_defesa_checked = document.getElementById("input_processo_com_defesa_checked");
+                    let span_processo_com_defesa_checked_2 = document.getElementById("span_processo_com_defesa_checked_2");
+
+                    let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
+                    let input_processo_com_defesa_checked_final = document.getElementById("input_processo_com_defesa_checked_final");
+                    let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
+
+
+
+                    span_processo_com_defesa_checked_1_final.innerText = span_processo_com_defesa_checked_1.innerText;
+                    input_processo_com_defesa_checked_final.innerText = input_processo_com_defesa_checked.value;
+                    span_processo_com_defesa_checked_2_final.innerText = span_processo_com_defesa_checked_2.innerText;
+
+
+                    // elemento deve aparecer em analises e considerações
+                    let area_processo_com_defesa_checked_analise = document.getElementById("area_processo_com_defesa_checked_analise");
+
+                    let area_processo_com_defesa_checked_analise_final = document.getElementById("area_processo_com_defesa_checked_analise_final");
+
+                    area_processo_com_defesa_checked_analise_final.textContent = area_processo_com_defesa_checked_analise.value;
+
+                    // elemento deve aparecer em analises e considerações
+                    let p_processo_com_defesa_checked_resolucoes_1 = document.getElementById("p_processo_com_defesa_checked_resolucoes_1");
+                    let p_processo_com_defesa_checked_resolucoes_2 = document.getElementById("p_processo_com_defesa_checked_resolucoes_2");
+
+
+                    let p_processo_com_defesa_checked_resolucoes_1_final = document.getElementById("p_processo_com_defesa_checked_resolucoes_1_final");
+                    let p_processo_com_defesa_checked_resolucoes_2_final = document.getElementById("p_processo_com_defesa_checked_resolucoes_2_final");
+
+                    p_processo_com_defesa_checked_resolucoes_1_final.innerText = p_processo_com_defesa_checked_resolucoes_1.innerText;
+                    p_processo_com_defesa_checked_resolucoes_2_final.innerText = p_processo_com_defesa_checked_resolucoes_2.innerText;
+
+
+                } else {
+
+                    span_processo_com_defesa_checked_1_final.innerText = "";
+                    input_processo_com_defesa_checked_final.innerText = "";
+                    span_processo_com_defesa_checked_2_final.innerText = "";
+                    area_processo_com_defesa_checked_analise_final.innerText = "";
+                    p_processo_com_defesa_checked_resolucoes_1_final.innerText = "";
+                    p_processo_com_defesa_checked_resolucoes_2_final.innerText = "";
+                }
+
+                // Análises e Considerações
+
+                let legend_analises_consideracoes = document.getElementById("legend_analises_consideracoes");
+                let legend_analises_consideracoes_final = document.getElementById("legend_analises_consideracoes_final");
+                legend_analises_consideracoes_final.innerText = legend_analises_consideracoes.innerText;
+
+
+                // Sem regularização e sem pagamento de multa:
+
+                let input_sem_regularizacao_sem_pagamento = document.getElementById("input_sem_regularizacao_sem_pagamento");
+
+                if (input_sem_regularizacao_sem_pagamento.checked) {
+                    console.log("Sem regularização e sem pagamento de multa: está selecionado.");
+                    let span_sem_regularizacao_sem_pagamento_checked_1 = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_1");
+                    // let input_sem_regularizacao_sem_pagamento_checked_1 = document.getElementById("input_sem_regularizacao_sem_pagamento_checked_1");
+                    // let span_sem_regularizacao_sem_pagamento_checked_2 = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_2");
+
+                    let span_sem_regularizacao_sem_pagamento_checked_1_final = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_1_final");
+                    // let input_sem_regularizacao_sem_pagamento_checked_1_final = document.getElementById("input_sem_regularizacao_sem_pagamento_checked_1_final");
+                    // let span_sem_regularizacao_sem_pagamento_checked_2_final = document.getElementById("span_sem_regularizacao_sem_pagamento_checked_2_final");
+
+
+
+                    span_sem_regularizacao_sem_pagamento_checked_1_final.innerText = span_sem_regularizacao_sem_pagamento_checked_1.innerText;
+                    // input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = input_sem_regularizacao_sem_pagamento_checked_1.value;
+                    // span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = span_sem_regularizacao_sem_pagamento_checked_2.innerText;
+
+                } else {
+                    span_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
+                    // input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
+                    // span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = "";
+
+
+                }
+
+                // Se houve somente a regularização:
+
+                let input_somente_regularizacao = document.getElementById("input_somente_regularizacao");
+
+                if (input_somente_regularizacao.checked) {
+                    console.log("Se houve somente a regularização: está selecionado.");
+                    let span_somente_regularizacao_checked_1 = document.getElementById("span_somente_regularizacao_checked_1");
+                    let input_somente_regularizacao_checked_1 = document.getElementById("input_somente_regularizacao_checked_1");
+                    let span_somente_regularizacao_checked_2 = document.getElementById("span_somente_regularizacao_checked_2");
+                    // let input_somente_regularizacao_checked_2 = document.getElementById("input_somente_regularizacao_checked_2");
+                    // let span_somente_regularizacao_checked_3 = document.getElementById("span_somente_regularizacao_checked_3");
+
+                    let span_somente_regularizacao_checked_1_final = document.getElementById("span_somente_regularizacao_checked_1_final");
+                    let input_somente_regularizacao_checked_1_final = document.getElementById("input_somente_regularizacao_checked_1_final");
+                    let span_somente_regularizacao_checked_2_final = document.getElementById("span_somente_regularizacao_checked_2_final");
+                    // let input_somente_regularizacao_checked_2_final = document.getElementById("input_somente_regularizacao_checked_2_final");
+                    // let span_somente_regularizacao_checked_3_final = document.getElementById("span_somente_regularizacao_checked_3_final");
+
+                    span_somente_regularizacao_checked_1_final.innerText = span_somente_regularizacao_checked_1.innerText;
+                    input_somente_regularizacao_checked_1_final.innerText = input_somente_regularizacao_checked_1.value;
+                    span_somente_regularizacao_checked_2_final.innerText = span_somente_regularizacao_checked_2.innerText;
+                    // input_somente_regularizacao_checked_2_final.innerText = input_somente_regularizacao_checked_2.value;
+                    // span_somente_regularizacao_checked_3_final.innerText = span_somente_regularizacao_checked_3.innerText;
+
+                    // elemento deve aparecer em analises e considerações
+                    let p_somente_regularizacao_checked_resolucoes_1 = document.getElementById("p_somente_regularizacao_checked_resolucoes_1");
+                    let p_somente_regularizacao_checked_resolucoes_2 = document.getElementById("p_somente_regularizacao_checked_resolucoes_2");
+
+
+                    let p_somente_regularizacao_checked_resolucoes_1_final = document.getElementById("p_somente_regularizacao_checked_resolucoes_1_final");
+                    let p_somente_regularizacao_checked_resolucoes_2_final = document.getElementById("p_somente_regularizacao_checked_resolucoes_2_final");
+
+                    p_somente_regularizacao_checked_resolucoes_1_final.innerText = p_somente_regularizacao_checked_resolucoes_1.innerText;
+                    p_somente_regularizacao_checked_resolucoes_2_final.innerText = p_somente_regularizacao_checked_resolucoes_2.innerText;
+
+                } else {
+                    span_somente_regularizacao_checked_1_final.innerText = "";
+                    input_somente_regularizacao_checked_1_final.innerText = "";
+                    span_somente_regularizacao_checked_2_final.innerText = "";
+                    // input_somente_regularizacao_checked_2_final.innerText = "";
+                    // span_somente_regularizacao_checked_3_final.innerText = "";
+                    p_somente_regularizacao_checked_resolucoes_1_final.innerText = "";
+                    p_somente_regularizacao_checked_resolucoes_2_final.innerText = "";
+                }
 
 
 
 
-            fieldset_relato_final.style.display = 'block';
+                // Se houve somente o pagamento da multa:
 
+                let input_somente_pagamento_multa = document.getElementById("input_somente_pagamento_multa");
+
+                if (input_somente_pagamento_multa.checked) {
+                    console.log("Se houve somente o pagamento da multa: está selecionado.");
+                    let span_somente_pagamento_multa_checked_1 = document.getElementById("span_somente_pagamento_multa_checked_1");
+                    let input_somente_pagamento_multa_checked_1 = document.getElementById("input_somente_pagamento_multa_checked_1");
+                    let span_somente_pagamento_multa_checked_2 = document.getElementById("span_somente_pagamento_multa_checked_2");
+                    // let input_somente_pagamento_multa_checked_2 = document.getElementById("input_somente_pagamento_multa_checked_2");
+                    // let span_somente_pagamento_multa_checked_3 = document.getElementById("span_somente_pagamento_multa_checked_3");
+
+                    let span_somente_pagamento_multa_checked_1_final = document.getElementById("span_somente_pagamento_multa_checked_1_final");
+                    let input_somente_pagamento_multa_checked_1_final = document.getElementById("input_somente_pagamento_multa_checked_1_final");
+                    let span_somente_pagamento_multa_checked_2_final = document.getElementById("span_somente_pagamento_multa_checked_2_final");
+                    // let input_somente_pagamento_multa_checked_2_final = document.getElementById("input_somente_pagamento_multa_checked_2_final");
+                    // let span_somente_pagamento_multa_checked_3_final = document.getElementById("span_somente_pagamento_multa_checked_3_final");
+
+                    span_somente_pagamento_multa_checked_1_final.innerText = span_somente_pagamento_multa_checked_1.innerText;
+                    input_somente_pagamento_multa_checked_1_final.innerText = input_somente_pagamento_multa_checked_1.value;
+                    span_somente_pagamento_multa_checked_2_final.innerText = span_somente_pagamento_multa_checked_2.innerText;
+                    // input_somente_pagamento_multa_checked_2_final.innerText = input_somente_pagamento_multa_checked_2.value;
+                    // span_somente_pagamento_multa_checked_3_final.innerText = span_somente_pagamento_multa_checked_3.innerText;
+
+                    // elemento deve aparecer em analises e considerações
+                    let p_somente_pagamento_multa_checked_resolucoes_1 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1");
+                    let p_somente_pagamento_multa_checked_resolucoes_2 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2");
+                    let p_somente_pagamento_multa_checked_resolucoes_3 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3");
+                    let p_somente_pagamento_multa_checked_resolucoes_4 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_4");
+
+
+                    let p_somente_pagamento_multa_checked_resolucoes_1_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_2_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_3_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_4_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_4_final");
+
+
+                    p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = p_somente_pagamento_multa_checked_resolucoes_1.innerText;
+                    p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = p_somente_pagamento_multa_checked_resolucoes_2.innerText;
+                    p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = p_somente_pagamento_multa_checked_resolucoes_3.innerText;
+                    p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = p_somente_pagamento_multa_checked_resolucoes_4.innerText;
+
+
+                    // elemento deve aparecer no voto
+
+                    let input_alteracao_multa_sim = document.getElementById("input_alteracao_multa_sim");
+                    input_alteracao_multa_sim.checked = false;
+                    let input_alteracao_multa_nao = document.getElementById("input_alteracao_multa_nao");
+                    input_alteracao_multa_nao.checked = false;
+
+
+
+                    let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
+
+
+                    let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
+
+
+                    span_multa_paga_voto_final.innerText = span_multa_paga_voto.innerText;
+
+
+
+
+                } else {
+
+                    span_somente_pagamento_multa_checked_1_final.innerText = "";
+                    input_somente_pagamento_multa_checked_1_final.innerText = "";
+                    span_somente_pagamento_multa_checked_2_final.innerText = "";
+                    // input_somente_pagamento_multa_checked_2_final.innerText = "";
+                    // span_somente_pagamento_multa_checked_3_final.innerText = "";
+
+                    p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = "";
+
+                    span_multa_paga_voto_final.innerText = "";
+
+                }
+
+                // Se houve alteração da multa
+
+
+                if (input_alteracao_multa_sim.checked) {
+                    let span_corresp_alteracao_multa_sim_1 = document.getElementById("span_corresp_alteracao_multa_sim_1");
+                    let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+
+                    let span_corresp_alteracao_multa_sim_1_final = document.getElementById("span_corresp_alteracao_multa_sim_1_final");
+                    let span_corresp_alteracao_multa_sim_2_final = document.getElementById("span_corresp_alteracao_multa_sim_2_final");
+
+                    span_corresp_alteracao_multa_sim_1_final.innerText = span_corresp_alteracao_multa_sim_1.innerText;
+                    span_corresp_alteracao_multa_sim_2_final.innerText = span_corresp_alteracao_multa_sim_2.innerText;
+
+                } else {
+
+                    span_corresp_alteracao_multa_sim_1_final.innerText = "";
+                    span_corresp_alteracao_multa_sim_2_final.innerText = "";
+
+                }
+
+
+                if (input_alteracao_multa_nao.checked) {
+                    let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
+
+                    let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
+
+                    span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
+
+
+                } else {
+
+                    span_alteracao_multa_nao_final.innerText = "";
+                }
+
+
+                let div_resolucoes_fixa = document.getElementById("div_resolucoes_fixa");
+
+                let div_resolucoes_fixa_final = document.getElementById("div_resolucoes_fixa_final");
+                div_resolucoes_fixa_final.innerHTML = ""
+
+                div_resolucoes_fixa_final.appendChild(div_resolucoes_fixa.cloneNode(true))
+
+
+                // Calculadora de dosimetria
+
+
+                let div_calculadora = document.getElementById('calculadora');
+
+                if (div_calculadora.classList.contains('show')) {
+
+
+
+                    console.log("expandido");
+
+                    let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
+                    let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
+                    let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
+                    let dosimetria_resolucao_4 = document.getElementById("dosimetria_resolucao_4");
+
+                    let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
+                    let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
+                    let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                    let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
+
+                    dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
+                    dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
+                    dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
+                    dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+
+                    // tabela,
+
+                    let tabela_resumo = document.getElementById("tabela_resumo");
+                    let tabela_resumo_final = document.getElementById("tabela_resumo_final");
+                    tabela_resumo_final.innerHTML = tabela_resumo.outerHTML;
+
+
+
+                    let span_multa_superior_ou_inferior = document.getElementById("span_multa_superior_ou_inferior");
+                    let span_multa_superior_ou_inferior_final = document.getElementById("span_multa_superior_ou_inferior_final");
+                    span_multa_superior_ou_inferior_final.innerText = span_multa_superior_ou_inferior.innerText;
+
+
+
+
+
+
+
+                } else {
+
+                    console.log("não expandido");
+
+                    dosimetria_resolucao_1_final.innerText = "";
+                    dosimetria_resolucao_2_final.innerText = "";
+                    dosimetria_resolucao_3_final.innerText = "";
+                    dosimetria_resolucao_4_final.innerText = "";
+
+                    tabela_resumo_final.innerHTML = "";
+
+
+
+
+                    span_multa_superior_ou_inferior_final.innerText = "";
+
+
+
+                }
+
+
+                // VOTO
+
+                let legend_voto = document.getElementById("legend_voto");
+                let p_voto_final = document.getElementById("p_voto_final");
+                p_voto_final.innerText = legend_voto.innerText;
+
+
+
+
+                let area_razoes_decisao = document.getElementById("area_razoes_decisao");
+                let area_razoes_decisao_final = document.getElementById("area_razoes_decisao_final");
+                area_razoes_decisao_final.innerText = area_razoes_decisao.value;
+
+
+
+
+                let assinatura_1 = document.getElementById("assinatura_1");
+                let assinatura_2 = document.getElementById("assinatura_2");
+                let assinatura_3 = document.getElementById("assinatura_3");
+                let assinatura_4 = document.getElementById("assinatura_4");
+                let assinatura_5 = document.getElementById("assinatura_5");
+
+                let assinatura_1_final = document.getElementById("assinatura_1_final");
+                let assinatura_2_final = document.getElementById("assinatura_2_final");
+                let assinatura_3_final = document.getElementById("assinatura_3_final");
+                let assinatura_4_final = document.getElementById("assinatura_4_final");
+                let assinatura_5_final = document.getElementById("assinatura_5_final");
+
+
+                assinatura_1_final.innerText = assinatura_1.innerText;
+                assinatura_2_final.innerText = assinatura_2.innerText;
+                assinatura_3_final.innerText = assinatura_3.innerText;
+                assinatura_4_final.innerText = assinatura_4.innerText;
+                assinatura_5_final.innerText = assinatura_5.innerText;
+
+
+
+
+
+
+
+
+
+
+                fieldset_relato_final.style.display = 'block';
+            }
         }
 
 
