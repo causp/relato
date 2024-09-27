@@ -3587,26 +3587,52 @@
             // Seleciona o conteúdo da div
             const conteudoRelato = document.getElementById('conteudo_relato_final');
 
+            // Cria cópias dos elementos para manipulação
+            const tabelaCopia = tabela.cloneNode(true);
+            const conteudoRelatoCopia = conteudoRelato.cloneNode(true);
+
+            // Função para remover elementos vazios
+            function removerElementosVazios(parent) {
+                const filhos = Array.from(parent.childNodes); // Converte para array para poder usar forEach
+
+                filhos.forEach(child => {
+                    // Ignora elementos que são tabelas ou estão dentro de tabelas
+                    if (child.nodeType === Node.ELEMENT_NODE) {
+                        const isTable = child.tagName.toLowerCase() === 'table';
+                        const isInsideTable = parent.closest('table') !== null;
+
+                        if (!isTable && !isInsideTable && !child.textContent.trim()) {
+                            parent.removeChild(child);
+                        } else if (!isTable) {
+                            // Chama a função recursivamente para verificar filhos
+                            removerElementosVazios(child);
+                        }
+                    }
+                });
+            }
+
+            // Remove elementos vazios do conteúdo da cópia
+            removerElementosVazios(conteudoRelatoCopia);
+
+            // Cria um container temporário para as cópias
+            const tempContainer = document.createElement('div');
+            tempContainer.style.position = 'absolute';
+            tempContainer.style.left = '-9999px';
+
+            // Adiciona as cópias ao container temporário
+            tempContainer.appendChild(tabelaCopia);
+            tempContainer.appendChild(conteudoRelatoCopia);
+            document.body.appendChild(tempContainer);
+
             // Cria um intervalo para a seleção
             const range = document.createRange();
-            range.selectNode(tabela);
+            // Seleciona o conteúdo combinado da tabela e da cópia da div
+            range.selectNodeContents(tempContainer);
 
-            // Cria um intervalo separado para o conteúdo da div
-            const rangeConteudo = document.createRange();
-            rangeConteudo.selectNodeContents(conteudoRelato);
-
-            // Adiciona o conteúdo da div ao intervalo
-            range.setEndAfter(conteudoRelato.lastChild);
-            rangeConteudo.setStartBefore(conteudoRelato.firstChild);
-
-            // Mescla os intervalos
-            rangeConteudo.setStart(range.startContainer, range.startOffset);
-            rangeConteudo.setEnd(range.endContainer, range.endOffset);
-
-            // Seleciona o conteúdo combinado da tabela e da div
+            // Seleciona o conteúdo combinado da tabela e da cópia da div
             const selection = window.getSelection();
             selection.removeAllRanges();
-            selection.addRange(rangeConteudo);
+            selection.addRange(range);
 
             try {
                 // Executa o comando de cópia
@@ -3618,7 +3644,12 @@
 
             // Limpa a seleção
             selection.removeAllRanges();
+
+            // Remove o container temporário do DOM
+            document.body.removeChild(tempContainer);
         }
+
+
 
 
 
