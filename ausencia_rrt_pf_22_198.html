@@ -116,6 +116,44 @@
                 display: none;
             }
         }
+        
+        /* Estilos para o loader */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Criando um spinner com CSS */
+        .spinner {
+            border: 10px solid #f3f3f3; /* Cor de fundo do spinner */
+            border-top: 10px solid #3498db; /* Cor do spinner */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Definindo a animação */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Estilização do texto */
+        #loader div {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px; /* Espaço entre o spinner e o texto */
+        }
 
     </style>
 
@@ -123,6 +161,12 @@
 
 <body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif;">
 
+    <!-- Div para o loader com o spinner CSS -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <div>carregando...</div>
+    </div>
+        
     <div class="sidebar">
 
         <a href="#navbar" class="btn btn-info" title="">Histórico</a>  <!-- nav -->
@@ -3762,10 +3806,56 @@
         // });
 
         $(document).ready(function () {
-            // Selecione todos os elementos de entrada com a classe 'sua-classe-aqui' e aplique a máscara a cada um
-            $('.dts').each(function () {
-                $(this).mask('00/00/0000');
+            // Aplica a máscara para o formato de data DD/MM/AAAA
+            $('.dts').mask('00/00/0000');
+
+            // Validação das datas ao clicar fora do input
+            $('.dts').on('blur', function () {
+                const inputData = $(this).val();
+                const tipo = $(this).attr('placeholder'); // Usa o placeholder como tipo
+
+                if (inputData && !validarDataFormatada(inputData, tipo)) {
+                    $(this).val(''); // Limpa o input se a data for inválida
+                    alert("Data inválida, digite uma data válida.");
+                }
             });
+
+            function validarDataFormatada(data, tipo) {
+                // Permite que o campo fique vazio
+                if (!data) {
+                    return true; // Retorna verdadeiro se o campo estiver vazio
+                }
+
+                // Remove a máscara
+                const inputData = data.replace(/\//g, '');
+
+                // Verifica se o input contém exatamente 8 dígitos
+                if (inputData.length !== 8 || isNaN(inputData)) {
+                    return false; // Data inválida
+                }
+
+                // Extrai o dia, mês e ano do input
+                const dia = parseInt(inputData.slice(0, 2));
+                const mes = parseInt(inputData.slice(2, 4));
+                const ano = parseInt(inputData.slice(4, 8));
+
+                // Verifica se o mês é válido
+                if (mes < 1 || mes > 12) {
+                    return false; // Data inválida
+                }
+
+                // Verifica se o dia é válido para o mês e ano
+                const diasNoMes = [31, (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                if (dia < 1 || dia > diasNoMes[mes - 1]) {
+                    return false; // Data inválida
+                }
+
+                // Tenta criar um objeto Date
+                const dataObj = new Date(ano, mes - 1, dia); // O mês no JavaScript é 0-indexado
+
+                // Verifica se a data é válida
+                return (dataObj.getFullYear() === ano && dataObj.getMonth() === mes - 1 && dataObj.getDate() === dia);
+            }
         });
 
 
@@ -4395,8 +4485,13 @@
             
         });
 
-        
-
+        // Simula um atraso de 3 segundos para testar o loader
+        window.onload = function() {
+            setTimeout(function() {
+                // Remove o loader após o atraso
+                document.getElementById('loader').style.display = 'none';
+            }, 600); 
+        };
 
     </script>
 

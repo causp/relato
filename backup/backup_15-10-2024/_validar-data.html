@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <h2>Validação de Data</h2>
+
+    <div class="form-group">
+        <label for="input_dt_relatorio_fisc">Data do Relatório Fiscal:</label>
+        <input type="text" class="dts form-control form-control-sm w-auto d-inline" id="input_dt_relatorio_fisc" placeholder="DD/MM/AAAA">
+    </div>
+    <div class="form-group">
+        <label for="input_dt_notificacao_preventiva">Data da Notificação Preventiva:</label>
+        <input type="text" class="dts form-control form-control-sm w-auto d-inline" id="input_dt_notificacao_preventiva" placeholder="DD/MM/AAAA">
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // Aplica a máscara para o formato de data DD/MM/AAAA
+            $('.dts').mask('00/00/0000');
+
+            // Validação das datas ao clicar fora do input
+            $('.dts').on('blur', function () {
+                const inputData = $(this).val();
+                const tipo = $(this).attr('placeholder'); // Usa o placeholder como tipo
+
+                if (!validarDataFormatada(inputData, tipo)) {
+                    $(this).val(''); // Limpa o input se a data for inválida
+                    alert("Data inválida, digite uma data válida.")
+                }
+            });
+
+            // Função de validação de data
+            window.validarData = function() {
+                // Obtém os valores dos inputs
+                const dataRelatorio = $('#input_dt_relatorio_fisc').val();
+                const dataNotificacao = $('#input_dt_notificacao_preventiva').val();
+
+                // Valida ambas as datas
+                const resultadoRelatorio = validarDataFormatada(dataRelatorio, 'Data do Relatório Fiscal');
+                const resultadoNotificacao = validarDataFormatada(dataNotificacao, 'Data da Notificação Preventiva');
+
+                // Atualiza o resultado na página
+                document.getElementById('resultado').innerHTML = `${resultadoRelatorio}<br>${resultadoNotificacao}`;
+            };
+
+            function validarDataFormatada(data, tipo) {
+                // Remove a máscara
+                const inputData = data.replace(/\//g, '');
+
+                // Verifica se o input contém exatamente 8 dígitos
+                if (inputData.length !== 8 || isNaN(inputData)) {
+                    return false; // Data inválida
+                }
+
+                // Extrai o dia, mês e ano do input
+                const dia = parseInt(inputData.slice(0, 2));
+                const mes = parseInt(inputData.slice(2, 4));
+                const ano = parseInt(inputData.slice(4, 8));
+
+                // Verifica se o mês é válido
+                if (mes < 1 || mes > 12) {
+                    return false; // Data inválida
+                }
+
+                // Verifica se o dia é válido para o mês e ano
+                const diasNoMes = [31, (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                if (dia < 1 || dia > diasNoMes[mes - 1]) {
+                    return false; // Data inválida
+                }
+
+                // Tenta criar um objeto Date
+                const dataObj = new Date(ano, mes - 1, dia); // O mês no JavaScript é 0-indexado
+
+                // Verifica se a data é válida
+                return (dataObj.getFullYear() === ano && dataObj.getMonth() === mes - 1 && dataObj.getDate() === dia);
+            }
+        });
+    </script>
+</body>
+</html>

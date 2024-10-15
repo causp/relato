@@ -76,7 +76,6 @@
             justify-content: center; /* Centraliza os botões verticalmente */
             /* margin-right: 5px; */
         }
-        
         .sidebar .btn {
             width: 85%;
             text-align: center;
@@ -116,44 +115,6 @@
                 display: none;
             }
         }
-        
-        /* Estilos para o loader */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        /* Criando um spinner com CSS */
-        .spinner {
-            border: 10px solid #f3f3f3; /* Cor de fundo do spinner */
-            border-top: 10px solid #3498db; /* Cor do spinner */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s linear infinite;
-        }
-
-        /* Definindo a animação */
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Estilização do texto */
-        #loader div {
-            font-size: 18px;
-            color: #333;
-            margin-top: 20px; /* Espaço entre o spinner e o texto */
-        }
 
     </style>
 
@@ -161,12 +122,6 @@
 
 <body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif;">
 
-    <!-- Div para o loader com o spinner CSS -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <div>carregando...</div>
-    </div>
-        
     <div class="sidebar">
 
         <a href="#navbar" class="btn btn-info" title="">Histórico</a>  <!-- nav -->
@@ -285,7 +240,7 @@
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Ausência de registro no CAU (PJ)." style="width: 475px;" disabled></td>
+                            placeholder="Exercício ilegal da profissão (PF)." style="width: 475px;" disabled></td>
                 </tr>
 
                 <tr>
@@ -381,7 +336,7 @@
 
             <!-- <label class="my-3" for="" id="lab_irregularidade"><strong>Irregularidade:</strong></label> -->
             <textarea class="form-control my-1" id="area_irregularidade" cols="30" rows="5"
-                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a empresa em questão possui atividade no campo da arquitetura e urbanismo sem ter o devido registro no Conselho.</textarea>
+                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a parte interessada realizou atividade de arquitetura e urbanismo sem ter o devido acompanhamento de responsável técnico habilitado.</textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: a empresa XXXXXXXX possui atividades no campo da
                 arquitetura e urbanismo sem ter o devido registro no Conselho.)</p> -->
@@ -909,7 +864,7 @@
                     urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
                 </p>
                 <p id="p_resolucoes_fixo_5" style="text-align: justify">
-                    Considerando o art. 35, inciso X, da Resolução 22/2012:
+                    Considerando o art. 35, inciso VII, da Resolução 22/2012:
                 </p>
                 <p id="p_resolucoes_fixo_6" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                     “Art. 35. As infrações ao exercício da profissão de Arquitetura e Urbanismo nos termos definidos
@@ -921,29 +876,17 @@
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_8"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    X – Pessoa jurídica sem registro no CAU exercendo atividade privativa de arquitetos e urbanistas;
+                    VII – Exercício ilegal de atividade fiscalizada pelo CAU por pessoa física não habilitada (leigo);
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_9"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Infrator: pessoa jurídica;
+                    Infrator: pessoa física;
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_10"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Valor da Multa: mínimo de 5 (cinco) vezes e máximo de 10 (dez) vezes o valor vigente da anuidade”
+                    Valor da Multa: mínimo de 2 (duas) vezes e máximo de 5 (cinco) vezes o valor vigente da anuidade;”
                 </p>
 
-
-                <p id="p_resolucoes_fixo_11" style="text-align: justify">
-                    Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
-                </p>
-
-                <p class="espacamento_simples" id="p_resolucoes_fixo_12"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas
-                    encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das
-                    diversas profissões, em razão da atividade básica ou em relação àquela pela qual prestem serviços a
-                    terceiros.”
-                </p>
 
             </div>
 
@@ -1116,7 +1059,7 @@
                                                     <td class="text-center align-middle">13</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input align-middle"
-                                                            id="gravidade-item2" data-text="">
+                                                            id="gravidade-item2" data-text="" disabled>
                                                     </td>
                                                 </tr>
 
@@ -1148,7 +1091,7 @@
                                                     <td class="text-center align-middle">10</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item5" data-text=""disabled>
+                                                            id="gravidade-item5" data-text="">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1555,11 +1498,7 @@
                                             </p>
 
                                             <p id="dosimetria_resolucao_3">
-                                                A infração do inciso X do art. 35 da Resolução 22 equivale ao inciso II
-                                                do art. 39 da Resolução 198: “exercer, promover-se, divulgar que exerce
-                                                ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e
-                                                Urbanismo, sem registro no CAU, configurando exploração econômica da
-                                                atividade”.
+                                                A infração do inciso VII do art. 35 da Resolução 22, para o presente caso, equivale ao inciso V do art. 39 da Resolução 198: “realizar atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem responsável técnico pelo desempenho destas atividades, não configurando exploração econômica da atividade”.
                                             </p>
 
                                             <p id="dosimetria_resolucao_4">
@@ -1721,13 +1660,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-         
+          
+                
 
             </div>
 
@@ -1756,12 +1696,12 @@
                 <div class="card p-2" id="div_alteracao_multa_sim" style="display: none;">
 
                     <span id="span_corresp_alteracao_multa_sim">
-
+                        
                         <span id="span_corresp_alteracao_multa_sim_1" contenteditable="true">
-                            
+                                
                             <span contenteditable="false"></span>
 
-                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso VII do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
 
                         </span>
 
@@ -1774,19 +1714,21 @@
 
                     </span>
 
-                   
+                
 
                 </div>
 
                 <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;">
 
                     <span id="span_alteracao_multa_nao" contenteditable="true">
-
+                        
                         <span contenteditable="false"></span>
-                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
+                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
 
-                   
+                
+
+
 
                 </div>
 
@@ -2079,11 +2021,9 @@
                     <p id="p_resolucoes_fixo_5_final" ></p>
                     <p id="p_resolucoes_fixo_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_8_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_9_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p id="p_resolucoes_fixo_8_final" ></p>
+                    <p id="p_resolucoes_fixo_9_final" ></p>
                     <p id="p_resolucoes_fixo_10_final" ></p>
-                    <p id="p_resolucoes_fixo_11_final" ></p>
-                    <p id="p_resolucoes_fixo_12_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
 
                     <!-- condicionado -->    
@@ -2594,11 +2534,11 @@
                 .filter(checkbox => checkbox.checked).length > 1;
 
             if (razoesSemRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular e com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, estando ela ainda irregular e com a multa não paga.";
             } else if (razoesSomenteRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
             } else if (razoesSomentePagamentoMulta.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular, mas com a multa paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, estando ela ainda irregular, mas com a multa paga.";
             } else if (maisDeUmSelecionado) {
                 areaRazoesDecisao.value = "-----------------------------------------------------------------------"; // Verifica se mais de um checkbox foi selecionado simultaneamente
             } else {
@@ -2611,33 +2551,6 @@
         razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
-
-        // não permite que voto em branco -------------------------------------------------------
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const validacao_preenchimento_span_multa_paga_voto = document.getElementById('span_multa_paga_voto');
-
-        //     if (validacao_preenchimento_span_multa_paga_voto) {
-        //         // Configura o MutationObserver para monitorar alterações no texto do span
-        //         const observer = new MutationObserver(function (mutationsList, observer) {
-        //             mutationsList.forEach(function (mutation) {
-        //                 if (mutation.type === 'childList') {
-        //                     // Verifica se o conteúdo do span está vazio
-        //                     if (validacao_preenchimento_span_multa_paga_voto.innerText === "") {
-        //                         validacao_preenchimento_span_multa_paga_voto.innerText = "-";
-        //                     }
-        //                 }
-        //             });
-        //         });
-
-        //         // Inicia o observer, observando mudanças nos filhos do span (o que inclui o texto)
-        //         observer.observe(validacao_preenchimento_span_multa_paga_voto, { childList: true });
-        //     } else {
-        //         console.error("Elemento span_multa_paga_voto não encontrado.");
-        //     }
-        // });
-
-        
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -2670,12 +2583,12 @@
 
             verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
             verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
-            
+
             // Se houver mensagens, mostra um alerta com todas
             if (mensagens.length > 0) {
                 alert(`• Existem campos obrigatórios não preenchidos:\n\n${mensagens.join("\n")}`);
             }
-            
+
             function verificarCampoInput(campoId, mensagem, mensagens) {
                 if (document.querySelector(campoId).value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
@@ -2704,7 +2617,6 @@
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
-            
 
             function verificarCheckboxNotificacaoPreventiva(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
@@ -2851,7 +2763,7 @@
             }
 
             // ------------------- fim da validação -----------------------------------------------
-     
+
 
             if (mensagens.length === 0) {
 
@@ -2877,7 +2789,7 @@
 
                 td_num_processo_final.innerText = input_num_processo.value;
                 td_interessado_final.innerText = input_interessado.value;
-                td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
+                td_assunto_final.innerText = "Exercício ilegal da profissão (PF).";
                 td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
 
 
@@ -3514,8 +3426,7 @@
                 let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
                 let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
                 let p_resolucoes_fixo_10 = document.getElementById("p_resolucoes_fixo_10");
-                let p_resolucoes_fixo_11 = document.getElementById("p_resolucoes_fixo_11");
-                let p_resolucoes_fixo_12 = document.getElementById("p_resolucoes_fixo_12");
+
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
                 let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
@@ -3527,8 +3438,7 @@
                 let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
                 let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
                 let p_resolucoes_fixo_10_final = document.getElementById("p_resolucoes_fixo_10_final");
-                let p_resolucoes_fixo_11_final = document.getElementById("p_resolucoes_fixo_11_final");
-                let p_resolucoes_fixo_12_final = document.getElementById("p_resolucoes_fixo_12_final");
+
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
                 p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
@@ -3540,8 +3450,8 @@
                 p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
                 p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
                 p_resolucoes_fixo_10_final.innerText = p_resolucoes_fixo_10.innerText;
-                p_resolucoes_fixo_11_final.innerText = p_resolucoes_fixo_11.innerText;
-                p_resolucoes_fixo_12_final.innerText = p_resolucoes_fixo_12.innerText;
+
+
 
 
 
@@ -3816,56 +3726,10 @@
         // });
 
         $(document).ready(function () {
-            // Aplica a máscara para o formato de data DD/MM/AAAA
-            $('.dts').mask('00/00/0000');
-
-            // Validação das datas ao clicar fora do input
-            $('.dts').on('blur', function () {
-                const inputData = $(this).val();
-                const tipo = $(this).attr('placeholder'); // Usa o placeholder como tipo
-
-                if (inputData && !validarDataFormatada(inputData, tipo)) {
-                    $(this).val(''); // Limpa o input se a data for inválida
-                    alert("Data inválida, digite uma data válida.");
-                }
+            // Selecione todos os elementos de entrada com a classe 'sua-classe-aqui' e aplique a máscara a cada um
+            $('.dts').each(function () {
+                $(this).mask('00/00/0000');
             });
-
-            function validarDataFormatada(data, tipo) {
-                // Permite que o campo fique vazio
-                if (!data) {
-                    return true; // Retorna verdadeiro se o campo estiver vazio
-                }
-
-                // Remove a máscara
-                const inputData = data.replace(/\//g, '');
-
-                // Verifica se o input contém exatamente 8 dígitos
-                if (inputData.length !== 8 || isNaN(inputData)) {
-                    return false; // Data inválida
-                }
-
-                // Extrai o dia, mês e ano do input
-                const dia = parseInt(inputData.slice(0, 2));
-                const mes = parseInt(inputData.slice(2, 4));
-                const ano = parseInt(inputData.slice(4, 8));
-
-                // Verifica se o mês é válido
-                if (mes < 1 || mes > 12) {
-                    return false; // Data inválida
-                }
-
-                // Verifica se o dia é válido para o mês e ano
-                const diasNoMes = [31, (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-                if (dia < 1 || dia > diasNoMes[mes - 1]) {
-                    return false; // Data inválida
-                }
-
-                // Tenta criar um objeto Date
-                const dataObj = new Date(ano, mes - 1, dia); // O mês no JavaScript é 0-indexado
-
-                // Verifica se a data é válida
-                return (dataObj.getFullYear() === ano && dataObj.getMonth() === mes - 1 && dataObj.getDate() === dia);
-            }
         });
 
 
@@ -4011,13 +3875,13 @@
         // selecionar o checkbox referente a infração logo no início
         // Adiciona um event listener ao botão com ID 'btn_calculadora'
         document.getElementById('btn_calculadora').addEventListener('click', function() {
-            let checkbox = document.getElementById("gravidade-item2");
+            let checkbox = document.getElementById("gravidade-item5");
 
             if (!checkbox.checked) {
                 checkbox.click(); // Simula o clique no checkbox
-                console.log("Checkbox gravidade-item2 clicado");
+                console.log("Checkbox gravidade-item5 clicado");
             } else {
-                console.log("Checkbox gravidade-item2 não encontrado");
+                console.log("Checkbox gravidade-item5 não encontrado");
             }
         });
 
@@ -4495,13 +4359,8 @@
             
         });
 
-        // Simula um atraso de 3 segundos para testar o loader
-        window.onload = function() {
-            setTimeout(function() {
-                // Remove o loader após o atraso
-                document.getElementById('loader').style.display = 'none';
-            }, 600); 
-        };
+        
+
 
     </script>
 
