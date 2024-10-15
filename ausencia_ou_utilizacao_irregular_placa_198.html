@@ -110,9 +110,36 @@
 
         }
 
+        @media (max-width: 993px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 550px; /* Largura para telas menores que 981px */
+            }
+        }
+
+        @media (max-width: 767px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 480px; /* Largura para telas menores que 570px */
+            }
+        }
+
         @media (max-width: 665px) {
             .sidebar {
                 display: none;
+            }
+        }
+
+        @media (min-width: 994px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 582px; /* Largura para telas menores que 570px */
             }
         }
 
@@ -270,25 +297,25 @@
                 <tr>
                     <td>PROCESSO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_num_processo"
-                            placeholder="Nº do processo-Índice." style="width: 535px;"></td>
+                            placeholder="Nº do processo-Índice." style="max-width: 535px;"></td>
                 </tr>
 
                 <tr>
                     <td> INTERESSADO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_interessado"
-                            placeholder="Nome completo do interessado." style="width: 535px;"></td>
+                            placeholder="Nome completo do interessado." style="max-width: 535px;"></td>
                 </tr>
 
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Análise e parecer sobre processo de fiscalização – Ausência ou utilização irregular de placa." style="width: 535px;" disabled></td>
+                            placeholder="Análise e parecer sobre processo de fiscalização – Ausência ou utilização irregular de placa." style="max-width: 535px;" disabled></td>
                 </tr>
 
                 <tr>
                     <td>RELATOR:</td>
                     <td>
-                        <select class="form-control form-control-sm" id="input_relator" style="width: 535px;" onchange="inserirAssinaturas()">
+                        <select class="form-control form-control-sm" id="input_relator" style="max-width: 535px;" onchange="inserirAssinaturas()">
                             <option value="M">Selecione o nome do Conselheiro/a relator/a.</option>
                             <option value="M">---------------------- Conselheiros ----------------------</option>
                             <option value="F">Renata Ballone</option>
