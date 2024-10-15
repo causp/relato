@@ -168,6 +168,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="exercicio_ilegal_profissao_pj_198.html">Exercício ilegal da profissão PJ <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
                             <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_198.html">Exercício ilegal da profissão PF <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ausencia_responsavel_tecnico_para_ativiade_198.html">Ausência de responsável técnico para a atividade <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <a class="dropdown-item" href="ausencia_rrt_pf_198.html">Ausência de RRT PF<span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <a class="dropdown-item" href="ausencia_ou_utilizacao_irregular_placa_198.html">Ausência ou utilização irregular de placa <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
                             <!-- <a class="dropdown-item" href="#">Exercício ilegal da profissão PF  (Resolução nº 198)</a> -->
                             <!-- outros itens comentados -->
                         </div>
@@ -642,7 +646,15 @@
 
                 <label class="my-3" id="lab_encaminhamento" for=""><strong>Encaminhamento de processo:</strong></label>
 
-                <div class="" id="div_processo_revelia">
+                <!-- envio ao ministério público -->
+                <div class="" id="div_envio_ao_mp">
+
+                    <input type="checkbox" id="input_envio_ao_mp">
+                    <label id="lab_envio_ao_mp" for="input_envio_ao_mp">Envio ao Ministério Público.</label>
+
+                </div>  
+
+                <div class="mt-2" id="div_processo_revelia">
 
 
 
@@ -752,7 +764,7 @@
                 <label id="lab_processo_com_defesa_checked_analise" for=""><strong>Processo com defesa.</strong></label>
                 <textarea class="form-control mt-1 mb-3" id="area_processo_com_defesa_checked_analise" cols="30"
                     rows="5" style="width: 100%; padding: 5px;"
-                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível.">Após análise, a defesa não foi acolhida.</textarea>
+                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível."></textarea>
 
             </div>
 
@@ -870,6 +882,44 @@
                     Infrator: pessoa física (leigo ou graduado em Arquitetura e Urbanismo);”
                 </p>
     
+
+            </div>
+
+            <div id="div_legislacao_envio_ao_mp">
+
+
+                <div class="" style="display: none;" id="div_envio_ao_mp_checked_resolucoes">
+
+                    <label class="my-3" id="lab_legislacao_envio_ao_mp"
+                        ><strong>Houve necessidade de envio ao Ministério Público:</strong>
+                    </label>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_1" style="text-align: justify">
+                        Considerando o art. 47 da Lei nº 3.688/1941 (Lei das Contravenções Penais):
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_2"
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        “Art. 47. Exercer profissão ou atividade econômica ou anunciar que a exerce, sem preencher as condições a que por lei está subordinado o seu exercício”</p>
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_3" style="text-align: justify">
+                        Considerando o art. 85 da Resolução 198/2020:
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_4"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        “Art. 85. Nos casos em que for verificada a ocorrência de indícios de violação ao Código Penal ou à Lei das Contravenções Penais, os fatos deverão ser encaminhados à Presidência do CAU/UF ou do CAU/BR, que os comunicará às autoridades competentes.
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_5"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        Parágrafo único. A comunicação do fato à autoridade competente não paralisa o procedimento ou o processo de fiscalização.”
+                    </p>
+
+                    
+
+                </div>
 
             </div>
 
@@ -1664,14 +1714,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso I do Art. 39 da Resolução Nº 198/2020 do CAU/BR.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso I do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-                <br><br>
-
+             
+                
             </div>
 
 
@@ -1717,7 +1767,7 @@
 
                     </span>
 
-                    <br><br>
+                
 
                 </div>
 
@@ -1726,14 +1776,30 @@
                     <span id="span_alteracao_multa_nao">
                         
                         <span></span>
-                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso I do Art. 39 da Resolução Nº 198/2020 do CAU/BR.</span>
+                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso I do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     <span>
 
-                    <br><br>
-
-                    <br><br>
+       
 
                 </div>
+
+
+            </div>
+
+            <label class="my-3" for="" id="lab_envio_ao_mp_voto"  style="display: none;"><strong>Informação sobre o envio ao Ministério Público:</strong></label>
+
+            <div class="card p-2" id="div_envio_ao_mp_voto" style="display: none;">
+
+                <span id="">
+
+                    <span id="span_envio_ao_mp_voto" contenteditable="true">
+                        
+                        <span contenteditable="false"></span>
+
+                        Acrescento, ainda, que cópia do referido processo seja remetida à Assessoria Jurídica do CAU/SP para abertura de denúncia perante o Ministério Público contra o denunciado.    
+                    </span>
+
+                </span>
 
 
             </div>
@@ -2025,6 +2091,12 @@
                     <p id="p_resolucoes_fixo_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
+                    <!-- condicionado -->    
+                    <p id="p_envio_ao_mp_checked_resolucoes_1_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p id="p_envio_ao_mp_checked_resolucoes_3_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_5_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
                     <!-- condicionado -->    
                     <p id="p_somente_regularizacao_checked_resolucoes_1_final" style="text-align: justify"></p>
@@ -2083,6 +2155,10 @@
                     <!-- condicionado -->    
                     <p >
                         <span id="span_alteracao_multa_nao_final"></span>
+                    </p>
+
+                    <p >
+                        <span id="span_envio_ao_mp_voto_final"></span>
                     </p>
 
                     <p style="text-align: center; margin-top: 35px;">
@@ -2274,6 +2350,23 @@
                 div_processo_revelia_checked.style.display = "none";
                 // div_processo_revelia_checked_analise.style.display = "none";
                 div_processo_revelia_checked_resolucoes.style.display = "none";
+            }
+
+        });
+        
+        // processo enviado ao mp checked
+        let input_envio_ao_mp = document.getElementById("input_envio_ao_mp");
+        let div_envio_ao_mp_checked_resolucoes = document.getElementById("div_envio_ao_mp_checked_resolucoes");
+
+        input_envio_ao_mp.addEventListener("change", () => {
+            if (input_envio_ao_mp.checked) {
+                div_envio_ao_mp_checked_resolucoes.style.display = "block";
+                div_envio_ao_mp_voto.style.display = "block";
+                lab_envio_ao_mp_voto.style.display = "block";
+            } else {
+                div_envio_ao_mp_checked_resolucoes.style.display = "none";
+                div_envio_ao_mp_voto.style.display = "none";
+                lab_envio_ao_mp_voto.style.display = "none";
             }
 
         });
@@ -2621,6 +2714,7 @@
             verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
             verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
             verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
@@ -2649,7 +2743,15 @@
             function verificarCheckbox(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
-                if (!select01.checked && !select01.checked) {
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarProcessoComDefesa(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2965,10 +3067,6 @@
                     span_corresp_devolvida_nao_2_final.innerText = "";
                     input_corresp_devolvida_nao_1_final.innerText = "";
                     span_corresp_devolvida_nao_3_final.innerText = "";
-
-
-
-
                 }
 
                 // Houve contestação da Notificação Preventiva?
@@ -3115,6 +3213,49 @@
                     span_corresp_auto_devolvida_nao_2_final.innerText = "";
                     input_corresp_auto_devolvida_nao_1_final.innerText = "";
                     span_corresp_auto_devolvida_nao_3_final.innerText = "";
+
+                }
+
+                // Encaminhamento de processo: enviado ao mp.
+
+                let input_envio_ao_mp = document.getElementById("input_envio_ao_mp");
+
+                if (input_envio_ao_mp.checked) {
+
+                    let p_envio_ao_mp_checked_resolucoes_1 = document.getElementById("p_envio_ao_mp_checked_resolucoes_1");
+                    let p_envio_ao_mp_checked_resolucoes_2 = document.getElementById("p_envio_ao_mp_checked_resolucoes_2");
+                    let p_envio_ao_mp_checked_resolucoes_3 = document.getElementById("p_envio_ao_mp_checked_resolucoes_3");
+                    let p_envio_ao_mp_checked_resolucoes_4 = document.getElementById("p_envio_ao_mp_checked_resolucoes_4");
+                    let p_envio_ao_mp_checked_resolucoes_5 = document.getElementById("p_envio_ao_mp_checked_resolucoes_5");
+
+                    let p_envio_ao_mp_checked_resolucoes_1_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_1_final");
+                    let p_envio_ao_mp_checked_resolucoes_2_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_2_final");
+                    let p_envio_ao_mp_checked_resolucoes_3_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_3_final");
+                    let p_envio_ao_mp_checked_resolucoes_4_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_4_final");
+                    let p_envio_ao_mp_checked_resolucoes_5_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_5_final");
+
+                    p_envio_ao_mp_checked_resolucoes_1_final.innerText = p_envio_ao_mp_checked_resolucoes_1.innerText;
+                    p_envio_ao_mp_checked_resolucoes_2_final.innerText = p_envio_ao_mp_checked_resolucoes_2.innerText;
+                    p_envio_ao_mp_checked_resolucoes_3_final.innerText = p_envio_ao_mp_checked_resolucoes_3.innerText;
+                    p_envio_ao_mp_checked_resolucoes_4_final.innerText = p_envio_ao_mp_checked_resolucoes_4.innerText;
+                    p_envio_ao_mp_checked_resolucoes_5_final.innerText = p_envio_ao_mp_checked_resolucoes_5.innerText;
+
+
+                    let span_envio_ao_mp_voto = document.getElementById("span_envio_ao_mp_voto");
+
+                    let span_envio_ao_mp_voto_final = document.getElementById("span_envio_ao_mp_voto_final");
+
+                    span_envio_ao_mp_voto_final.innerText = span_envio_ao_mp_voto.innerText;
+
+                } else {
+                    p_envio_ao_mp_checked_resolucoes_1_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_2_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_3_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_4_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_5_final.innerText = "";
+
+
+                    span_envio_ao_mp_voto_final.innerText = "";
 
                 }
 

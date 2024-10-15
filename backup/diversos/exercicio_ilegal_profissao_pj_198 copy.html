@@ -37,7 +37,6 @@
 
         body {
             min-width: 700px;
-            
         }
 
         .table-sm td,
@@ -76,7 +75,7 @@
             justify-content: center; /* Centraliza os botões verticalmente */
             /* margin-right: 5px; */
         }
-
+        
         .sidebar .btn {
             width: 85%;
             text-align: center;
@@ -86,6 +85,12 @@
             padding: 5px 1px;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s; /* Adiciona transição suave */
+            
+        }
+
+        .sidebar .btn:hover {
+            transform: translateY(-2px); /* Leve elevação ao passar o mouse */
         }
 
         @media (max-width: 767px) {
@@ -111,11 +116,12 @@
             }
         }
 
+        
     </style>
 
 </head>
 
-<body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif;">
+<body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif; min-width: 700px;">
 
     <div class="sidebar">
 
@@ -159,20 +165,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tipo de Relato
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="ausencia_registro_cau_pj_22_198.html">Ausência de registro no CAU PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <a class="dropdown-item" href="ausencia_registro_cau_e_crea_pj_22_198.html">Ausência de registro no CAU e no CREA PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="ausencia_responsavel_tecnico_pj_22_198.html">Ausência de responsável técnico PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_ausencia_responsavel_atividade_22_198.html">Exercício ilegal da profissão (PF) - Ausência de responsável para a atividade <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_exploracao_economica_198_22_198.html">Exercício ilegal da profissão (PF) - Exploração econônima <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="ausencia_rrt_pf_22_198.html">Ausência de RRT (PF) <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <!-- <a class="dropdown-item" href="#">Exercício ilegal da profissão PF  (Resoluções nº 22 e 198)</a> -->
-                            <!-- outros itens comentados -->
-                        </div>
-
+exercicio_ilegal_profissao_pj_198.html
                     </li>
 
 
@@ -187,7 +180,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções CAU/BR</a>
+                    <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções CAU/BR</a>
                     </li>
             
 
@@ -196,11 +189,11 @@
                 <ul class="navbar-nav align-items-center">
                     <!-- Itens alinhados no fim -->
                     <li class="nav-item mx-1">
-                        <a class="btn btn-danger btn-sm" href="ausencia_registro_cau_pj_22_198.html" role="button">Resoluções nº 22 e 198</a>
+                        <a class="btn btn-light btn-sm" style="background-color: #e4e4e4f4;" href="ausencia_registro_cau_pj_22_198.html" role="button">Resoluções nº 22 e 198</a>
                     </li>
                     
                     <li class="nav-item mx-1">
-                        <a class="btn btn-light btn-sm" style="background-color: #dad9d9f4;" href="exercicio_ilegal_profissao_pj_198.html" role="button">Resolução nº 198</a>
+                        <a class="btn btn-primary btn-sm" href="exercicio_ilegal_profissao_pj_198.html" role="button">Resolução nº 198</a>
                     </li>
                 </ul>
 
@@ -211,7 +204,7 @@
 
     <!--------------------------------------- Relato  ---------------------------------------->
 
-    <div class="container my-4 " id="div_cabecalho">
+    <div class="container my-4 " id="div_cabecalho" >
 
 
         <fieldset class="border rounded border-dark p-3">
@@ -235,7 +228,7 @@
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Ausência de registro no CAU (PJ)." style="width: 475px;" disabled></td>
+                            placeholder="Análise e parecer sobre processo de fiscalização – Exercício ilegal da profissão PJ." style="width: 475px;" disabled></td>
                 </tr>
 
                 <tr>
@@ -753,7 +746,7 @@
                 <label id="lab_processo_com_defesa_checked_analise" for=""><strong>Processo com defesa.</strong></label>
                 <textarea class="form-control mt-1 mb-3" id="area_processo_com_defesa_checked_analise" cols="30"
                     rows="5" style="width: 100%; padding: 5px;"
-                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível.">Após análise, a defesa não foi acolhida.</textarea>
+                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível."></textarea>
 
             </div>
 
@@ -859,35 +852,23 @@
                     urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
                 </p>
                 <p id="p_resolucoes_fixo_5" style="text-align: justify">
-                    Considerando o art. 35, inciso X, da Resolução 22/2012:
+                    Considerando o art. 39, inciso II, da Resolução 198/2020:
                 </p>
-                <p id="p_resolucoes_fixo_6" style="text-align: justify">
-                    “Art. 35. As infrações ao exercício da profissão de Arquitetura e Urbanismo nos termos definidos
-                    nesta Resolução serão punidas com multas, respeitados os seguintes limites:
+
+                <p class="espacamento_simples" id="p_resolucoes_fixo_6"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                    “II – exercer, promover-se, divulgar que exerce ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem registro no CAU, configurando exploração econômica da atividade;
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_7"
-                style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    (...)
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_8"
-                style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    X – Pessoa jurídica sem registro no CAU exercendo atividade privativa de arquitetos e urbanistas;
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_9"
-                style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Infrator: pessoa jurídica;
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_10"
-                style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Valor da Multa: mínimo de 5 (cinco) vezes e máximo de 10 (dez) vezes o valor vigente da anuidade”
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                    Infrator: pessoa jurídica;”
                 </p>
 
-
-                <p id="p_resolucoes_fixo_11" style="text-align: justify">
+                <p id="p_resolucoes_fixo_8" style="text-align: justify">
                     Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
                 </p>
 
-                <p class="espacamento_simples" id="p_resolucoes_fixo_12"
+                <p class="espacamento_simples" id="p_resolucoes_fixo_9"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                     “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas
                     encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das
@@ -910,7 +891,7 @@
                     </p>
 
                     <p id="p_somente_regularizacao_checked_resolucoes_2"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         “Art. 38. Depois de lavrado o auto de infração, a regularização da situação não exime a pessoa
                         física ou jurídica das penalidades aplicadas.”</p>
                     </p>
@@ -933,16 +914,16 @@
                     </p>
 
                     <p class="espacamento_simples" id="p_somente_pagamento_multa_checked_resolucoes_2"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         “Art. 75. A regularização da pessoa física ou jurídica frente a infração ao exercício da
                         Arquitetura e Urbanismo ocorrerá após:
                     </p>
                     <p class="espacamento_simples" id="p_somente_pagamento_multa_checked_resolucoes_3"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         I – a eliminação do fato gerador do auto de infração, quando couber; e
                     </p>
                     <p class="espacamento_simples" id="p_somente_pagamento_multa_checked_resolucoes_4"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         II – o pagamento integral ou mediante parcelamento do valor da multa, depois da lavratura do
                         auto de infração.”
                     </p>
@@ -962,7 +943,7 @@
                     </p>
 
                     <p class="espacamento_simples" id="p_processo_revelia_checked_resolucoes_2"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         “Art. 54. A CEP-CAU/UF julgará à revelia a pessoa física ou jurídica autuada que não apresentar
                         defesa ao auto de infração, sendo garantido amplo direito de defesa nas fases subsequentes do
                         processo.”
@@ -1191,6 +1172,7 @@
 
                                             </tbody>
                                         </table>
+
                                     </div>
 
 
@@ -1468,19 +1450,20 @@
                                             <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res198"></p>
                                         </div>
 
-                                        <hr>
 
-                                        <div class="d-flex">
+
+                                        <div class="d-none">
                                             <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme
                                                     Resolução nº 22:</strong></p>
                                             <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p>
                                             <input type="text" style="width: 250px; height: 30px;" class="form-control"
                                                 id="valorMultaRes22" value=""
-                                                placeholder="Informe o valor da multa...">
+                                                placeholder="Se necessário, informe o valor...">
                                         </div>
 
-                                        <hr>
-                                        <div class="d-flex">
+
+
+                                        <div class="d-none">
                                             <p class="d-flex my-1 align-items-center"><strong>Multa a ser
                                                     aplicada:</strong></p>
                                             <p class="d-flex my-1 align-items-center ml-2" id="multa_aplicada"></p>
@@ -1492,7 +1475,7 @@
 
                                         <div style="text-align: justify">
 
-                                            <p id="dosimetria_resolucao_1">
+                                            <!-- <p id="dosimetria_resolucao_1">
                                                 Por fim, uma vez que o presente processo foi aberto sob a Resolução
                                                 22/2012, revogada pelo advento da Resolução 198/2020, é necessário
                                                 verificar as disposições materiais para se aplicar a situação mais
@@ -1510,10 +1493,25 @@
                                                 ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e
                                                 Urbanismo, sem registro no CAU, configurando exploração econômica da
                                                 atividade”.
-                                            </p>
+                                            </p> -->
 
-                                            <p id="dosimetria_resolucao_4">
-                                                Aplicando-se a dosimetria da multa da Resolução 198/2020:<br>
+                                            <!-- recalculo da multa -->
+
+                                            <label class="my-3" for="" id="lab_recalculo_multa"><strong>Houve fatos que justifiquem o recálculo da multa?</strong></label>
+            
+                                            <div id="div_recalculo_multa">
+                                
+                                                <input type="checkbox" id="input_recalculo_multa_nao">
+                                                <label for="input_recalculo_multa_nao" id="lab_recalculo_multa_nao">Não</label>
+                                
+                                                <input type="checkbox" class="ml-2" id="input_recalculo_multa_sim">
+                                                <label for="input_recalculo_multa_sim" id="lab_recalculo_multa_sim">Sim</label>
+                                
+
+                                            </div>
+
+                                            <p id="dosimetria_resolucao_4" style="display: none;" contenteditable="true">
+                                                
                                             </p>
 
                                         </div>
@@ -1671,13 +1669,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso II do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
                 <br><br>
+
 
             </div>
 
@@ -1711,7 +1710,7 @@
                             
                             <span contenteditable="false"></span>
 
-                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso II do Art. 39 da Resolução Nº 198/2020 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
 
                         </span>
 
@@ -1730,13 +1729,15 @@
 
                 <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;">
 
-                    <span id="span_alteracao_multa_nao" contenteditable="true">
 
-                        <span contenteditable="false"></span>
-                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
+                    <span id="span_alteracao_multa_nao">
+                        
+                        <span></span>
+                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso II do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
+                    
 
-                    <br><br>
+                    <br><br>        
 
                     <br><br>
 
@@ -2029,14 +2030,10 @@
                     <p id="p_resolucoes_fixo_3_final" ></p>
                     <p id="p_resolucoes_fixo_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_5_final" ></p>
-                    <p id="p_resolucoes_fixo_6_final" ></p>
+                    <p id="p_resolucoes_fixo_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_8_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_9_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_10_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_11_final" ></p>
-                    <p id="p_resolucoes_fixo_12_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-
+                    <p id="p_resolucoes_fixo_8_final" ></p>
+                    <p id="p_resolucoes_fixo_9_final" ></p>
 
 
                     <!-- condicionado -->    
@@ -2097,8 +2094,6 @@
                     <p >
                         <span id="span_alteracao_multa_nao_final"></span>
                     </p>
-
-
 
                     <p style="text-align: center; margin-top: 35px;">
                         <span id="assinatura_1_final" ></span><span id="assinatura_2_final"></span>
@@ -2500,6 +2495,51 @@
             }
         });
 
+        // CHECKBOX DO recalculo ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_recalculo = document.getElementById('input_recalculo_multa_sim');
+        var checkboxNao_recalculo = document.getElementById('input_recalculo_multa_nao');
+
+        // Obtém as divs correspondentes
+        var divSim_recalculo = document.getElementById('dosimetria_resolucao_4');
+        var descricao_atenuantes_recalculo = document.getElementById('descricao_atenuantes'); // <td>
+
+        // Função para atualizar o texto da div com base no texto da TD
+        function atualizarDescricaoRecalculo() {
+            var descricaoTexto = descricao_atenuantes_recalculo.innerText.trim() || ''; // Captura o texto da TD 
+            divSim_recalculo.innerHTML = `Considerando o (s) fato (s) que justifiquem o recálculo da multa (${descricaoTexto}), segue aplicação de nova dosimetria, conforme art. 42 da Resolução CAU/BR nº 198/2020:`;
+        }
+
+        // Adiciona os event listeners
+        checkboxSim_recalculo.addEventListener('change', function () {
+            if (checkboxSim_recalculo.checked) {
+                checkboxNao_recalculo.checked = false; // Desmarca o outro checkbox
+                divSim_recalculo.style.display = 'block';
+                atualizarDescricaoRecalculo(); // Atualiza o texto ao marcar o checkbox
+            } else {
+                divSim_recalculo.style.display = 'none';
+            }
+        });
+
+        checkboxNao_recalculo.addEventListener('change', function () {
+            if (checkboxNao_recalculo.checked) {
+                checkboxSim_recalculo.checked = false; // Desmarca o outro checkbox
+                divSim_recalculo.style.display = 'block';
+                divSim_recalculo.innerText = "Considerando que não houve fatos novos que justifiquem novo cálculo da multa aplicada, conforme art. 42 da Resolução CAU/BR nº 198/2020.";
+            } else {
+                divSim_recalculo.style.display = 'none';
+            }
+        });
+
+        // Usando MutationObserver para monitorar mudanças no conteúdo da TD
+        var observer = new MutationObserver(atualizarDescricaoRecalculo);
+
+        // Configura o observer para observar mudanças no nó filho (texto) da TD
+        observer.observe(descricao_atenuantes_recalculo, { characterData: true, childList: true, subtree: true });
+
+
+
         // ALTERAÇÃO DE MULTA ---------------------------------------------------------------------------------
 
         // Obtém os elementos de checkbox
@@ -2566,33 +2606,6 @@
         razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
-
-        // não permite que voto em branco -------------------------------------------------------
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const validacao_preenchimento_span_multa_paga_voto = document.getElementById('span_multa_paga_voto');
-
-        //     if (validacao_preenchimento_span_multa_paga_voto) {
-        //         // Configura o MutationObserver para monitorar alterações no texto do span
-        //         const observer = new MutationObserver(function (mutationsList, observer) {
-        //             mutationsList.forEach(function (mutation) {
-        //                 if (mutation.type === 'childList') {
-        //                     // Verifica se o conteúdo do span está vazio
-        //                     if (validacao_preenchimento_span_multa_paga_voto.innerText === "") {
-        //                         validacao_preenchimento_span_multa_paga_voto.innerText = "-";
-        //                     }
-        //                 }
-        //             });
-        //         });
-
-        //         // Inicia o observer, observando mudanças nos filhos do span (o que inclui o texto)
-        //         observer.observe(validacao_preenchimento_span_multa_paga_voto, { childList: true });
-        //     } else {
-        //         console.error("Elemento span_multa_paga_voto não encontrado.");
-        //     }
-        // });
-
-        
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -2603,6 +2616,7 @@
             let mensagens = []; // Array para acumular mensagens
 
             // Verifica cada campo e adiciona mensagens ao array se necessário
+
             verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
             verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
             verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
@@ -2617,10 +2631,11 @@
             verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
             verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
             verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
-
+            verificarCheckboxRecalculo("#input_recalculo_multa_nao", "#input_recalculo_multa_sim", "Informar se houve necessidade de recálculo.", mensagens);
             verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
             verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
             
@@ -2645,7 +2660,15 @@
             function verificarCheckbox(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
-                if (!select01.checked && !select01.checked) {
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarProcessoComDefesa(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2777,7 +2800,7 @@
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
                 const div_calculadora = document.getElementById('calculadora');
-                if (!select01.checked && !select01.checked && div_calculadora.classList.contains('show')) {
+                if (!select01.checked && !select02.checked && div_calculadora.classList.contains('show')) {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2798,7 +2821,6 @@
      
 
             if (mensagens.length === 0) {
-
                 // var conteudo_relato_final = document.getElementById("conteudo_relato_final");
                 // conteudo_relato_final.innerText = "";
 
@@ -2821,7 +2843,7 @@
 
                 td_num_processo_final.innerText = input_num_processo.value;
                 td_interessado_final.innerText = input_interessado.value;
-                td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
+                td_assunto_final.innerText = "Análise e parecer sobre processo de fiscalização – Exercício ilegal da profissão PJ.";
                 td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
 
 
@@ -3446,6 +3468,8 @@
                     span_alteracao_multa_nao_final.innerText = "";
                 }
 
+
+
                 let p_resolucoes_fixo_1 = document.getElementById("p_resolucoes_fixo_1");
                 let p_resolucoes_fixo_2 = document.getElementById("p_resolucoes_fixo_2");
                 let p_resolucoes_fixo_3 = document.getElementById("p_resolucoes_fixo_3");
@@ -3455,9 +3479,7 @@
                 let p_resolucoes_fixo_7 = document.getElementById("p_resolucoes_fixo_7");
                 let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
                 let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
-                let p_resolucoes_fixo_10 = document.getElementById("p_resolucoes_fixo_10");
-                let p_resolucoes_fixo_11 = document.getElementById("p_resolucoes_fixo_11");
-                let p_resolucoes_fixo_12 = document.getElementById("p_resolucoes_fixo_12");
+
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
                 let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
@@ -3468,9 +3490,7 @@
                 let p_resolucoes_fixo_7_final = document.getElementById("p_resolucoes_fixo_7_final");
                 let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
                 let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
-                let p_resolucoes_fixo_10_final = document.getElementById("p_resolucoes_fixo_10_final");
-                let p_resolucoes_fixo_11_final = document.getElementById("p_resolucoes_fixo_11_final");
-                let p_resolucoes_fixo_12_final = document.getElementById("p_resolucoes_fixo_12_final");
+
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
                 p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
@@ -3481,9 +3501,9 @@
                 p_resolucoes_fixo_7_final.innerText = p_resolucoes_fixo_7.innerText;
                 p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
                 p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
-                p_resolucoes_fixo_10_final.innerText = p_resolucoes_fixo_10.innerText;
-                p_resolucoes_fixo_11_final.innerText = p_resolucoes_fixo_11.innerText;
-                p_resolucoes_fixo_12_final.innerText = p_resolucoes_fixo_12.innerText;
+
+
+
 
 
                 // Calculadora de dosimetria
@@ -3497,20 +3517,27 @@
 
                     console.log("expandido");
 
-                    let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
-                    let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
-                    let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
+                    // let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
+                    // let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
+                    // let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
                     let dosimetria_resolucao_4 = document.getElementById("dosimetria_resolucao_4");
 
-                    let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
-                    let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
-                    let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                    // let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
+                    // let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
+                    // let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                    
                     let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
 
-                    dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
-                    dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
-                    dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
-                    dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+                    // dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
+                    // dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
+                    // dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
+
+                    if (!checkboxSim_recalculo.checked && !checkboxNao_recalculo.checked){
+                        dosimetria_resolucao_4_final.innerText = ""
+                    } else {
+                        dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+                    }
+                    
 
                     // tabela,
 
@@ -3693,9 +3720,6 @@
             // Remove o container temporário do DOM
             document.body.removeChild(tempContainer);
         }
-
-
-
 
 
 
@@ -4338,15 +4362,22 @@
 
         // Função para atualizar a descrição com base nos checkboxes selecionados
         function atualizarDescricaoAgravantesAtenuantes(idDescricao, checkboxes) {
-            var descricao = '';
+            // Array para armazenar as descrições
+            var descricoes = [];
+
             checkboxes.forEach(function (checkbox) {
                 if (checkbox.checked) {
-                    // Concatenar a descrição do checkbox selecionado
-                    descricao += checkbox.parentNode.previousElementSibling.previousElementSibling.textContent.trim() + "<br>";
+                    // Adicionar a descrição do checkbox selecionado ao array
+                    var descricao = checkbox.parentNode.previousElementSibling.previousElementSibling.textContent.trim();
+                    descricoes.push(descricao);
                 }
             });
+
+            // Juntar as descrições com uma vírgula e adicionar <br> no final
+            var descricaoFinal = descricoes.join('; ') + "<br>";
+
             // Atualizar a descrição no elemento correspondente usando innerHTML
-            document.getElementById(idDescricao).innerHTML = descricao;
+            document.getElementById(idDescricao).innerHTML = descricaoFinal;
         }
 
         function inserirAssinaturas() {

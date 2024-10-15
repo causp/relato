@@ -768,7 +768,7 @@
                 <label id="lab_processo_com_defesa_checked_analise" for=""><strong>Processo com defesa.</strong></label>
                 <textarea class="form-control mt-1 mb-3" id="area_processo_com_defesa_checked_analise" cols="30"
                     rows="5" style="width: 100%; padding: 5px;"
-                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível.">Após análise, a defesa não foi acolhida.</textarea>
+                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível."></textarea>
 
             </div>
 
@@ -1722,9 +1722,9 @@
                 style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator."></textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: Diante do exposto acima, é evidente a infração ao
-                exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela
-                regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa
-                paga.)</p> -->
+            exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela
+            regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa
+            paga.)</p> -->
 
 
 
@@ -1737,19 +1737,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-                <br><br>
 
             </div>
-
-
-
-
 
 
 
@@ -1790,7 +1785,8 @@
 
                     </span>
 
-                    <br><br>
+
+            
 
                 </div>
 
@@ -1802,11 +1798,29 @@
                         <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
 
-                    <br><br>
 
-                    <br><br>
 
                 </div>
+
+
+            </div>
+
+
+
+            <label class="my-3" for="" id="lab_envio_ao_mp_voto"  style="display: none;"><strong>Informação sobre o envio ao Ministério Público:</strong></label>
+
+            <div class="card p-2" id="div_envio_ao_mp_voto" style="display: none;">
+
+                <span id="">
+
+                    <span id="span_envio_ao_mp_voto" contenteditable="true">
+                        
+                        <span contenteditable="false"></span>
+
+                        Acrescento, ainda, que cópia do referido processo seja remetida à Assessoria Jurídica do CAU/SP para abertura de denúncia perante o Ministério Público contra o denunciado.    
+                    </span>
+
+                </span>
 
 
             </div>
@@ -2173,6 +2187,12 @@
                         <span id="span_alteracao_multa_nao_final"></span>
                     </p>
 
+                    <p >
+                        <span id="span_envio_ao_mp_voto_final"></span>
+                    </p>
+
+                    
+
                     <p style="text-align: center; margin-top: 35px;">
                         <span id="assinatura_1_final" ></span><span id="assinatura_2_final"></span>
                         <span id="assinatura_3_final"></span>
@@ -2373,8 +2393,12 @@
         input_envio_ao_mp.addEventListener("change", () => {
             if (input_envio_ao_mp.checked) {
                 div_envio_ao_mp_checked_resolucoes.style.display = "block";
+                div_envio_ao_mp_voto.style.display = "block";
+                lab_envio_ao_mp_voto.style.display = "block";
             } else {
                 div_envio_ao_mp_checked_resolucoes.style.display = "none";
+                div_envio_ao_mp_voto.style.display = "none";
+                lab_envio_ao_mp_voto.style.display = "none";
             }
 
         });
@@ -2689,26 +2713,26 @@
 
             // Verifica cada campo e adiciona mensagens ao array se necessário
 
-            verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
-            verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
-            verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
-            verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
-            verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
-            verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
-            verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
-            verificarCheckboxNotificacaoPreventiva("#input_devolucao_corresp_sim", "#input_devolucao_corresp_nao", "Devolução de correspondência da notificação preventiva incompleto.", mensagens);
-            verificarCheckboxContestacao("#input_notificacao_preventiva", "#input_notificacao_preventiva_checked", "Contestação da notificação preventiva incompleto.", mensagens);
-            
-            verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
-            verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
-            verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
-            verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
-
-            verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
-            verificarCheckMultaSimNao("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_nao", "Informar se houve pagamento da multa.", mensagens);
-            verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
-            verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
-            verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
+            // verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
+            // verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
+            // verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
+            // verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
+            // verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
+            // verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
+            // verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
+            // verificarCheckboxNotificacaoPreventiva("#input_devolucao_corresp_sim", "#input_devolucao_corresp_nao", "Devolução de correspondência da notificação preventiva incompleto.", mensagens);
+            // verificarCheckboxContestacao("#input_notificacao_preventiva", "#input_notificacao_preventiva_checked", "Contestação da notificação preventiva incompleto.", mensagens);
+            // verificarCheckboxTentativaRegularizacao("#input_tentativa_regularizacao_nao", "#input_tentativa_regularizacao_sim", "Tentativa de regularização sem informação.", mensagens);
+            // verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
+            // verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
+            // verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
+            // verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            // verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
+            // verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
+            // verificarCheckMultaSimNao("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_nao", "Informar se houve pagamento da multa.", mensagens);
+            // verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
+            // verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
+            // verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
 
             // Se houver mensagens, mostra um alerta com todas
             if (mensagens.length > 0) {
@@ -2731,7 +2755,15 @@
             function verificarCheckbox(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
-                if (!select01.checked && !select01.checked) {
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarProcessoComDefesa(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2873,7 +2905,7 @@
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
                 const div_calculadora = document.getElementById('calculadora');
-                if (!select01.checked && !select01.checked && div_calculadora.classList.contains('show')) {
+                if (!select01.checked && !select02.checked && div_calculadora.classList.contains('show')) {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -3211,11 +3243,6 @@
                 }
 
 
-
-
-
-
-
                 // Encaminhamento de processo: enviado ao mp.
 
                 let input_envio_ao_mp = document.getElementById("input_envio_ao_mp");
@@ -3241,6 +3268,11 @@
                     p_envio_ao_mp_checked_resolucoes_5_final.innerText = p_envio_ao_mp_checked_resolucoes_5.innerText;
 
 
+                    let span_envio_ao_mp_voto = document.getElementById("span_envio_ao_mp_voto");
+
+                    let span_envio_ao_mp_voto_final = document.getElementById("span_envio_ao_mp_voto_final");
+
+                    span_envio_ao_mp_voto_final.innerText = span_envio_ao_mp_voto.innerText;
 
                 } else {
                     p_envio_ao_mp_checked_resolucoes_1_final.innerText = "";
@@ -3248,12 +3280,11 @@
                     p_envio_ao_mp_checked_resolucoes_3_final.innerText = "";
                     p_envio_ao_mp_checked_resolucoes_4_final.innerText = "";
                     p_envio_ao_mp_checked_resolucoes_5_final.innerText = "";
+
+
+                    span_envio_ao_mp_voto_final.innerText = "";
+
                 }
-
-
-
-
-
 
 
                 // Encaminhamento de processo: Processo à Revelia.

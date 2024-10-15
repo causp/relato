@@ -758,7 +758,7 @@
                 <label id="lab_processo_com_defesa_checked_analise" for=""><strong>Processo com defesa.</strong></label>
                 <textarea class="form-control mt-1 mb-3" id="area_processo_com_defesa_checked_analise" cols="30"
                     rows="5" style="width: 100%; padding: 5px;"
-                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível.">Após análise, a defesa não foi acolhida.</textarea>
+                    placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível."></textarea>
 
             </div>
 
@@ -1660,13 +1660,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-                <br><br>
+          
+                
 
             </div>
 
@@ -1713,7 +1714,7 @@
 
                     </span>
 
-                    <br><br>
+                
 
                 </div>
 
@@ -1725,9 +1726,9 @@
                         <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
 
-                    <br><br>
+                
 
-                    <br><br>
+
 
                 </div>
 
@@ -2575,6 +2576,7 @@
             verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
             verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
             verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
@@ -2603,7 +2605,15 @@
             function verificarCheckbox(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
-                if (!select01.checked && !select01.checked) {
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarProcessoComDefesa(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (select01.checked && select02.value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2735,7 +2745,7 @@
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
                 const div_calculadora = document.getElementById('calculadora');
-                if (!select01.checked && !select01.checked && div_calculadora.classList.contains('show')) {
+                if (!select01.checked && !select02.checked && div_calculadora.classList.contains('show')) {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
