@@ -225,7 +225,6 @@
 
                     </li>
 
-
                     <!-- <li class="nav-item">
                     <a class="nav-link" href="https://n-tech4b.github.io/app/calculadora.html"
                     target="_blank">Calculadora de Dosimetria</a>
@@ -250,7 +249,7 @@
                     </li>
                     
                     <li class="nav-item mx-1">
-                        <a class="btn btn-light btn-sm" style="background-color: #dad9d9f4;" href="01_exercicio_ilegal_profissao_pf_198.html" role="button">Resolução nº 198</a>
+                        <a class="btn btn-light btn-sm" style="background-color: #dad9d9f4;" href="exercicio_ilegal_profissao_pj_198.html" role="button">Resolução nº 198</a>
                     </li>
                 </ul>
 
@@ -285,7 +284,7 @@
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Ausência de registro no CAU (PJ)." style="width: 475px;" disabled></td>
+                            placeholder="Exercício ilegal da profissão (PF)." style="width: 475px;" disabled></td>
                 </tr>
 
                 <tr>
@@ -381,7 +380,7 @@
 
             <!-- <label class="my-3" for="" id="lab_irregularidade"><strong>Irregularidade:</strong></label> -->
             <textarea class="form-control my-1" id="area_irregularidade" cols="30" rows="5"
-                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a empresa em questão possui atividade no campo da arquitetura e urbanismo sem ter o devido registro no Conselho.</textarea>
+                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a parte interessada realizou atividade de arquitetura e urbanismo sem ter o devido registro no CAU, caracterizando exploração econômica da atividade.</textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: a empresa XXXXXXXX possui atividades no campo da
                 arquitetura e urbanismo sem ter o devido registro no Conselho.)</p> -->
@@ -539,19 +538,19 @@
 
             <div id="div_tentativa_regularizacao">
 
-                <label class="my-3" for="" id="lab_devolucao_corresp_auto"><strong>Houve tentativa de regularização?</strong></label>
+                <label class="my-3" for="" id="lab_devolucao_corresp_auto"><strong>Houve tentativa de regularização?</strong></label><span style="font-style: italic; color: rgb(177, 2, 2);">&nbsp;(infração sem a possibilidade de regularização.)</span>
 
                 <div id="">
 
-                    <input type="checkbox" id="input_tentativa_regularizacao_nao">
+                    <input type="checkbox" id="input_tentativa_regularizacao_nao" disabled>
                     <label id="lab_tentativa_regularizacao_nao" for="input_tentativa_regularizacao_nao">Não</label>
 
-                    <input type="checkbox" class="ml-2" id="input_tentativa_regularizacao_sim">
+                    <input type="checkbox" class="ml-2" id="input_tentativa_regularizacao_sim" disabled>
                     <label id="lab_tentativa_regularizacao_sim" for="input_tentativa_regularizacao_sim">Sim</label>
 
                 </div>
 
-                <div class="" style="display: none;" id="div_tentativa_regularizacao_nao">
+                <div class="" style="display: none;" id="div_tentativa_regularizacao_nao" >
                     <textarea id="area_tentativa_regularizacao_nao" class="form-control my-1" id="" cols="30" rows="5"
                         style="width: 100%; padding: 5px;"
                         placeholder="Texto a ser preenchido pelo relator.">Não houve tentativa de regularização.</textarea>
@@ -693,7 +692,15 @@
 
                 <label class="my-3" id="lab_encaminhamento" for=""><strong>Encaminhamento de processo:</strong></label>
 
-                <div class="" id="div_processo_revelia">
+                <!-- envio ao ministério público -->
+                <div class="" id="div_envio_ao_mp">
+
+                    <input type="checkbox" id="input_envio_ao_mp">
+                    <label id="lab_envio_ao_mp" for="input_envio_ao_mp">Envio ao Ministério Público.</label>
+
+                </div>  
+
+                <div class="mt-2" id="div_processo_revelia">
 
 
 
@@ -711,9 +718,9 @@
 
 
                 <div class="mt-2" id="div_processo_regularizado">
-                    <input type="checkbox" id="input_processo_regularizado">
+                    <input type="checkbox" id="input_processo_regularizado" disabled>
                     <label id="lab_processo_regularizado" for="input_processo_regularizado">Processo
-                        regularizado.</label>
+                        regularizado.</label><span style="font-style: italic; color: rgb(177, 2, 2);">&nbsp;(infração sem a possibilidade de regularização.)</span>
 
                     <div class="" style="display: none;" id="div_processo_regularizado_checked">
                         <div class="border rounded px-2 py-3 ">
@@ -758,6 +765,8 @@
                 </div>
 
             </div>
+
+
 
         </fieldset>
 
@@ -809,14 +818,14 @@
 
             <!-- -------------------------------------- -->
 
-            <div class="mt-3"><label id="" for=""><strong>Informações sobre a regularização e o pagamento de
-                        multa:</strong></label></div>
+            <div class="mt-3"><label id="" for=""><strong>Houve o pagamento da multa?</strong></label></div>
 
 
 
-            <input type="checkbox" id="input_sem_regularizacao_sem_pagamento">
-            <label class="mt-2" id="lab_sem_regularizacao_sem_pagamento" for="input_sem_regularizacao_sem_pagamento">Sem
-                regularização e sem pagamento de multa:</label>
+            <input class=" d-none" type="checkbox" id="input_sem_regularizacao_sem_pagamento" disabled>
+            <label class="mt-2  d-none" id="lab_sem_regularizacao_sem_pagamento" for="input_sem_regularizacao_sem_pagamento">Sem
+                regularização e sem pagamento de multa:
+            </label>
 
             <div class="" style="display: none;" id="div_sem_regularizacao_sem_pagamento_checked">
                 <div class="border rounded px-2 py-3 ">
@@ -834,9 +843,10 @@
 
             <div></div>
 
-            <input type="checkbox" id="input_somente_regularizacao">
-            <label class="mt-2" id="lab_somente_regularizacao" for="input_somente_regularizacao">Se houve somente a
-                regularização:</label>
+            <input class=" d-none" type="checkbox" id="input_somente_regularizacao" disabled>
+            <label class="mt-2  d-none" id="lab_somente_regularizacao" for="input_somente_regularizacao">Se houve somente a
+                regularização:
+            </label>
 
             <div class="" style="display: none;" id="div_somente_regularizacao_checked">
                 <div class="border rounded px-2 py-3 ">
@@ -858,26 +868,52 @@
 
             <div></div>
 
-            <input type="checkbox" id="input_somente_pagamento_multa">
-            <label class="mt-2" id="lab_somente_pagamento_multa" for="input_somente_pagamento_multa">Se houve somente o
-                pagamento da multa:</label>
+            
+            <!-- <div id="">
+
+                <input type="checkbox" id="input_tentativa_regularizacao_nao">
+                <label id="lab_tentativa_regularizacao_nao" for="input_tentativa_regularizacao_nao">Não</label>
+
+                <input type="checkbox" class="ml-2" id="input_tentativa_regularizacao_sim">
+                <label id="lab_tentativa_regularizacao_sim" for="input_tentativa_regularizacao_sim">Sim</label>
+
+            </div> -->
+
+
+
+
+
+            <input type="checkbox" class="" id="input_somente_pagamento_multa">
+            <label class="mt-2" id="lab_somente_pagamento_multa" for="input_somente_pagamento_multa">Sim</label>
+
+            <input type="checkbox" class="ml-2" id="input_somente_pagamento_multa_nao">
+            <label class="mt-2" id="lab_somente_pagamento_multa_nao" for="input_somente_pagamento_multa_nao">Não</label>
 
             <div class="" style="display: none;" id="div_somente_pagamento_multa_checked">
                 <div class="border rounded px-2 py-3 ">
-                    <span id="span_somente_pagamento_multa_checked_1">Além disso, verificou-se que a multa foi paga em
+                    <span id="span_somente_pagamento_multa_checked_1">A parte interessada efetuou o pagamento da multa em
                     </span>
 
                     <!-- data  -->
                     <input type="text" class="dts form-control form-control-sm w-auto d-inline mb-1"
                         id="input_somente_pagamento_multa_checked_1" placeholder="DD/MM/AAAA">
 
-                    <span id="span_somente_pagamento_multa_checked_2">, mas o fato gerador não foi eliminado até o presente momento.</span>
+                    <span id="span_somente_pagamento_multa_checked_2">. Além disso, trata-se de infração sem a possibilidade de regularização.</span>
 
                     <!-- data  -->
                     <!-- <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                         id="input_somente_pagamento_multa_checked_2" placeholder="DD/MM/AAAA">
                     
                     <span id="span_somente_pagamento_multa_checked_3">.</span> -->
+
+                </div>
+
+            </div>
+
+            <div class="" style="display: none;" id="div_somente_pagamento_multa_nao">
+                <div class="border rounded px-2 py-3 ">
+
+                    <span id="span_somente_pagamento_multa_nao">A parte interessada não efetuou o pagamento da multa até o presente momento. Além disso, trata-se de infração sem a possibilidade de regularização.</span>
 
                 </div>
 
@@ -909,9 +945,10 @@
                     urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
                 </p>
                 <p id="p_resolucoes_fixo_5" style="text-align: justify">
-                    Considerando o art. 35, inciso X, da Resolução 22/2012:
+                    Considerando o art. 35, inciso VII, da Resolução 22/2012:
                 </p>
-                <p id="p_resolucoes_fixo_6" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                <p id="p_resolucoes_fixo_6"  
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                     “Art. 35. As infrações ao exercício da profissão de Arquitetura e Urbanismo nos termos definidos
                     nesta Resolução serão punidas com multas, respeitados os seguintes limites:
                 </p>
@@ -921,29 +958,55 @@
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_8"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    X – Pessoa jurídica sem registro no CAU exercendo atividade privativa de arquitetos e urbanistas;
+                    VII – Exercício ilegal de atividade fiscalizada pelo CAU por pessoa física não habilitada (leigo);
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_9"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Infrator: pessoa jurídica;
+                    Infrator: pessoa física;
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_10"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Valor da Multa: mínimo de 5 (cinco) vezes e máximo de 10 (dez) vezes o valor vigente da anuidade”
+                    Valor da Multa: mínimo de 2 (duas) vezes e máximo de 5 (cinco) vezes o valor vigente da anuidade;”
                 </p>
 
 
-                <p id="p_resolucoes_fixo_11" style="text-align: justify">
-                    Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
-                </p>
+            </div>
 
-                <p class="espacamento_simples" id="p_resolucoes_fixo_12"
+            <div id="div_legislacao_envio_ao_mp">
+
+
+                <div class="" style="display: none;" id="div_envio_ao_mp_checked_resolucoes">
+
+                    <label class="my-3" id="lab_legislacao_envio_ao_mp"
+                        ><strong>Houve necessidade de envio ao Ministério Público:</strong>
+                    </label>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_1" style="text-align: justify">
+                        Considerando o art. 47 da Lei nº 3.688/1941 (Lei das Contravenções Penais):
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_2"
+                        style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        “Art. 47. Exercer profissão ou atividade econômica ou anunciar que a exerce, sem preencher as condições a que por lei está subordinado o seu exercício”</p>
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_3" style="text-align: justify">
+                        Considerando o art. 85 da Resolução 198/2020:
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_4"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas
-                    encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das
-                    diversas profissões, em razão da atividade básica ou em relação àquela pela qual prestem serviços a
-                    terceiros.”
-                </p>
+                        “Art. 85. Nos casos em que for verificada a ocorrência de indícios de violação ao Código Penal ou à Lei das Contravenções Penais, os fatos deverão ser encaminhados à Presidência do CAU/UF ou do CAU/BR, que os comunicará às autoridades competentes.
+                    </p>
+
+                    <p id="p_envio_ao_mp_checked_resolucoes_5"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        Parágrafo único. A comunicação do fato à autoridade competente não paralisa o procedimento ou o processo de fiscalização.”
+                    </p>
+
+                    
+
+                </div>
 
             </div>
 
@@ -962,8 +1025,10 @@
                     <p id="p_somente_regularizacao_checked_resolucoes_2"
                         style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                         “Art. 38. Depois de lavrado o auto de infração, a regularização da situação não exime a pessoa
-                        física ou jurídica das penalidades aplicadas.”</p>
+                        física ou jurídica das penalidades aplicadas.”
                     </p>
+
+
 
                 </div>
 
@@ -976,8 +1041,7 @@
                 <div class="" style="display: none;" id="div_somente_pagamento_multa_checked_resolucoes">
 
                     <label class="my-3" id="lab_somente_pagamento_multa_checked"
-                        ><strong>Houve pagamento da multa sem
-                            regularização:</strong></label>
+                        ><strong>Houve pagamento da multa:</strong></label>
                     <p id="p_somente_pagamento_multa_checked_resolucoes_1" style="text-align: justify">
                         Considerando o art. 75 da Resolução 198/2020:
                     </p>
@@ -1105,7 +1169,7 @@
                                                     <td class="text-center align-middle">13</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input"
-                                                            id="gravidade-item1" data-text="" disabled>
+                                                            id="gravidade-item1" data-text="">
                                                     </td>
                                                 </tr>
 
@@ -1116,7 +1180,7 @@
                                                     <td class="text-center align-middle">13</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input align-middle"
-                                                            id="gravidade-item2" data-text="">
+                                                            id="gravidade-item2" data-text="" disabled>
                                                     </td>
                                                 </tr>
 
@@ -1148,7 +1212,7 @@
                                                     <td class="text-center align-middle">10</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item5" data-text=""disabled>
+                                                            id="gravidade-item5" data-text="" disabled>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1555,11 +1619,7 @@
                                             </p>
 
                                             <p id="dosimetria_resolucao_3">
-                                                A infração do inciso X do art. 35 da Resolução 22 equivale ao inciso II
-                                                do art. 39 da Resolução 198: “exercer, promover-se, divulgar que exerce
-                                                ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e
-                                                Urbanismo, sem registro no CAU, configurando exploração econômica da
-                                                atividade”.
+                                                A infração do inciso VII do art. 35 da Resolução 22 equivale ao inciso I do art. 39 da Resolução 198: “exercer, promover-se, divulgar que exerce ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem registro no CAU, configurando exploração econômica da atividade”.
                                             </p>
 
                                             <p id="dosimetria_resolucao_4">
@@ -1706,9 +1766,9 @@
                 style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator."></textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: Diante do exposto acima, é evidente a infração ao
-                exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela
-                regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa
-                paga.)</p> -->
+            exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela
+            regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa
+            paga.)</p> -->
 
 
 
@@ -1721,19 +1781,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-         
 
             </div>
-
-
-
-
 
 
 
@@ -1761,7 +1816,7 @@
                             
                             <span contenteditable="false"></span>
 
-                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso VII do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
 
                         </span>
 
@@ -1774,21 +1829,42 @@
 
                     </span>
 
-                   
+
+            
 
                 </div>
 
                 <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;">
 
                     <span id="span_alteracao_multa_nao" contenteditable="true">
-
+                        
                         <span contenteditable="false"></span>
-                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
+                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso VII do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
 
-                   
+
 
                 </div>
+
+
+            </div>
+
+
+
+            <label class="my-3" for="" id="lab_envio_ao_mp_voto"  style="display: none;"><strong>Informação sobre o envio ao Ministério Público:</strong></label>
+
+            <div class="card p-2" id="div_envio_ao_mp_voto" style="display: none;">
+
+                <span id="">
+
+                    <span id="span_envio_ao_mp_voto" contenteditable="true">
+                        
+                        <span contenteditable="false"></span>
+
+                        Acrescento, ainda, que cópia do referido processo seja remetida à Assessoria Jurídica do CAU/SP para abertura de denúncia perante o Ministério Público contra o denunciado.    
+                    </span>
+
+                </span>
 
 
             </div>
@@ -2071,6 +2147,10 @@
                         <!-- <span id="input_somente_pagamento_multa_checked_2_final"></span><span id="span_somente_pagamento_multa_checked_3_final"></span> -->
                     </p>
 
+                    <p>
+                        <span id="span_somente_pagamento_multa_nao_final"></span>
+                    </p>
+
 
                     <p id="p_resolucoes_fixo_1_final" ></p>
                     <p id="p_resolucoes_fixo_2_final" ></p>
@@ -2081,9 +2161,15 @@
                     <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_8_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_9_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_10_final" ></p>
-                    <p id="p_resolucoes_fixo_11_final" ></p>
-                    <p id="p_resolucoes_fixo_12_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p id="p_resolucoes_fixo_10_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+
+
+                    <!-- condicionado -->    
+                    <p id="p_envio_ao_mp_checked_resolucoes_1_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p id="p_envio_ao_mp_checked_resolucoes_3_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_envio_ao_mp_checked_resolucoes_5_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
 
                     <!-- condicionado -->    
@@ -2144,6 +2230,12 @@
                     <p >
                         <span id="span_alteracao_multa_nao_final"></span>
                     </p>
+
+                    <p >
+                        <span id="span_envio_ao_mp_voto_final"></span>
+                    </p>
+
+                    
 
                     <p style="text-align: center; margin-top: 35px;">
                         <span id="assinatura_1_final" ></span><span id="assinatura_2_final"></span>
@@ -2338,6 +2430,24 @@
 
         });
 
+        // processo enviado ao mp checked
+        let input_envio_ao_mp = document.getElementById("input_envio_ao_mp");
+        let div_envio_ao_mp_checked_resolucoes = document.getElementById("div_envio_ao_mp_checked_resolucoes");
+
+        input_envio_ao_mp.addEventListener("change", () => {
+            if (input_envio_ao_mp.checked) {
+                div_envio_ao_mp_checked_resolucoes.style.display = "block";
+                div_envio_ao_mp_voto.style.display = "block";
+                lab_envio_ao_mp_voto.style.display = "block";
+            } else {
+                div_envio_ao_mp_checked_resolucoes.style.display = "none";
+                div_envio_ao_mp_voto.style.display = "none";
+                lab_envio_ao_mp_voto.style.display = "none";
+            }
+
+        });
+        
+
         let processo_com_defesa = document.getElementById("processo_com_defesa");
         let div_processo_com_defesa_checked = document.getElementById("div_processo_com_defesa_checked");
         let div_processo_com_defesa_checked_analise = document.getElementById("div_processo_com_defesa_checked_analise");
@@ -2380,19 +2490,40 @@
         let div_somente_pagamento_multa_checked_voto = document.getElementById("div_somente_pagamento_multa_checked_voto");
 
 
+        let input_somente_pagamento_multa_nao = document.getElementById("input_somente_pagamento_multa_nao");
+        let div_somente_pagamento_multa_nao = document.getElementById("div_somente_pagamento_multa_nao");
+
+
+
         input_somente_pagamento_multa.addEventListener("change", () => {
             if (input_somente_pagamento_multa.checked) {
                 div_somente_pagamento_multa_checked.style.display = "block";
                 div_somente_pagamento_multa_checked_resolucoes.style.display = "block";
                 div_multa_paga_voto.style.display = "block";
-                div_somente_pagamento_multa_checked_voto.style.display = "none"; //inversamente
+                div_somente_pagamento_multa_checked_voto.style.display = "none"; // inversamente
+
+                input_somente_pagamento_multa_nao.checked = false; // Desmarca o outro checkbox
+                div_somente_pagamento_multa_nao.style.display = "none"; // inversamente
             } else {
                 div_somente_pagamento_multa_checked.style.display = "none";
                 div_somente_pagamento_multa_checked_resolucoes.style.display = "none";
                 div_multa_paga_voto.style.display = "none";
-                div_somente_pagamento_multa_checked_voto.style.display = "block"; //inversamente
+                div_somente_pagamento_multa_checked_voto.style.display = "block"; // inversamente
             }
+        });
 
+        input_somente_pagamento_multa_nao.addEventListener("change", () => {
+            if (input_somente_pagamento_multa_nao.checked) {
+                div_somente_pagamento_multa_checked.style.display = "none";
+                div_somente_pagamento_multa_checked_resolucoes.style.display = "none";
+                div_multa_paga_voto.style.display = "none";
+                div_somente_pagamento_multa_checked_voto.style.display = "block"; // inversamente
+
+                div_somente_pagamento_multa_nao.style.display = "block"; // inversamente
+                input_somente_pagamento_multa.checked = false; // Desmarca o outro checkbox
+            } else {
+                div_somente_pagamento_multa_nao.style.display = "none"; // inversamente
+            }
         });
 
         // Houve contestação da Notificação Preventiva?
@@ -2421,6 +2552,7 @@
 
         // });
 
+ 
         // CHECKBOX DA NOTIFICAÇÃO houve regularização?  ---------------------------------------------------------------------------------
 
         
@@ -2585,59 +2717,35 @@
         const razoesSemRegularizacao = document.getElementById('input_sem_regularizacao_sem_pagamento');
         const razoesSomenteRegularizacao = document.getElementById('input_somente_regularizacao');
         const razoesSomentePagamentoMulta = document.getElementById('input_somente_pagamento_multa');
+        const razoesSemPagamentoMulta = document.getElementById('input_somente_pagamento_multa_nao');
         const areaRazoesDecisao = document.getElementById('area_razoes_decisao');
 
         // Função para atualizar a área de decisão com base no checkbox selecionado
         function atualizarAreaDecisao() {
             // Verifica se mais de um checkbox está selecionado
-            const maisDeUmSelecionado = [razoesSemRegularizacao, razoesSomenteRegularizacao, razoesSomentePagamentoMulta]
-                .filter(checkbox => checkbox.checked).length > 1;
+            const maisDeUmSelecionado = [razoesSemRegularizacao, razoesSomenteRegularizacao, razoesSomentePagamentoMulta, razoesSemPagamentoMulta,].filter(checkbox => checkbox.checked).length > 1;
 
             if (razoesSemRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular e com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, estando ela ainda irregular e com a multa não paga.";
             } else if (razoesSomenteRegularizacao.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, tendo ela regularizado o fato gerador somente após o auto de infração, mas com a multa não paga.";
             } else if (razoesSomentePagamentoMulta.checked && !maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular, mas com a multa paga.";
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, mas com a multa paga.";
+            } else if (razoesSemPagamentoMulta.checked && !maisDeUmSelecionado) {
+                areaRazoesDecisao.value = "Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela parte interessada, sem o pagamento da multa paga.";
             } else if (maisDeUmSelecionado) {
-                areaRazoesDecisao.value = "-----------------------------------------------------------------------"; // Verifica se mais de um checkbox foi selecionado simultaneamente
+                areaRazoesDecisao.value = "-----------------------------------------------------------------------"; // Marca mais de um selecionado
             } else {
                 areaRazoesDecisao.value = ""; // Limpa o valor se nenhum checkbox estiver selecionado ou se há mais de um selecionado
-            }
+              }
         }
 
         // Adiciona os eventos de mudança para os checkboxes
         razoesSemRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
+        razoesSemPagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
-
-        // não permite que voto em branco -------------------------------------------------------
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const validacao_preenchimento_span_multa_paga_voto = document.getElementById('span_multa_paga_voto');
-
-        //     if (validacao_preenchimento_span_multa_paga_voto) {
-        //         // Configura o MutationObserver para monitorar alterações no texto do span
-        //         const observer = new MutationObserver(function (mutationsList, observer) {
-        //             mutationsList.forEach(function (mutation) {
-        //                 if (mutation.type === 'childList') {
-        //                     // Verifica se o conteúdo do span está vazio
-        //                     if (validacao_preenchimento_span_multa_paga_voto.innerText === "") {
-        //                         validacao_preenchimento_span_multa_paga_voto.innerText = "-";
-        //                     }
-        //                 }
-        //             });
-        //         });
-
-        //         // Inicia o observer, observando mudanças nos filhos do span (o que inclui o texto)
-        //         observer.observe(validacao_preenchimento_span_multa_paga_voto, { childList: true });
-        //     } else {
-        //         console.error("Elemento span_multa_paga_voto não encontrado.");
-        //     }
-        // });
-
-        
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -2649,33 +2757,32 @@
 
             // Verifica cada campo e adiciona mensagens ao array se necessário
 
-            verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
-            verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
-            verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
-            verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
-            verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
-            verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
-            verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
-            verificarCheckboxNotificacaoPreventiva("#input_devolucao_corresp_sim", "#input_devolucao_corresp_nao", "Devolução de correspondência da notificação preventiva incompleto.", mensagens);
-            verificarCheckboxContestacao("#input_notificacao_preventiva", "#input_notificacao_preventiva_checked", "Contestação da notificação preventiva incompleto.", mensagens);
-            verificarCheckboxTentativaRegularizacao("#input_tentativa_regularizacao_nao", "#input_tentativa_regularizacao_sim", "Tentativa de regularização sem informação.", mensagens);
-            verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
-            verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
-            verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
-            verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
-            verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
-            verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
-            verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
-            verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
+            // verificarCampoInput("#input_num_processo", "Nº do processo em branco.", mensagens);
+            // verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
+            // verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
+            // verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
+            // verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
+            // verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
+            // verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
+            // verificarCheckboxNotificacaoPreventiva("#input_devolucao_corresp_sim", "#input_devolucao_corresp_nao", "Devolução de correspondência da notificação preventiva incompleto.", mensagens);
+            // verificarCheckboxContestacao("#input_notificacao_preventiva", "#input_notificacao_preventiva_checked", "Contestação da notificação preventiva incompleto.", mensagens);
+            // verificarCheckboxTentativaRegularizacao("#input_tentativa_regularizacao_nao", "#input_tentativa_regularizacao_sim", "Tentativa de regularização sem informação.", mensagens);
+            // verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
+            // verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
+            // verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
+            // verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
+            // verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
+            // verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
+            // verificarCheckMultaSimNao("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_nao", "Informar se houve pagamento da multa.", mensagens);
+            // verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
+            // verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
+            // verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
 
-            verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
-            verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
-            
             // Se houver mensagens, mostra um alerta com todas
             if (mensagens.length > 0) {
                 alert(`• Existem campos obrigatórios não preenchidos:\n\n${mensagens.join("\n")}`);
             }
-            
+
             function verificarCampoInput(campoId, mensagem, mensagens) {
                 if (document.querySelector(campoId).value === "") {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
@@ -2704,7 +2811,7 @@
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
-            
+
 
             function verificarCheckboxNotificacaoPreventiva(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
@@ -2783,6 +2890,15 @@
                 }   
             }
 
+            function verificarCheckMultaSimNao(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+
+                }
+            }
+
             function verificarCheckboxProcessoRegularizado(campoId01, campoId02, campoId03, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
@@ -2851,10 +2967,9 @@
             }
 
             // ------------------- fim da validação -----------------------------------------------
-     
+
 
             if (mensagens.length === 0) {
-
                 // var conteudo_relato_final = document.getElementById("conteudo_relato_final");
                 // conteudo_relato_final.innerText = "";
 
@@ -2877,7 +2992,7 @@
 
                 td_num_processo_final.innerText = input_num_processo.value;
                 td_interessado_final.innerText = input_interessado.value;
-                td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
+                td_assunto_final.innerText = "Exercício ilegal da profissão (PF).";
                 td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
 
 
@@ -3172,6 +3287,50 @@
                 }
 
 
+                // Encaminhamento de processo: enviado ao mp.
+
+                let input_envio_ao_mp = document.getElementById("input_envio_ao_mp");
+
+                if (input_envio_ao_mp.checked) {
+
+                    let p_envio_ao_mp_checked_resolucoes_1 = document.getElementById("p_envio_ao_mp_checked_resolucoes_1");
+                    let p_envio_ao_mp_checked_resolucoes_2 = document.getElementById("p_envio_ao_mp_checked_resolucoes_2");
+                    let p_envio_ao_mp_checked_resolucoes_3 = document.getElementById("p_envio_ao_mp_checked_resolucoes_3");
+                    let p_envio_ao_mp_checked_resolucoes_4 = document.getElementById("p_envio_ao_mp_checked_resolucoes_4");
+                    let p_envio_ao_mp_checked_resolucoes_5 = document.getElementById("p_envio_ao_mp_checked_resolucoes_5");
+
+                    let p_envio_ao_mp_checked_resolucoes_1_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_1_final");
+                    let p_envio_ao_mp_checked_resolucoes_2_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_2_final");
+                    let p_envio_ao_mp_checked_resolucoes_3_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_3_final");
+                    let p_envio_ao_mp_checked_resolucoes_4_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_4_final");
+                    let p_envio_ao_mp_checked_resolucoes_5_final = document.getElementById("p_envio_ao_mp_checked_resolucoes_5_final");
+
+                    p_envio_ao_mp_checked_resolucoes_1_final.innerText = p_envio_ao_mp_checked_resolucoes_1.innerText;
+                    p_envio_ao_mp_checked_resolucoes_2_final.innerText = p_envio_ao_mp_checked_resolucoes_2.innerText;
+                    p_envio_ao_mp_checked_resolucoes_3_final.innerText = p_envio_ao_mp_checked_resolucoes_3.innerText;
+                    p_envio_ao_mp_checked_resolucoes_4_final.innerText = p_envio_ao_mp_checked_resolucoes_4.innerText;
+                    p_envio_ao_mp_checked_resolucoes_5_final.innerText = p_envio_ao_mp_checked_resolucoes_5.innerText;
+
+
+                    let span_envio_ao_mp_voto = document.getElementById("span_envio_ao_mp_voto");
+
+                    let span_envio_ao_mp_voto_final = document.getElementById("span_envio_ao_mp_voto_final");
+
+                    span_envio_ao_mp_voto_final.innerText = span_envio_ao_mp_voto.innerText;
+
+                } else {
+                    p_envio_ao_mp_checked_resolucoes_1_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_2_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_3_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_4_final.innerText = "";
+                    p_envio_ao_mp_checked_resolucoes_5_final.innerText = "";
+
+
+                    span_envio_ao_mp_voto_final.innerText = "";
+
+                }
+
+
                 // Encaminhamento de processo: Processo à Revelia.
 
                 let input_processo_revelia = document.getElementById("input_processo_revelia");
@@ -3391,28 +3550,33 @@
                 // Se houve somente o pagamento da multa:
 
                 let input_somente_pagamento_multa = document.getElementById("input_somente_pagamento_multa");
+                let input_somente_pagamento_multa_nao = document.getElementById("input_somente_pagamento_multa_nao");
 
                 if (input_somente_pagamento_multa.checked) {
-                    console.log("Se houve somente o pagamento da multa: está selecionado.");
+
+                    // limpar campos
+
+                    let span_somente_pagamento_multa_nao_final = document.getElementById("span_somente_pagamento_multa_nao_final");
+
+
+                    span_somente_pagamento_multa_nao_final.innerText = "";
+
+
+                    //  ----------------------------------------------
+
                     let span_somente_pagamento_multa_checked_1 = document.getElementById("span_somente_pagamento_multa_checked_1");
                     let input_somente_pagamento_multa_checked_1 = document.getElementById("input_somente_pagamento_multa_checked_1");
                     let span_somente_pagamento_multa_checked_2 = document.getElementById("span_somente_pagamento_multa_checked_2");
-                    // let input_somente_pagamento_multa_checked_2 = document.getElementById("input_somente_pagamento_multa_checked_2");
-                    // let span_somente_pagamento_multa_checked_3 = document.getElementById("span_somente_pagamento_multa_checked_3");
+
 
                     let span_somente_pagamento_multa_checked_1_final = document.getElementById("span_somente_pagamento_multa_checked_1_final");
                     let input_somente_pagamento_multa_checked_1_final = document.getElementById("input_somente_pagamento_multa_checked_1_final");
                     let span_somente_pagamento_multa_checked_2_final = document.getElementById("span_somente_pagamento_multa_checked_2_final");
-                    // let input_somente_pagamento_multa_checked_2_final = document.getElementById("input_somente_pagamento_multa_checked_2_final");
-                    // let span_somente_pagamento_multa_checked_3_final = document.getElementById("span_somente_pagamento_multa_checked_3_final");
 
                     span_somente_pagamento_multa_checked_1_final.innerText = span_somente_pagamento_multa_checked_1.innerText;
                     input_somente_pagamento_multa_checked_1_final.innerText = input_somente_pagamento_multa_checked_1.value;
                     span_somente_pagamento_multa_checked_2_final.innerText = span_somente_pagamento_multa_checked_2.innerText;
-                    // input_somente_pagamento_multa_checked_2_final.innerText = input_somente_pagamento_multa_checked_2.value;
-                    // span_somente_pagamento_multa_checked_3_final.innerText = span_somente_pagamento_multa_checked_3.innerText;
 
-                    // elemento deve aparecer em analises e considerações
                     let p_somente_pagamento_multa_checked_resolucoes_1 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1");
                     let p_somente_pagamento_multa_checked_resolucoes_2 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2");
                     let p_somente_pagamento_multa_checked_resolucoes_3 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3");
@@ -3451,13 +3615,65 @@
 
 
 
-                } else {
+                } else if (input_somente_pagamento_multa_nao.checked) {
+
+                    // limpar campos
+
+                    let span_somente_pagamento_multa_checked_1_final = document.getElementById("span_somente_pagamento_multa_checked_1_final");
+                    let input_somente_pagamento_multa_checked_1_final = document.getElementById("input_somente_pagamento_multa_checked_1_final");
+                    let span_somente_pagamento_multa_checked_2_final = document.getElementById("span_somente_pagamento_multa_checked_2_final");
 
                     span_somente_pagamento_multa_checked_1_final.innerText = "";
                     input_somente_pagamento_multa_checked_1_final.innerText = "";
                     span_somente_pagamento_multa_checked_2_final.innerText = "";
-                    // input_somente_pagamento_multa_checked_2_final.innerText = "";
-                    // span_somente_pagamento_multa_checked_3_final.innerText = "";
+
+                    let p_somente_pagamento_multa_checked_resolucoes_1_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_2_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_2_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_3_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_3_final");
+                    let p_somente_pagamento_multa_checked_resolucoes_4_final = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_4_final");
+
+
+                    p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = "";
+                    p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = "";
+
+                    //  ----------------------------------------------
+
+                    let span_somente_pagamento_multa_nao = document.getElementById("span_somente_pagamento_multa_nao");
+
+                    let span_somente_pagamento_multa_nao_final = document.getElementById("span_somente_pagamento_multa_nao_final");
+
+                    span_somente_pagamento_multa_nao_final.innerText = span_somente_pagamento_multa_nao.innerText;
+
+
+
+
+
+                    // elemento deve aparecer no voto
+
+                    // let input_alteracao_multa_sim = document.getElementById("input_alteracao_multa_sim");
+                    // input_alteracao_multa_sim.checked = false;
+                    // let input_alteracao_multa_nao = document.getElementById("input_alteracao_multa_nao");
+                    // input_alteracao_multa_nao.checked = false;
+
+
+
+                    let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
+
+
+                    let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
+
+
+                    span_multa_paga_voto_final.innerText = "";
+                    
+                    
+                } else  {
+
+                    span_somente_pagamento_multa_checked_1_final.innerText = "";
+                    input_somente_pagamento_multa_checked_1_final.innerText = "";
+                    span_somente_pagamento_multa_checked_2_final.innerText = "";
+
 
                     p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
                     p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
@@ -3467,6 +3683,7 @@
                     span_multa_paga_voto_final.innerText = "";
 
                 }
+                
 
                 // Se houve alteração da multa
 
@@ -3514,8 +3731,7 @@
                 let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
                 let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
                 let p_resolucoes_fixo_10 = document.getElementById("p_resolucoes_fixo_10");
-                let p_resolucoes_fixo_11 = document.getElementById("p_resolucoes_fixo_11");
-                let p_resolucoes_fixo_12 = document.getElementById("p_resolucoes_fixo_12");
+
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
                 let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
@@ -3527,8 +3743,7 @@
                 let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
                 let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
                 let p_resolucoes_fixo_10_final = document.getElementById("p_resolucoes_fixo_10_final");
-                let p_resolucoes_fixo_11_final = document.getElementById("p_resolucoes_fixo_11_final");
-                let p_resolucoes_fixo_12_final = document.getElementById("p_resolucoes_fixo_12_final");
+
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
                 p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
@@ -3540,8 +3755,8 @@
                 p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
                 p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
                 p_resolucoes_fixo_10_final.innerText = p_resolucoes_fixo_10.innerText;
-                p_resolucoes_fixo_11_final.innerText = p_resolucoes_fixo_11.innerText;
-                p_resolucoes_fixo_12_final.innerText = p_resolucoes_fixo_12.innerText;
+
+
 
 
 
@@ -4011,13 +4226,13 @@
         // selecionar o checkbox referente a infração logo no início
         // Adiciona um event listener ao botão com ID 'btn_calculadora'
         document.getElementById('btn_calculadora').addEventListener('click', function() {
-            let checkbox = document.getElementById("gravidade-item2");
+            let checkbox = document.getElementById("gravidade-item1");
 
             if (!checkbox.checked) {
                 checkbox.click(); // Simula o clique no checkbox
-                console.log("Checkbox gravidade-item2 clicado");
+                console.log("Checkbox gravidade-item1 clicado");
             } else {
-                console.log("Checkbox gravidade-item2 não encontrado");
+                console.log("Checkbox gravidade-item1 não encontrado");
             }
         });
 

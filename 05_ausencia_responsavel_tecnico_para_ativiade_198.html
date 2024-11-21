@@ -37,7 +37,6 @@
 
         body {
             min-width: 700px;
-            
         }
 
         .table-sm td,
@@ -110,12 +109,40 @@
             }
 
         }
+        
+        @media (max-width: 993px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 550px; /* Largura para telas menores que 981px */
+            }
+        }
+
+        @media (max-width: 767px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 480px; /* Largura para telas menores que 570px */
+            }
+        }
+
+        @media (min-width: 994px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 582px; /* Largura para telas menores que 570px */
+            }
+        }
 
         @media (max-width: 665px) {
             .sidebar {
                 display: none;
             }
         }
+        
         
         /* Estilos para o loader */
         #loader {
@@ -155,18 +182,20 @@
             margin-top: 20px; /* Espaço entre o spinner e o texto */
         }
 
+        
     </style>
 
 </head>
 
-<body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif;">
+<body class="" style="font-size: 16px; font-family: Calibri, Arial, sans-serif; min-width: 700px;">
 
     <!-- Div para o loader com o spinner CSS -->
     <div id="loader">
         <div class="spinner"></div>
         <div>carregando...</div>
     </div>
-        
+    
+
     <div class="sidebar">
 
         <a href="#navbar" class="btn btn-info" title="">Histórico</a>  <!-- nav -->
@@ -210,19 +239,32 @@
                             Tipo de Relato
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="ausencia_registro_cau_pj_22_198.html">Ausência de registro no CAU PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <a class="dropdown-item" href="ausencia_registro_cau_e_crea_pj_22_198.html">Ausência de registro no CAU e no CREA PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <!-- 1  -->
+                            <a class="dropdown-item" href="01_exercicio_ilegal_profissao_pf_198.html">Exercício ilegal da profissão PF <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <!-- 2  -->
+                            <a class="dropdown-item" href="02_exercicio_ilegal_profissao_pj_198.html">Exercício ilegal da profissão PJ <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="ausencia_responsavel_tecnico_pj_22_198.html">Ausência de responsável técnico PJ <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <!-- 3  -->    
+                            <a class="dropdown-item" href="03_exercicio_irregular_profissao_pf_198.html">Exercício irregular da profissão PF <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_ausencia_responsavel_atividade_22_198.html">Exercício ilegal da profissão (PF) - Ausência de responsável para a atividade <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <a class="dropdown-item" href="exercicio_ilegal_profissao_pf_exploracao_economica_198_22_198.html">Exercício ilegal da profissão (PF) - Exploração econônima <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
+                            <!-- 5  -->    
+                            <a class="dropdown-item" href="05_ausencia_responsavel_tecnico_para_ativiade_198.html">Ausência de responsável técnico para a atividade <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <!-- 6  -->    
+                            <a class="dropdown-item" href="06_ausencia_responsavel_tecnico_pj_198.html">Ausência de responsável técnico registrado PJ <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="ausencia_rrt_pf_22_198.html">Ausência de RRT (PF) <span style="color: #cf3232; text-decoration: underline; font-style: italic">(Resoluções nº 22 e 198)</span></a>
-                            <!-- <a class="dropdown-item" href="#">Exercício ilegal da profissão PF  (Resoluções nº 22 e 198)</a> -->
-                            <!-- outros itens comentados -->
-                        </div>
+                            <!-- 9  -->    
+                            <a class="dropdown-item" href="09_utilizacao_irregular_termos_arquitetura_e_urbanismo_198.html">Utilização irregular dos termos "Arquitetura" ou "Urbanismo" <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            
+                            <div class="dropdown-divider"></div>
+                            <!-- 10  -->     
+                            <a class="dropdown-item" href="10_ausencia_ou_utilizacao_irregular_placa_198.html">Ausência ou utilização irregular de placa <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
+                            <!-- 14  -->     
+                            <a class="dropdown-item" href="10_ausencia_ou_utilizacao_irregular_placa_198.html">Ausência de RRT PF <span style="color: #2378cd; text-decoration: underline; font-style: italic;">(Resolução nº 198)</span></a>
 
+                        </div>
                     </li>
 
 
@@ -237,7 +279,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções CAU/BR</a>
+                    <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções CAU/BR</a>
                     </li>
             
 
@@ -246,11 +288,11 @@
                 <ul class="navbar-nav align-items-center">
                     <!-- Itens alinhados no fim -->
                     <li class="nav-item mx-1">
-                        <a class="btn btn-danger btn-sm" href="ausencia_registro_cau_pj_22_198.html" role="button">Resoluções nº 22 e 198</a>
+                        <a class="btn btn-light btn-sm" style="background-color: #e4e4e4f4;" href="ausencia_registro_cau_pj_22_198.html" role="button">Resoluções nº 22 e 198</a>
                     </li>
                     
                     <li class="nav-item mx-1">
-                        <a class="btn btn-light btn-sm" style="background-color: #dad9d9f4;" href="01_exercicio_ilegal_profissao_pf_198.html" role="button">Resolução nº 198</a>
+                        <a class="btn btn-primary btn-sm" href="exercicio_ilegal_profissao_pj_198.html" role="button">Resolução nº 198</a>
                     </li>
                 </ul>
 
@@ -261,7 +303,7 @@
 
     <!--------------------------------------- Relato  ---------------------------------------->
 
-    <div class="container my-4 " id="div_cabecalho">
+    <div class="container my-4 " id="div_cabecalho" >
 
 
         <fieldset class="border rounded border-dark p-3">
@@ -273,25 +315,25 @@
                 <tr>
                     <td>PROCESSO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_num_processo"
-                            placeholder="Nº do processo-Índice." style="width: 475px;"></td>
+                            placeholder="Nº do processo-Índice." style="max-width: 582px;"></td>
                 </tr>
 
                 <tr>
                     <td> INTERESSADO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_interessado"
-                            placeholder="Nome completo do interessado." style="width: 475px;"></td>
+                            placeholder="Nome completo do interessado." style="max-width: 582px;"></td>
                 </tr>
 
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Ausência de registro no CAU (PJ)." style="width: 475px;" disabled></td>
+                            placeholder="Análise e parecer sobre processo de fiscalização – Ausência de responsável técnico para a atividade." style="max-width: 582px;" disabled></td>
                 </tr>
 
                 <tr>
                     <td>RELATOR:</td>
                     <td>
-                        <select class="form-control form-control-sm" id="input_relator" style="width: 475px;" onchange="inserirAssinaturas()">
+                        <select class="form-control form-control-sm" id="input_relator" style="max-width: 582px;" onchange="inserirAssinaturas()">
                             <option value="M">Selecione o nome do Conselheiro/a relator/a.</option>
                             <option value="M">---------------------- Conselheiros ----------------------</option>
                             <option value="F">Renata Ballone</option>
@@ -381,7 +423,7 @@
 
             <!-- <label class="my-3" for="" id="lab_irregularidade"><strong>Irregularidade:</strong></label> -->
             <textarea class="form-control my-1" id="area_irregularidade" cols="30" rows="5"
-                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a empresa em questão possui atividade no campo da arquitetura e urbanismo sem ter o devido registro no Conselho.</textarea>
+                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">houve a realização de atividade de XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX pela parte interessada sem ter o devido profissional habilitado para sua execução.</textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: a empresa XXXXXXXX possui atividades no campo da
                 arquitetura e urbanismo sem ter o devido registro no Conselho.)</p> -->
@@ -885,6 +927,41 @@
 
             <div></div>
 
+            <div id="div_pf_baixa_renda">
+
+                <label class="my-3" for="" id="lab_pf_baixa_renda"><strong>Interessado é pessoa física de baixa renda? <span style="font-style: italic; color: rgb(177, 2, 2);">&nbsp;(nesse caso não será cobrada multa).</span> </strong></label>
+
+                <div id="">
+
+                    <input type="checkbox" id="input_pf_baixa_renda_nao">
+                    <label id="lab_pf_baixa_renda_nao" for="input_pf_baixa_renda_nao">Não</label>
+
+                    <input type="checkbox" class="ml-2" id="input_pf_baixa_renda_sim">
+                    <label id="lab_pf_baixa_renda_sim" for="input_pf_baixa_renda_sim">Sim</label>
+
+                </div>
+
+                <!-- <div class="" style="display: none;" id="div_pf_baixa_renda_nao">
+                    <textarea id="area_pf_baixa_renda_nao" class="form-control my-1" id="" cols="30" rows="5"
+                        style="width: 100%; padding: 5px;"
+                        placeholder="Texto a ser preenchido pelo relator.">Não houve tentativa de regularização.</textarea>
+
+
+
+                </div>
+
+                <div class="" style="display: none;" id="div_pf_baixa_renda_sim">
+                    <textarea id="area_pf_baixa_renda_sim" class="form-control my-1" id="" cols="30" rows="5"
+                        style="width: 100%; padding: 5px;"
+                        placeholder="Texto a ser preenchido pelo relator.">Houve tentativa de regularização, que não foi acatada.</textarea>
+
+                </div> -->
+
+
+            </div>
+
+            <div></div>
+
             <hr>
 
             <!-- div resolução -->
@@ -909,41 +986,29 @@
                     urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
                 </p>
                 <p id="p_resolucoes_fixo_5" style="text-align: justify">
-                    Considerando o art. 35, inciso X, da Resolução 22/2012:
+                    Considerando o art. 39, inciso V, da Resolução 198/2020:
                 </p>
-                <p id="p_resolucoes_fixo_6" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “Art. 35. As infrações ao exercício da profissão de Arquitetura e Urbanismo nos termos definidos
-                    nesta Resolução serão punidas com multas, respeitados os seguintes limites:
+
+                <p class="espacamento_simples" id="p_resolucoes_fixo_6"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                    “V – realizar atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem responsável técnico pelo desempenho destas atividades, não configurando exploração econômica da atividade;
                 </p>
                 <p class="espacamento_simples" id="p_resolucoes_fixo_7"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    (...)
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_8"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    X – Pessoa jurídica sem registro no CAU exercendo atividade privativa de arquitetos e urbanistas;
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_9"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Infrator: pessoa jurídica;
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_10"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Valor da Multa: mínimo de 5 (cinco) vezes e máximo de 10 (dez) vezes o valor vigente da anuidade”
+                    Infrator: pessoa física (leigo) ou jurídica;”
                 </p>
 
-
-                <p id="p_resolucoes_fixo_11" style="text-align: justify">
+                <!-- <p id="p_resolucoes_fixo_8" style="text-align: justify">
                     Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
                 </p>
 
-                <p class="espacamento_simples" id="p_resolucoes_fixo_12"
+                <p class="espacamento_simples" id="p_resolucoes_fixo_9"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
                     “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas
                     encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das
                     diversas profissões, em razão da atividade básica ou em relação àquela pela qual prestem serviços a
                     terceiros.”
-                </p>
+                </p> -->
 
             </div>
 
@@ -1043,6 +1108,48 @@
 
             </div>
 
+            <div id="div_legislacao_pf_baixa_renda">
+
+
+                <div class="" style="display: none;" id="div_pf_baixa_renda_resolucoes">
+
+                    <label class="my-3"  ><strong>Pessoa física de baixa renda</strong></label>
+
+                    <p id="p_pf_baixa_renda_resolucoes_1" style="text-align: justify">
+                        Considerando o art. 39, §§ 1º, 2º e 3º, da Resolução CAU/BR nº 198/2020:
+                    </p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_2" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        “Art. 39 [...]
+                    </p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_3" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        § 1º No caso da infração prevista no inciso V deste artigo, quando o notificado ou autuado se tratar de pessoa física cuja família se configure como de baixa renda, o CAU/UF notificará o órgão local competente para o cumprimento da Lei nº 11.888, de 24 de dezembro de 2008, e, caso não seja regularizada a situação, o CAU/UF deverá comunicará o fato ao Ministério Público, não sendo aplicada a penalidade de multa ao autuado.
+                    </p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_4" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        § 2º Para fins desta Resolução, considera-se família de baixa renda aquela que se enquadra nas condições do Cadastro Único para Programas Sociais do Governo Federal, regulamentado pelo Decreto nº 6.135, de 26 de junho de 2007, ou em legislação federal posterior vigente.
+                    </p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_5" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        § 3º Caberá à pessoa física notificada ou autuada a comprovação de seu enquadramento nas condições de baixa renda que tratam o § 2º deste artigo.”
+                    </p>
+
+
+
+                    <p id="p_pf_baixa_renda_resolucoes_6" style="text-align: justify">
+                        Considerando o art. 45 da Resolução CAU/BR nº 198/2020:
+                    </p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_7" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                        “Art. 45. No caso da infração prevista no inciso V do art. 39, relativa à ausência de responsável técnico para atividade, não haverá aplicação de multa, quando o notificado se tratar de pessoa física cuja família se configure como de baixa renda, nos termos do § 2º do art. 39.”
+                    </p>
+
+
+                </div>
+
+            </div>
+
 
             <hr class="my-4">
 
@@ -1116,7 +1223,7 @@
                                                     <td class="text-center align-middle">13</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input align-middle"
-                                                            id="gravidade-item2" data-text="">
+                                                            id="gravidade-item2" data-text="" disabled>
                                                     </td>
                                                 </tr>
 
@@ -1148,7 +1255,7 @@
                                                     <td class="text-center align-middle">10</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item5" data-text=""disabled>
+                                                            id="gravidade-item5" data-text="">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1241,6 +1348,7 @@
 
                                             </tbody>
                                         </table>
+
                                     </div>
 
 
@@ -1518,19 +1626,20 @@
                                             <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res198"></p>
                                         </div>
 
-                                        <hr>
 
-                                        <div class="d-flex">
+
+                                        <div class="d-none">
                                             <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme
                                                     Resolução nº 22:</strong></p>
                                             <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p>
                                             <input type="text" style="width: 250px; height: 30px;" class="form-control"
                                                 id="valorMultaRes22" value=""
-                                                placeholder="Informe o valor da multa...">
+                                                placeholder="Se necessário, informe o valor...">
                                         </div>
 
-                                        <hr>
-                                        <div class="d-flex">
+
+
+                                        <div class="d-none">
                                             <p class="d-flex my-1 align-items-center"><strong>Multa a ser
                                                     aplicada:</strong></p>
                                             <p class="d-flex my-1 align-items-center ml-2" id="multa_aplicada"></p>
@@ -1542,7 +1651,7 @@
 
                                         <div style="text-align: justify">
 
-                                            <p id="dosimetria_resolucao_1">
+                                            <!-- <p id="dosimetria_resolucao_1">
                                                 Por fim, uma vez que o presente processo foi aberto sob a Resolução
                                                 22/2012, revogada pelo advento da Resolução 198/2020, é necessário
                                                 verificar as disposições materiais para se aplicar a situação mais
@@ -1560,10 +1669,25 @@
                                                 ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e
                                                 Urbanismo, sem registro no CAU, configurando exploração econômica da
                                                 atividade”.
-                                            </p>
+                                            </p> -->
 
-                                            <p id="dosimetria_resolucao_4">
-                                                Aplicando-se a dosimetria da multa da Resolução 198/2020:<br>
+                                            <!-- recalculo da multa -->
+
+                                            <label class="my-3" for="" id="lab_recalculo_multa"><strong>Houve fatos que justifiquem o recálculo da multa?</strong></label>
+            
+                                            <div id="div_recalculo_multa">
+                                
+                                                <input type="checkbox" id="input_recalculo_multa_nao">
+                                                <label for="input_recalculo_multa_nao" id="lab_recalculo_multa_nao">Não</label>
+                                
+                                                <input type="checkbox" class="ml-2" id="input_recalculo_multa_sim">
+                                                <label for="input_recalculo_multa_sim" id="lab_recalculo_multa_sim">Sim</label>
+                                
+
+                                            </div>
+
+                                            <p id="dosimetria_resolucao_4" style="display: none;" contenteditable="true">
+                                                
                                             </p>
 
                                         </div>
@@ -1721,13 +1845,32 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso V do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-         
+
+
+            </div>
+
+            <div class="card p-2" id="div_pf_baixa_renda_voto" style="display: none;">
+
+                <span id="">
+
+                    <span id="span_pf_baixa_renda_voto" contenteditable="true">
+                        
+                        <span contenteditable="false"></span>
+
+                        Considerando se tratar de pessoa física cuja família se configure como de baixa renda, voto pelo ARQUIVAMENTO do processo, com CANCELAMENTO da multa aplicada, com base no art. 45 da Resolução CAU/BR Nº 198/2020, encaminhando cópia do processo para a Comissão de ATHIS do CAU/SP para análise e providências em relação ao caso.
+                    
+                    </span>
+
+                </span>
+
+                <br><br>
+
 
             </div>
 
@@ -1761,7 +1904,7 @@
                             
                             <span contenteditable="false"></span>
 
-                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso V do Art. 39 da Resolução Nº 198/2020 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
 
                         </span>
 
@@ -1780,13 +1923,15 @@
 
                 <div class="card p-2" id="div_alteracao_multa_nao" style="display: none;">
 
-                    <span id="span_alteracao_multa_nao" contenteditable="true">
 
-                        <span contenteditable="false"></span>
-                        <span >Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
+                    <span id="span_alteracao_multa_nao">
+                        
+                        <span></span>
+                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso V do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
+                    
 
-                   
+        
 
                 </div>
 
@@ -2079,11 +2224,8 @@
                     <p id="p_resolucoes_fixo_5_final" ></p>
                     <p id="p_resolucoes_fixo_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
                     <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_8_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_9_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_10_final" ></p>
-                    <p id="p_resolucoes_fixo_11_final" ></p>
-                    <p id="p_resolucoes_fixo_12_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <!-- <p id="p_resolucoes_fixo_8_final" ></p>
+                    <p id="p_resolucoes_fixo_9_final" ></p> -->
 
 
                     <!-- condicionado -->    
@@ -2105,6 +2247,16 @@
                     <p id="p_processo_com_defesa_checked_resolucoes_1_final" style="text-align: justify"></p>
                     <p class="espacamento_simples" id="p_processo_com_defesa_checked_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
+                    <!-- condicionado -->    
+                    <p id="p_pf_baixa_renda_resolucoes_1_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_pf_baixa_renda_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_pf_baixa_renda_resolucoes_3_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_pf_baixa_renda_resolucoes_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_pf_baixa_renda_resolucoes_5_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+
+                    <p id="p_pf_baixa_renda_resolucoes_6_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_pf_baixa_renda_resolucoes_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+   
 
 
                     <p id="dosimetria_resolucao_1_final"></p>
@@ -2131,6 +2283,10 @@
                     <!-- condicionado -->    
                     <p >
                         <span id="span_multa_paga_voto_final"></span>
+                    </p>
+
+                    <p >
+                        <span id="span_pf_baixa_renda_voto_final"></span>
                     </p>
 
 
@@ -2338,6 +2494,34 @@
 
         });
 
+        // ADDEVENTLIST CHECKBOX EXPANSIVOS
+        // pf de baixa renda resolucao
+        let input_pf_baixa_renda_sim = document.getElementById("input_pf_baixa_renda_sim");
+        let input_pf_baixa_renda_nao = document.getElementById("input_pf_baixa_renda_nao");
+        let div_pf_baixa_renda_resolucoes = document.getElementById("div_pf_baixa_renda_resolucoes");
+
+        input_pf_baixa_renda_sim.addEventListener("change", () => {
+            if (input_pf_baixa_renda_sim.checked) {
+
+                div_pf_baixa_renda_resolucoes.style.display = "block";
+            } else {
+
+                div_pf_baixa_renda_resolucoes.style.display = "none";
+            }
+
+        });
+
+        input_pf_baixa_renda_nao.addEventListener("change", () => {
+            if (input_pf_baixa_renda_nao.checked) {
+
+                div_pf_baixa_renda_resolucoes.style.display = "none";
+            } else {
+
+                div_pf_baixa_renda_resolucoes.style.display = "none";
+            }
+
+        });
+
         let processo_com_defesa = document.getElementById("processo_com_defesa");
         let div_processo_com_defesa_checked = document.getElementById("div_processo_com_defesa_checked");
         let div_processo_com_defesa_checked_analise = document.getElementById("div_processo_com_defesa_checked_analise");
@@ -2373,27 +2557,87 @@
 
         });
 
-        // somente pagamento de multa
-        let input_somente_pagamento_multa = document.getElementById("input_somente_pagamento_multa");
-        let div_somente_pagamento_multa_checked = document.getElementById("div_somente_pagamento_multa_checked");
-        let div_somente_pagamento_multa_checked_resolucoes = document.getElementById("div_somente_pagamento_multa_checked_resolucoes");
-        let div_somente_pagamento_multa_checked_voto = document.getElementById("div_somente_pagamento_multa_checked_voto");
+        document.addEventListener("DOMContentLoaded", function() {
+            // Declaração dos elementos
+            let input_somente_pagamento_multa = document.getElementById("input_somente_pagamento_multa");
+            let div_somente_pagamento_multa_checked = document.getElementById("div_somente_pagamento_multa_checked");
+            let div_somente_pagamento_multa_checked_resolucoes = document.getElementById("div_somente_pagamento_multa_checked_resolucoes");
+            let div_somente_pagamento_multa_checked_voto = document.getElementById("div_somente_pagamento_multa_checked_voto");
+            let div_multa_paga_voto = document.getElementById("div_multa_paga_voto");
+
+            let input_pf_baixa_renda_sim = document.getElementById("input_pf_baixa_renda_sim");
+            let input_pf_baixa_renda_nao = document.getElementById("input_pf_baixa_renda_nao");
+            let div_pf_baixa_renda_voto = document.getElementById("div_pf_baixa_renda_voto");
+
+            // Função para atualizar o display com base nos inputs
+            function updateDisplay() {
+                if (input_somente_pagamento_multa.checked) {
+                    div_somente_pagamento_multa_checked.style.display = "block";
+                    div_somente_pagamento_multa_checked_resolucoes.style.display = "block";
+
+                    // Verifica se PF baixa renda está marcado
+                    if (input_pf_baixa_renda_sim.checked) {
+                        div_multa_paga_voto.style.display = "none";
+                        div_pf_baixa_renda_voto.style.display = "block";
+
+                    } else {
+                        div_multa_paga_voto.style.display = "block";
+                        div_pf_baixa_renda_voto.style.display = "none";
+                        div_somente_pagamento_multa_checked_voto.style.display = "none";
+
+                        if (input_alteracao_multa_nao.checked) {
+                            input_alteracao_multa_nao.checked = false; // Desmarcar se estiver checked
+                            div_alteracao_multa_nao.style.display = "none";
+                        }
+
+                        if (input_alteracao_multa_sim.checked) {
+                            input_alteracao_multa_sim.checked = false; // Desmarcar se estiver checked
+                            div_alteracao_multa_sim.style.display = "none";
+                        }
+                    }
+
+                    
 
 
-        input_somente_pagamento_multa.addEventListener("change", () => {
-            if (input_somente_pagamento_multa.checked) {
-                div_somente_pagamento_multa_checked.style.display = "block";
-                div_somente_pagamento_multa_checked_resolucoes.style.display = "block";
-                div_multa_paga_voto.style.display = "block";
-                div_somente_pagamento_multa_checked_voto.style.display = "none"; //inversamente
-            } else {
-                div_somente_pagamento_multa_checked.style.display = "none";
-                div_somente_pagamento_multa_checked_resolucoes.style.display = "none";
-                div_multa_paga_voto.style.display = "none";
-                div_somente_pagamento_multa_checked_voto.style.display = "block"; //inversamente
+                } else if (!input_somente_pagamento_multa.checked) {
+                    div_somente_pagamento_multa_checked.style.display = "none";
+                    div_somente_pagamento_multa_checked_resolucoes.style.display = "none";
+
+                    // Verifica se PF baixa renda está marcado
+                    if (input_pf_baixa_renda_sim.checked) {
+                        div_multa_paga_voto.style.display = "none";
+                        div_pf_baixa_renda_voto.style.display = "block";
+                        div_somente_pagamento_multa_checked_voto.style.display = "none";
+
+                        if (input_alteracao_multa_nao.checked) {
+                            input_alteracao_multa_nao.checked = false; // Desmarcar se estiver checked
+                            div_alteracao_multa_nao.style.display = "none";
+                        }
+
+                        if (input_alteracao_multa_sim.checked) {
+                            input_alteracao_multa_sim.checked = false; // Desmarcar se estiver checked
+                            div_alteracao_multa_sim.style.display = "none";
+                        }
+
+                    } else {
+                        div_multa_paga_voto.style.display = "none";
+                        div_pf_baixa_renda_voto.style.display = "none";
+                        div_somente_pagamento_multa_checked_voto.style.display = "block";
+                    }
+
+
+                } 
             }
 
+            // Eventos para todos os checkboxes
+            input_somente_pagamento_multa.addEventListener("change", updateDisplay);
+            input_pf_baixa_renda_sim.addEventListener("change", updateDisplay);
+            input_pf_baixa_renda_nao.addEventListener("change", updateDisplay);
+
+            // Inicializa a exibição correta ao carregar a página
+            updateDisplay();
         });
+
 
         // Houve contestação da Notificação Preventiva?
         let input_notificacao_preventiva = document.getElementById("input_notificacao_preventiva");
@@ -2545,6 +2789,70 @@
             }
         });
 
+        // CHECKBOX DO PF BAIXA RENDA ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_PfBaixaRenda = document.getElementById('input_pf_baixa_renda_sim');
+        var checkboxNao_PfBaixaRenda = document.getElementById('input_pf_baixa_renda_nao');
+
+        // Adiciona os event listeners
+        checkboxSim_PfBaixaRenda.addEventListener('change', function () {
+            if (checkboxSim_PfBaixaRenda.checked) {
+                checkboxNao_PfBaixaRenda.checked = false; // Desmarca o outro checkbox
+            }
+        });
+
+        checkboxNao_PfBaixaRenda.addEventListener('change', function () {
+            if (checkboxNao_PfBaixaRenda.checked) {
+                checkboxSim_PfBaixaRenda.checked = false; // Desmarca o outro checkbox
+            }
+        });
+
+        // CHECKBOX DO recalculo ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_recalculo = document.getElementById('input_recalculo_multa_sim');
+        var checkboxNao_recalculo = document.getElementById('input_recalculo_multa_nao');
+
+        // Obtém as divs correspondentes
+        var divSim_recalculo = document.getElementById('dosimetria_resolucao_4');
+        var descricao_atenuantes_recalculo = document.getElementById('descricao_atenuantes'); // <td>
+
+        // Função para atualizar o texto da div com base no texto da TD
+        function atualizarDescricaoRecalculo() {
+            var descricaoTexto = descricao_atenuantes_recalculo.innerText.trim() || ''; // Captura o texto da TD 
+            divSim_recalculo.innerHTML = `Considerando o (s) fato (s) que justifiquem o recálculo da multa (${descricaoTexto}), segue aplicação de nova dosimetria, conforme art. 42 da Resolução CAU/BR nº 198/2020:`;
+        }
+
+        // Adiciona os event listeners
+        checkboxSim_recalculo.addEventListener('change', function () {
+            if (checkboxSim_recalculo.checked) {
+                checkboxNao_recalculo.checked = false; // Desmarca o outro checkbox
+                divSim_recalculo.style.display = 'block';
+                atualizarDescricaoRecalculo(); // Atualiza o texto ao marcar o checkbox
+            } else {
+                divSim_recalculo.style.display = 'none';
+            }
+        });
+
+        checkboxNao_recalculo.addEventListener('change', function () {
+            if (checkboxNao_recalculo.checked) {
+                checkboxSim_recalculo.checked = false; // Desmarca o outro checkbox
+                divSim_recalculo.style.display = 'block';
+                divSim_recalculo.innerText = "Considerando que não houve fatos novos que justifiquem novo cálculo da multa aplicada, conforme art. 42 da Resolução CAU/BR nº 198/2020.";
+            } else {
+                divSim_recalculo.style.display = 'none';
+            }
+        });
+
+        // Usando MutationObserver para monitorar mudanças no conteúdo da TD
+        var observer = new MutationObserver(atualizarDescricaoRecalculo);
+
+        // Configura o observer para observar mudanças no nó filho (texto) da TD
+        observer.observe(descricao_atenuantes_recalculo, { characterData: true, childList: true, subtree: true });
+
+
+
         // ALTERAÇÃO DE MULTA ---------------------------------------------------------------------------------
 
         // Obtém os elementos de checkbox
@@ -2611,33 +2919,6 @@
         razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
         razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
-
-        // não permite que voto em branco -------------------------------------------------------
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const validacao_preenchimento_span_multa_paga_voto = document.getElementById('span_multa_paga_voto');
-
-        //     if (validacao_preenchimento_span_multa_paga_voto) {
-        //         // Configura o MutationObserver para monitorar alterações no texto do span
-        //         const observer = new MutationObserver(function (mutationsList, observer) {
-        //             mutationsList.forEach(function (mutation) {
-        //                 if (mutation.type === 'childList') {
-        //                     // Verifica se o conteúdo do span está vazio
-        //                     if (validacao_preenchimento_span_multa_paga_voto.innerText === "") {
-        //                         validacao_preenchimento_span_multa_paga_voto.innerText = "-";
-        //                     }
-        //                 }
-        //             });
-        //         });
-
-        //         // Inicia o observer, observando mudanças nos filhos do span (o que inclui o texto)
-        //         observer.observe(validacao_preenchimento_span_multa_paga_voto, { childList: true });
-        //     } else {
-        //         console.error("Elemento span_multa_paga_voto não encontrado.");
-        //     }
-        // });
-
-        
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -2661,15 +2942,18 @@
             verificarCheckboxTentativaRegularizacao("#input_tentativa_regularizacao_nao", "#input_tentativa_regularizacao_sim", "Tentativa de regularização sem informação.", mensagens);
             verificarCampoInput("#input_dt_auto", "Data do auto de infração em branco.", mensagens);
             verificarCheckboxAutoInfracao("#input_devolucao_corresp_auto_sim", "#input_devolucao_corresp_auto_nao", "Devolução de correspondência da auto de infração incompleto.", mensagens);
+            verificarCheckboxPfBaixaRenda("#input_pf_baixa_renda_sim", "#input_pf_baixa_renda_nao", "Informar se o interessado é pessoa física de baixa renda.", mensagens);
             verificarCheckboxProcessoRegularizado("#input_processo_regularizado", "#input_processo_regularizado_checked", "#span_processo_regularizado_checked", "Processo regularizado com informação incompleta.", mensagens);
             verificarCheckboxComDefesa("#processo_com_defesa", "#input_processo_com_defesa_checked", "Data da apresentação da defesa em branco.", mensagens);
             verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
-
+            verificarCheckboxRecalculo("#input_recalculo_multa_nao", "#input_recalculo_multa_sim", "Informar se houve necessidade de recálculo.", mensagens);
             verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
             verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
+
+
             
             // Se houver mensagens, mostra um alerta com todas
             if (mensagens.length > 0) {
@@ -2704,7 +2988,7 @@
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
-            
+
 
             function verificarCheckboxNotificacaoPreventiva(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
@@ -2838,23 +3122,39 @@
                 }
             }
 
+            verificarCheckboxAlteracaoMultaVoto("#input_alteracao_multa_sim", "#input_alteracao_multa_nao", "Informar se houve alteração de multa.", mensagens);
+
             function verificarCheckboxAlteracaoMultaVoto (campoId01, campoId02, mensagem, mensagens) {
+
+                if (input_pf_baixa_renda_sim.checked) {
+                    console.log("pf de baixa renda selecionado")
+
+                } else {
+                    const select01 = document.querySelector(campoId01);
+                    const select02 = document.querySelector(campoId02);
+                    const validar_somente_pagamento_multa = document.getElementById('input_somente_pagamento_multa');
+                    const validacao_div_multa_paga_voto = document.getElementById('div_multa_paga_voto'); // Certifique-se de que o ID está correto
+                    if (!select01.checked && !select02.checked && !validar_somente_pagamento_multa.checked) {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    } else if (validar_somente_pagamento_multa.checked && validacao_div_multa_paga_voto.innerText === "") {
+                        mensagens.push(mensagem); // Adiciona a mensagem ao array
+                    }
+                }
+            }
+
+            function verificarCheckboxPfBaixaRenda(campoId01, campoId02, mensagem, mensagens) {
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
-                const validar_somente_pagamento_multa = document.getElementById('input_somente_pagamento_multa');
-                const validacao_div_multa_paga_voto = document.getElementById('div_multa_paga_voto'); // Certifique-se de que o ID está correto
-                if (!select01.checked && !select02.checked && !validar_somente_pagamento_multa.checked) {
+                if (!select01.checked && !select02.checked) {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
-                } else if (validar_somente_pagamento_multa.checked && validacao_div_multa_paga_voto.innerText === "") {
-                    mensagens.push(mensagem); // Adiciona a mensagem ao array
-                }
+                } 
+        
             }
 
             // ------------------- fim da validação -----------------------------------------------
      
 
             if (mensagens.length === 0) {
-
                 // var conteudo_relato_final = document.getElementById("conteudo_relato_final");
                 // conteudo_relato_final.innerText = "";
 
@@ -2877,7 +3177,7 @@
 
                 td_num_processo_final.innerText = input_num_processo.value;
                 td_interessado_final.innerText = input_interessado.value;
-                td_assunto_final.innerText = "Ausência de registro no CAU (PJ).";
+                td_assunto_final.innerText = "Análise e parecer sobre processo de fiscalização – Ausência de responsável técnico para a atividade.";
                 td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
 
 
@@ -3305,6 +3605,65 @@
                     p_processo_com_defesa_checked_resolucoes_2_final.innerText = "";
                 }
 
+                // Encaminhamento de processo: pf baixa renda.
+
+                let input_pf_baixa_renda_sim = document.getElementById("input_pf_baixa_renda_sim");
+
+                if (input_pf_baixa_renda_sim.checked) {
+                    console.log("pf baixa renda checked.");
+
+                    // Repetindo a lógica para 1_final até 7_final
+                    let p_pf_baixa_renda_resolucoes_1 = document.getElementById("p_pf_baixa_renda_resolucoes_1");
+                    let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
+                    p_pf_baixa_renda_resolucoes_1_final.innerText = p_pf_baixa_renda_resolucoes_1.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_2 = document.getElementById("p_pf_baixa_renda_resolucoes_2");
+                    let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
+                    p_pf_baixa_renda_resolucoes_2_final.innerText = p_pf_baixa_renda_resolucoes_2.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_3 = document.getElementById("p_pf_baixa_renda_resolucoes_3");
+                    let span_processo_com_defesa_checked_3_final = document.getElementById("span_processo_com_defesa_checked_3_final");
+                    p_pf_baixa_renda_resolucoes_3_final.innerText = p_pf_baixa_renda_resolucoes_3.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_4 = document.getElementById("p_pf_baixa_renda_resolucoes_4");
+                    let span_processo_com_defesa_checked_4_final = document.getElementById("span_processo_com_defesa_checked_4_final");
+                    p_pf_baixa_renda_resolucoes_4_final.innerText = p_pf_baixa_renda_resolucoes_4.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_5 = document.getElementById("p_pf_baixa_renda_resolucoes_5");
+                    let span_processo_com_defesa_checked_5_final = document.getElementById("span_processo_com_defesa_checked_5_final");
+                    p_pf_baixa_renda_resolucoes_5_final.innerText = p_pf_baixa_renda_resolucoes_5.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_6 = document.getElementById("p_pf_baixa_renda_resolucoes_6");
+                    let span_processo_com_defesa_checked_6_final = document.getElementById("span_processo_com_defesa_checked_6_final");
+                    p_pf_baixa_renda_resolucoes_6_final.innerText = p_pf_baixa_renda_resolucoes_6.innerText;
+
+                    let p_pf_baixa_renda_resolucoes_7 = document.getElementById("p_pf_baixa_renda_resolucoes_7");
+                    let span_processo_com_defesa_checked_7_final = document.getElementById("span_processo_com_defesa_checked_7_final");
+                    p_pf_baixa_renda_resolucoes_7_final.innerText = p_pf_baixa_renda_resolucoes_7.innerText;
+
+
+
+                    let div_pf_baixa_renda_voto = document.getElementById("div_pf_baixa_renda_voto");
+                    let span_pf_baixa_renda_voto_final = document.getElementById("span_pf_baixa_renda_voto_final");
+
+                    span_pf_baixa_renda_voto_final.innerText = div_pf_baixa_renda_voto.innerText;
+
+                } else {
+                    // Limpa todos os campos de _final se o checkbox não estiver marcado
+                    p_pf_baixa_renda_resolucoes_1_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_2_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_3_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_4_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_5_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_6_final.innerText = "";
+                    p_pf_baixa_renda_resolucoes_7_final.innerText = "";
+
+
+
+                    span_pf_baixa_renda_voto_final.innerText = "";
+                }
+
+
                 // Análises e Considerações
 
                 let legend_analises_consideracoes = document.getElementById("legend_analises_consideracoes");
@@ -3440,13 +3799,20 @@
 
 
 
-                    let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
+                    if (input_pf_baixa_renda_sim.checked) {
 
+                        span_multa_paga_voto_final.innerText = "";
 
-                    let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
+                    } else {
 
+                        let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
 
-                    span_multa_paga_voto_final.innerText = span_multa_paga_voto.innerText;
+                        let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
+
+                        span_multa_paga_voto_final.innerText = span_multa_paga_voto.innerText;
+
+                    }
+                    
 
 
 
@@ -3467,6 +3833,8 @@
                     span_multa_paga_voto_final.innerText = "";
 
                 }
+
+                
 
                 // Se houve alteração da multa
 
@@ -3503,6 +3871,22 @@
                 }
 
 
+                // if () {
+
+                // } else if (input_alteracao_multa_nao.checked) {
+                //     let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
+
+                //     let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
+
+                //     span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
+
+
+                // } else {
+
+                //     span_alteracao_multa_nao_final.innerText = "";
+                // }
+
+
 
                 let p_resolucoes_fixo_1 = document.getElementById("p_resolucoes_fixo_1");
                 let p_resolucoes_fixo_2 = document.getElementById("p_resolucoes_fixo_2");
@@ -3511,11 +3895,9 @@
                 let p_resolucoes_fixo_5 = document.getElementById("p_resolucoes_fixo_5");
                 let p_resolucoes_fixo_6 = document.getElementById("p_resolucoes_fixo_6");
                 let p_resolucoes_fixo_7 = document.getElementById("p_resolucoes_fixo_7");
-                let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
-                let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
-                let p_resolucoes_fixo_10 = document.getElementById("p_resolucoes_fixo_10");
-                let p_resolucoes_fixo_11 = document.getElementById("p_resolucoes_fixo_11");
-                let p_resolucoes_fixo_12 = document.getElementById("p_resolucoes_fixo_12");
+                // let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
+                // let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
+
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
                 let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
@@ -3524,11 +3906,9 @@
                 let p_resolucoes_fixo_5_final = document.getElementById("p_resolucoes_fixo_5_final");
                 let p_resolucoes_fixo_6_final = document.getElementById("p_resolucoes_fixo_6_final");
                 let p_resolucoes_fixo_7_final = document.getElementById("p_resolucoes_fixo_7_final");
-                let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
-                let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
-                let p_resolucoes_fixo_10_final = document.getElementById("p_resolucoes_fixo_10_final");
-                let p_resolucoes_fixo_11_final = document.getElementById("p_resolucoes_fixo_11_final");
-                let p_resolucoes_fixo_12_final = document.getElementById("p_resolucoes_fixo_12_final");
+                // let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
+                // let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
+
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
                 p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
@@ -3537,11 +3917,10 @@
                 p_resolucoes_fixo_5_final.innerText = p_resolucoes_fixo_5.innerText;
                 p_resolucoes_fixo_6_final.innerText = p_resolucoes_fixo_6.innerText;
                 p_resolucoes_fixo_7_final.innerText = p_resolucoes_fixo_7.innerText;
-                p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
-                p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
-                p_resolucoes_fixo_10_final.innerText = p_resolucoes_fixo_10.innerText;
-                p_resolucoes_fixo_11_final.innerText = p_resolucoes_fixo_11.innerText;
-                p_resolucoes_fixo_12_final.innerText = p_resolucoes_fixo_12.innerText;
+                // p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
+                // p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
+
+
 
 
 
@@ -3556,20 +3935,27 @@
 
                     console.log("expandido");
 
-                    let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
-                    let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
-                    let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
+                    // let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
+                    // let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
+                    // let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
                     let dosimetria_resolucao_4 = document.getElementById("dosimetria_resolucao_4");
 
-                    let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
-                    let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
-                    let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                    // let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
+                    // let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
+                    // let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                    
                     let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
 
-                    dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
-                    dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
-                    dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
-                    dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+                    // dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
+                    // dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
+                    // dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
+
+                    if (!checkboxSim_recalculo.checked && !checkboxNao_recalculo.checked){
+                        dosimetria_resolucao_4_final.innerText = ""
+                    } else {
+                        dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+                    }
+                    
 
                     // tabela,
 
@@ -4011,13 +4397,13 @@
         // selecionar o checkbox referente a infração logo no início
         // Adiciona um event listener ao botão com ID 'btn_calculadora'
         document.getElementById('btn_calculadora').addEventListener('click', function() {
-            let checkbox = document.getElementById("gravidade-item2");
+            let checkbox = document.getElementById("gravidade-item5");
 
             if (!checkbox.checked) {
                 checkbox.click(); // Simula o clique no checkbox
-                console.log("Checkbox gravidade-item2 clicado");
+                console.log("Checkbox gravidade-item5 clicado");
             } else {
-                console.log("Checkbox gravidade-item2 não encontrado");
+                console.log("Checkbox gravidade-item5 não encontrado");
             }
         });
 
@@ -4440,15 +4826,22 @@
 
         // Função para atualizar a descrição com base nos checkboxes selecionados
         function atualizarDescricaoAgravantesAtenuantes(idDescricao, checkboxes) {
-            var descricao = '';
+            // Array para armazenar as descrições
+            var descricoes = [];
+
             checkboxes.forEach(function (checkbox) {
                 if (checkbox.checked) {
-                    // Concatenar a descrição do checkbox selecionado
-                    descricao += checkbox.parentNode.previousElementSibling.previousElementSibling.textContent.trim() + "<br>";
+                    // Adicionar a descrição do checkbox selecionado ao array
+                    var descricao = checkbox.parentNode.previousElementSibling.previousElementSibling.textContent.trim();
+                    descricoes.push(descricao);
                 }
             });
+
+            // Juntar as descrições com uma vírgula e adicionar <br> no final
+            var descricaoFinal = descricoes.join('; ') + "<br>";
+
             // Atualizar a descrição no elemento correspondente usando innerHTML
-            document.getElementById(idDescricao).innerHTML = descricao;
+            document.getElementById(idDescricao).innerHTML = descricaoFinal;
         }
 
         function inserirAssinaturas() {
