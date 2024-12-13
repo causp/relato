@@ -363,14 +363,14 @@
                     <div class="d-flex align-items-center mb-2">
                         <input type="checkbox" id="input_divulgou_atividade">
                         <label id="lab_divulgou_atividade" for="input_divulgou_atividade" class="ml-2 my-0">
-                            A parte interessada divulga que realiza atividades de arquitetura, mas sem ter sido compravada a realização dessas atividades.
+                            A parte interessada divulga que realiza atividades de arquitetura e urbanismo sem ter o registro profissional no conselho.
                         </label>
                     </div>
             
                     <div class="d-flex align-items-center mb-2">
                         <input type="checkbox" id="input_apresenta_como_arquiteto_sem_divulgar">
                         <label id="lab_apresenta_como_arquiteto_sem_divulgar" for="input_apresenta_como_arquiteto_sem_divulgar" class="ml-2 my-0">
-                            A parte interessada se apresenta como arquiteto(a), mas não há divulgação ou realização de atividades.
+                            A parte interessada se apresenta como arquiteto(a) sem ter o devido registro profissional no conselho.
                         </label>
                     </div>
             
@@ -2707,7 +2707,7 @@
 
         checkbox_divulgou_atividade.addEventListener('change', function () {
             if (checkbox_divulgou_atividade.checked) {
-                atualizarIrregularidade(checkbox_divulgou_atividade, "a parte interessada divulga que realiza atividades de arquitetura, mas sem ter sido compravada a realização dessas atividades.");
+                atualizarIrregularidade(checkbox_divulgou_atividade, "A parte interessada divulga que realiza atividades de arquitetura e urbanismo sem ter o registro profissional no conselho.");
             } else {
                 area_irregularidade.value = ""; // Limpa a área de texto se desmarcado
                 
@@ -2716,7 +2716,7 @@
 
         checkbox_apresenta_como_arquiteto_sem_divulgar.addEventListener('change', function () {
             if (checkbox_apresenta_como_arquiteto_sem_divulgar.checked) {
-                atualizarIrregularidade(checkbox_apresenta_como_arquiteto_sem_divulgar, "a parte interessada se apresenta como arquiteto(a), mas não há divulgação ou realização de atividades.");
+                atualizarIrregularidade(checkbox_apresenta_como_arquiteto_sem_divulgar, "A parte interessada se apresenta como arquiteto(a) sem ter o devido registro profissional no conselho.");
             } else {
                 area_irregularidade.value = ""; // Limpa a área de texto se desmarcado
                 
