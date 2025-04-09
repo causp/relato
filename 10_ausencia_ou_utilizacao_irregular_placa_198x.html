@@ -110,9 +110,36 @@
 
         }
 
+        @media (max-width: 993px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 550px; /* Largura para telas menores que 981px */
+            }
+        }
+
+        @media (max-width: 767px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 480px; /* Largura para telas menores que 570px */
+            }
+        }
+
         @media (max-width: 665px) {
             .sidebar {
                 display: none;
+            }
+        }
+
+        @media (min-width: 994px) {
+            #input_num_processo,
+            #input_interessado,
+            #input_assunto,
+            #input_relator {
+                width: 582px; /* Largura para telas menores que 570px */
             }
         }
 
@@ -153,6 +180,7 @@
             color: #333;
             margin-top: 20px; /* Espaço entre o spinner e o texto */
         }
+
 
         
     </style>
@@ -285,25 +313,25 @@
                 <tr>
                     <td>PROCESSO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_num_processo"
-                            placeholder="Nº do processo-Índice." style="width: 475px;"></td>
+                            placeholder="Nº do processo-Índice." style="max-width: 535px;"></td>
                 </tr>
 
                 <tr>
                     <td> INTERESSADO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_interessado"
-                            placeholder="Nome completo do interessado." style="width: 475px;"></td>
+                            placeholder="Nome completo do interessado." style="max-width: 535px;"></td>
                 </tr>
 
                 <tr>
                     <td>ASSUNTO:</td>
                     <td><input type="text" class="form-control form-control-sm" id="input_assunto"
-                            placeholder="Análise e parecer sobre processo de fiscalização – Exercício ilegal da profissão PJ." style="width: 475px;" disabled></td>
+                            placeholder="Análise e parecer sobre processo de fiscalização – Ausência ou utilização irregular de placa." style="max-width: 535px;" disabled></td>
                 </tr>
 
                 <tr>
                     <td>RELATOR:</td>
                     <td>
-                        <select class="form-control form-control-sm" id="input_relator" style="width: 475px;" onchange="inserirAssinaturas()">
+                        <select class="form-control form-control-sm" id="input_relator" style="max-width: 535px;" onchange="inserirAssinaturas()">
                             <option value="M">Selecione o nome do Conselheiro/a relator/a.</option>
                             <option value="M">---------------------- Conselheiros ----------------------</option>
                             <option value="F">Renata Ballone</option>
@@ -353,6 +381,24 @@
 
 
             <label class="my-3" for="" id="lab_historico_processo"><strong>Histórico do Processo</strong></label>
+
+            <div id="div_obra_sem_placa_ou_placa_incorreta">
+
+                <label class="my-3" for="" id="lab_obra_sem_placa_ou_placa_incorreta"><strong>Irregularidade? </strong></label>
+
+                <div id="">
+
+                    <input type="checkbox" id="input_obra_sem_placa_ou_placa_incorreta_nao">
+                    <label id="lab_obra_sem_placa_ou_placa_incorreta_nao" for="input_obra_sem_placa_ou_placa_incorreta_nao">Placa com informações incorretas.</label>
+
+                    <input type="checkbox" class="ml-2" id="input_obra_sem_placa_ou_placa_incorreta_sim">
+                    <label id="lab_obra_sem_placa_ou_placa_incorreta_sim" for="input_obra_sem_placa_ou_placa_incorreta_sim">Obra sem placa.</label>
+
+                </div>
+
+
+            </div>
+
             <p class="my-1" id="p_origem_demanda">
 
                 <span id="span_origem_demanda_1">Trata-se de processo de fiscalização iniciado a
@@ -386,14 +432,14 @@
                 </select> -->
 
                 <span id="span_origem_demanda_3" >
-                    , a qual identificou que
+                    , a qual identificou
                 </span>
 
             </p>
 
             <!-- <label class="my-3" for="" id="lab_irregularidade"><strong>Irregularidade:</strong></label> -->
             <textarea class="form-control my-1" id="area_irregularidade" cols="30" rows="5"
-                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">a empresa em questão possui atividade no campo da arquitetura e urbanismo sem ter o devido registro no Conselho.</textarea>
+                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator."></textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: a empresa XXXXXXXX possui atividades no campo da
                 arquitetura e urbanismo sem ter o devido registro no Conselho.)</p> -->
@@ -897,6 +943,23 @@
 
             <div></div>
 
+            <div id="div_interessado_arquiteto_e_urbanista">
+
+                <label class="my-3" for="" id="lab_interessado_arquiteto_e_urbanista"><strong>Interessado é arquiteto e urbanista? </strong></label>
+
+                <div id="">
+
+                    <input type="checkbox" id="input_interessado_arquiteto_e_urbanista_nao">
+                    <label id="lab_interessado_arquiteto_e_urbanista_nao" for="input_interessado_arquiteto_e_urbanista_nao">Não</label>
+
+                    <input type="checkbox" class="ml-2" id="input_interessado_arquiteto_e_urbanista_sim">
+                    <label id="lab_interessado_arquiteto_e_urbanista_sim" for="input_interessado_arquiteto_e_urbanista_sim">Sim</label>
+
+                </div>
+
+
+            </div>
+
             <hr>
 
             <!-- div resolução -->
@@ -909,41 +972,67 @@
                 <p id="p_resolucoes_fixo_2" style="text-align: justify">
                     Considerando que o rito processual foi corretamente seguido;
                 </p>
+
+                <!-- resolução não fixa -->
+
+                <div id="div_legislacao_interessado_arquiteto_e_urbanista">
+
+
+                    <div class="" style="display: none;" id="div_interessado_arquiteto_e_urbanista_resolucoes">
+    
+                        <label class="my-3"  ><strong>Interessado é arquiteto e urbanista:</strong></label>
+    
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_1" style="text-align: justify">
+                            Considerando o art. 14º da Lei 12.378/2010: 
+                        </p>
+    
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_2" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                            “Art. 14.  É dever do arquiteto e urbanista ou da sociedade de prestação de serviços de arquitetura e urbanismo indicar em documentos, peças publicitárias, placas ou outro elemento de comunicação dirigido a cliente, ao público em geral e ao CAU local:
+                        </p>
+    
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_3" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                            I - o nome civil ou razão social do(s) autor(es) e executante(s) do serviço, completo ou abreviado, ou pseudônimo ou nome fantasia, a critério do profissional ou da sociedade de prestação de serviços de arquitetura e urbanismo, conforme o caso;  
+                        </p>
+    
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_4" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                            II - o número do registro no CAU local; e 
+                        </p>
+    
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_5" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                            III - a atividade a ser desenvolvida.
+                        </p>
+        
+   
+                        <p id="p_interessado_arquiteto_e_urbanista_resolucoes_6" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                            Parágrafo único.  Quando se tratar de atividade desenvolvida por mais de um arquiteto e urbanista ou por mais de uma sociedade de prestação de serviços de arquitetura e urbanismo e não sendo especificados diferentes níveis de responsabilidade, todos serão considerados indistintamente coautores e corresponsáveis.  ”
+                        </p>
+    
+    
+                    </div>
+    
+                </div>
+
+                <!-- ----------------------------------------- -->
+
+
                 <p id="p_resolucoes_fixo_3" style="text-align: justify">
-                    Considerando o art. 7º da Lei 12.378/2010:
+                    Considerando o art. 39, inciso X, da Resolução 198/2020:
                 </p>
 
                 <p class="espacamento_simples" id="p_resolucoes_fixo_4"
                     style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “Art. 7º. Exerce ilegalmente a profissão de arquiteto e urbanista a pessoa física ou jurídica que
-                    realizar atos ou prestar serviços, públicos ou privados, privativos dos profissionais de que trata
-                    esta Lei ou, ainda, que, mesmo não realizando atos privativos, se apresenta como arquiteto e
-                    urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
+                    “Não afixar placa, nela deixar de indicar ou indicar erroneamente informações relativas à responsabilidade de arquiteto e urbanista por projeto, obra ou serviço, em discordância com a regulamentação vigente;
                 </p>
-                <p id="p_resolucoes_fixo_5" style="text-align: justify">
-                    Considerando o art. 39, inciso II, da Resolução 198/2020:
+                <p class="espacamento_simples" id="p_resolucoes_fixo_5"
+                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
+                    Infrator: pessoa física ou jurídica;”
                 </p>
 
-                <p class="espacamento_simples" id="p_resolucoes_fixo_6"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “II – exercer, promover-se, divulgar que exerce ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem registro no CAU, configurando exploração econômica da atividade;
-                </p>
-                <p class="espacamento_simples" id="p_resolucoes_fixo_7"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    Infrator: pessoa jurídica;”
+                <p id="p_resolucoes_fixo_6" style="text-align: justify">
+                    Considerando o Capítulo III da Resolução CAU/BR nº 75/2012, que trata “da indicação de responsabilidade técnica em placas”;
                 </p>
 
-                <p id="p_resolucoes_fixo_8" style="text-align: justify">
-                    Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
-                </p>
 
-                <p class="espacamento_simples" id="p_resolucoes_fixo_9"
-                    style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;">
-                    “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas
-                    encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das
-                    diversas profissões, em razão da atividade básica ou em relação àquela pela qual prestem serviços a
-                    terceiros.”
-                </p>
 
             </div>
 
@@ -1116,7 +1205,7 @@
                                                     <td class="text-center align-middle">13</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input align-middle"
-                                                            id="gravidade-item2" data-text="">
+                                                            id="gravidade-item2" data-text="" disabled>
                                                     </td>
                                                 </tr>
 
@@ -1201,7 +1290,7 @@
                                                     <td class="text-center align-middle">4</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item10" data-text=""disabled>
+                                                            id="gravidade-item10" data-text="" >
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1739,14 +1828,14 @@
                         
                         <span contenteditable="false"></span>
 
-                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso II do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                        Assim, voto pela Manutenção do Auto de Infração com base nos Art. 14 da Lei 12.378/2010 e inciso X do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
                     
                     </span>
 
                 </span>
 
-          
-                
+
+            
 
 
             </div>
@@ -1781,7 +1870,7 @@
                             
                             <span contenteditable="false"></span>
 
-                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso II do Art. 39 da Resolução Nº 198/2020 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 14 da Lei 12.378/2010, inciso X do Art. 39 da Resolução Nº 198/2020 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para 
 
                         </span>
 
@@ -1794,7 +1883,7 @@
 
                     </span>
 
-                
+
 
                 </div>
 
@@ -1804,7 +1893,7 @@
                     <span id="span_alteracao_multa_nao">
                         
                         <span></span>
-                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso II do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
+                        <span contenteditable="true">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 14 da Lei 12.378/2010 e inciso X do Art. 39 da Resolução Nº 198/2020 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.</span>
                     </span>
                     
 
@@ -2094,13 +2183,26 @@
 
                     <p id="p_resolucoes_fixo_1_final" ></p>
                     <p id="p_resolucoes_fixo_2_final" ></p>
+                    
+
+                    <!-- interessado arquiteto e urbanisara -->
+                    <!-- condicionado -->    
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_1_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_3_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_5_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+
+                    <p id="p_interessado_arquiteto_e_urbanista_6_final" style="text-align: justify"></p>
+                    <p class="espacamento_simples" id="p_interessado_arquiteto_e_urbanista_resolucoes_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    
+                    <!----------------------------------->
+
                     <p id="p_resolucoes_fixo_3_final" ></p>
                     <p id="p_resolucoes_fixo_4_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_5_final" ></p>
-                    <p id="p_resolucoes_fixo_6_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_7_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
-                    <p id="p_resolucoes_fixo_8_final" ></p>
-                    <p id="p_resolucoes_fixo_9_final" ></p>
+                    <p id="p_resolucoes_fixo_5_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
+                    <p id="p_resolucoes_fixo_6_final" ></p>
+
 
 
                     <!-- condicionado -->    
@@ -2122,6 +2224,7 @@
                     <p id="p_processo_com_defesa_checked_resolucoes_1_final" style="text-align: justify"></p>
                     <p class="espacamento_simples" id="p_processo_com_defesa_checked_resolucoes_2_final" style="margin-left: 94px; text-align: justify; margin-bottom: 8px; font-size: 14.5px; line-height: 17px;"></p>
 
+                    
 
 
                     <p id="dosimetria_resolucao_1_final"></p>
@@ -2355,6 +2458,35 @@
 
         });
 
+        // ADDEVENTLIST CHECKBOX EXPANSIVOS
+        // interessado arquiteto e urbanista
+        let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
+        let input_interessado_arquiteto_e_urbanista_nao = document.getElementById("input_interessado_arquiteto_e_urbanista_nao");
+        let div_interessado_arquiteto_e_urbanista_resolucoes = document.getElementById("div_interessado_arquiteto_e_urbanista_resolucoes");
+
+        input_interessado_arquiteto_e_urbanista_sim.addEventListener("change", () => {
+            if (input_interessado_arquiteto_e_urbanista_sim.checked) {
+
+                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "block";
+            } else {
+
+                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+            }
+
+        });
+
+        input_interessado_arquiteto_e_urbanista_nao.addEventListener("change", () => {
+            if (input_interessado_arquiteto_e_urbanista_nao.checked) {
+
+                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+            } else {
+
+                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+            }
+
+        });
+
+
         let processo_com_defesa = document.getElementById("processo_com_defesa");
         let div_processo_com_defesa_checked = document.getElementById("div_processo_com_defesa_checked");
         let div_processo_com_defesa_checked_analise = document.getElementById("div_processo_com_defesa_checked_analise");
@@ -2562,6 +2694,53 @@
             }
         });
 
+        // CHECKBOX DO INTERESSADO ARQUITETO E URBANISTA ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_sim');
+        var checkboxNao_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_nao');
+
+        // Adiciona os event listeners
+        checkboxSim_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
+            if (checkboxSim_interessado_arquiteto_e_urbanista.checked) {
+                checkboxNao_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
+            }
+        });
+
+        checkboxNao_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
+            if (checkboxNao_interessado_arquiteto_e_urbanista.checked) {
+                checkboxSim_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
+            }
+        });
+
+        // CHECKBOX obra sem placa ou placa incorreta ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkbox_placa_incorreta_obra_sem_placa_ou_placa_incorreta = document.getElementById('input_obra_sem_placa_ou_placa_incorreta_sim');
+        var checkbox_sem_placa_obra_sem_placa_ou_placa_incorreta = document.getElementById('input_obra_sem_placa_ou_placa_incorreta_nao');
+        var area_irregularidade = document.getElementById('area_irregularidade');
+        
+        // Adiciona os event listeners
+        checkbox_placa_incorreta_obra_sem_placa_ou_placa_incorreta.addEventListener('change', function () {
+            if (checkbox_placa_incorreta_obra_sem_placa_ou_placa_incorreta.checked) {
+                checkbox_sem_placa_obra_sem_placa_ou_placa_incorreta.checked = false; // Desmarca o outro checkbox
+                area_irregularidade.innerText = "obra no ENDEREÇO: XXXXXXXXXXXXXXXXXXXXXXXXXXX, sob responsabilidade do profissional interessado, sem ter a devida placa no local."
+            } else {
+                area_irregularidade.innerText = ""
+            }
+
+        });
+
+        checkbox_sem_placa_obra_sem_placa_ou_placa_incorreta.addEventListener('change', function () {
+            if (checkbox_sem_placa_obra_sem_placa_ou_placa_incorreta.checked) {
+                checkbox_placa_incorreta_obra_sem_placa_ou_placa_incorreta.checked = false; // Desmarca o outro checkbox
+                area_irregularidade.innerText = "placa de obra do profissional interessado em desconformidade com a Resolução CAU/BR nº 75/2014."
+                
+            } else {
+                area_irregularidade.innerText = ""
+            }
+        });
+
         // CHECKBOX DO recalculo ---------------------------------------------------------------------------------
 
         // Obtém os elementos de checkbox
@@ -2688,6 +2867,7 @@
             verificarCampoInput("#input_interessado", "Nome do interessado em branco.", mensagens);
             verificarOptions("#input_relator", "Relator não selecionado.", mensagens);
             verificarOptions("#select_origem_demanda", "A origem da demanda não foi selecionada.", mensagens);
+            verificarCheckboxObraSemPlacaOuPlacaIncorreta("#input_obra_sem_placa_ou_placa_incorreta_sim", "#input_obra_sem_placa_ou_placa_incorreta_nao", "Selecione uma irregularidade: placa com informações incorretas ou obra sem placa.", mensagens);
             verificarCampoInput("#area_irregularidade", "Descrição da irregularidade em branco.", mensagens);
             verificarCampoInput("#input_dt_relatorio_fisc", "Data do relatório da fiscalização em branco.", mensagens);
             verificarCampoInput("#input_dt_notificacao_preventiva", "Data da notificação preventiva em branco.", mensagens);
@@ -2701,6 +2881,7 @@
             verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
+            verificarCheckboxInteressadoArquiteoEUrbanista("#input_interessado_arquiteto_e_urbanista_sim", "#input_interessado_arquiteto_e_urbanista_nao", "Informe se o interessado é arquiteto e urbanista.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
             verificarCheckboxRecalculo("#input_recalculo_multa_nao", "#input_recalculo_multa_sim", "Informar se houve necessidade de recálculo.", mensagens);
             verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
@@ -2736,6 +2917,23 @@
                 const select01 = document.querySelector(campoId01);
                 const select02 = document.querySelector(campoId02);
                 if (select01.checked && select02.value === "") {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            
+            function verificarCheckboxObraSemPlacaOuPlacaIncorreta(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select02.checked) {
+                    mensagens.push(mensagem); // Adiciona a mensagem ao array
+                }
+            }
+
+            function verificarCheckboxInteressadoArquiteoEUrbanista(campoId01, campoId02, mensagem, mensagens) {
+                const select01 = document.querySelector(campoId01);
+                const select02 = document.querySelector(campoId02);
+                if (!select01.checked && !select02.checked) {
                     mensagens.push(mensagem); // Adiciona a mensagem ao array
                 }
             }
@@ -2910,7 +3108,7 @@
 
                 td_num_processo_final.innerText = input_num_processo.value;
                 td_interessado_final.innerText = input_interessado.value;
-                td_assunto_final.innerText = "Análise e parecer sobre processo de fiscalização – Exercício ilegal da profissão PJ.";
+                td_assunto_final.innerText = "Análise e parecer sobre processo de fiscalização – Ausência ou utilização irregular de placa.";
                 td_relator_final.innerText = input_relator.options[input_relator.selectedIndex].textContent;
 
 
@@ -3338,6 +3536,55 @@
                     p_processo_com_defesa_checked_resolucoes_2_final.innerText = "";
                 }
 
+                // Encaminhamento de processo: interessado arquiteto e urbanista.
+
+                let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
+
+                if (input_interessado_arquiteto_e_urbanista_sim.checked) {
+                    console.log("pf baixa renda checked.");
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_1 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_1");
+                    let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_1.innerText;
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_2 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_2");
+                    let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_2.innerText;
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_3 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_3");
+                    let span_processo_com_defesa_checked_3_final = document.getElementById("span_processo_com_defesa_checked_3_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_3.innerText;
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_4 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_4");
+                    let span_processo_com_defesa_checked_4_final = document.getElementById("span_processo_com_defesa_checked_4_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_4.innerText;
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_5 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_5");
+                    let span_processo_com_defesa_checked_5_final = document.getElementById("span_processo_com_defesa_checked_5_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_5.innerText;
+
+                    let p_interessado_arquiteto_e_urbanista_resolucoes_6 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_6");
+                    let span_processo_com_defesa_checked_6_final = document.getElementById("span_processo_com_defesa_checked_6_final");
+                    p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_6.innerText;
+
+
+
+
+                } else {
+                    // Limpa todos os campos de _final se o checkbox não estiver marcado
+                    p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = "";
+                    p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = "";
+                    p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = "";
+                    p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = "";
+                    p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = "";
+                    p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = "";
+
+
+
+
+                }
+
+
                 // Análises e Considerações
 
                 let legend_analises_consideracoes = document.getElementById("legend_analises_consideracoes");
@@ -3543,9 +3790,7 @@
                 let p_resolucoes_fixo_4 = document.getElementById("p_resolucoes_fixo_4");
                 let p_resolucoes_fixo_5 = document.getElementById("p_resolucoes_fixo_5");
                 let p_resolucoes_fixo_6 = document.getElementById("p_resolucoes_fixo_6");
-                let p_resolucoes_fixo_7 = document.getElementById("p_resolucoes_fixo_7");
-                let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
-                let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
+
 
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
@@ -3554,9 +3799,7 @@
                 let p_resolucoes_fixo_4_final = document.getElementById("p_resolucoes_fixo_4_final");
                 let p_resolucoes_fixo_5_final = document.getElementById("p_resolucoes_fixo_5_final");
                 let p_resolucoes_fixo_6_final = document.getElementById("p_resolucoes_fixo_6_final");
-                let p_resolucoes_fixo_7_final = document.getElementById("p_resolucoes_fixo_7_final");
-                let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
-                let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
+
 
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
@@ -3565,9 +3808,7 @@
                 p_resolucoes_fixo_4_final.innerText = p_resolucoes_fixo_4.innerText;
                 p_resolucoes_fixo_5_final.innerText = p_resolucoes_fixo_5.innerText;
                 p_resolucoes_fixo_6_final.innerText = p_resolucoes_fixo_6.innerText;
-                p_resolucoes_fixo_7_final.innerText = p_resolucoes_fixo_7.innerText;
-                p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
-                p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
+
 
 
 
@@ -4046,13 +4287,13 @@
         // selecionar o checkbox referente a infração logo no início
         // Adiciona um event listener ao botão com ID 'btn_calculadora'
         document.getElementById('btn_calculadora').addEventListener('click', function() {
-            let checkbox = document.getElementById("gravidade-item2");
+            let checkbox = document.getElementById("gravidade-item10");
 
             if (!checkbox.checked) {
                 checkbox.click(); // Simula o clique no checkbox
-                console.log("Checkbox gravidade-item2 clicado");
+                console.log("Checkbox gravidade-item10 clicado");
             } else {
-                console.log("Checkbox gravidade-item2 não encontrado");
+                console.log("Checkbox gravidade-item10 não encontrado");
             }
         });
 
@@ -4546,13 +4787,8 @@
             }, 600); 
         };
 
-        // Simula um atraso de 3 segundos para testar o loader
-        window.onload = function() {
-            setTimeout(function() {
-                // Remove o loader após o atraso
-                document.getElementById('loader').style.display = 'none';
-            }, 600); 
-        };
+        
+
 
     </script>
 
