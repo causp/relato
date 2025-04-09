@@ -943,7 +943,7 @@
 
             <div></div>
 
-            <div id="div_interessado_arquiteto_e_urbanista">
+            <!-- <div id="div_interessado_arquiteto_e_urbanista">
 
                 <label class="my-3" for="" id="lab_interessado_arquiteto_e_urbanista"><strong>Interessado é arquiteto e urbanista? </strong></label>
 
@@ -958,7 +958,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
 
             <hr>
 
@@ -975,12 +975,12 @@
 
                 <!-- resolução não fixa -->
 
-                <div id="div_legislacao_interessado_arquiteto_e_urbanista">
+                <!-- <div id="div_legislacao_interessado_arquiteto_e_urbanista">
 
 
-                    <div class="" style="display: none;" id="div_interessado_arquiteto_e_urbanista_resolucoes">
+                    <div class="" style="display: block;" id="div_interessado_arquiteto_e_urbanista_resolucoes">
     
-                        <label class="my-3"  ><strong>Interessado é arquiteto e urbanista:</strong></label>
+                        <label class="my-3"  ><strong>Interessado é arquiteto e urbanista:</strong></label> -->
     
                         <p id="p_interessado_arquiteto_e_urbanista_resolucoes_1" style="text-align: justify">
                             Considerando o art. 14º da Lei 12.378/2010: 
@@ -1008,9 +1008,9 @@
                         </p>
     
     
-                    </div>
+                    <!-- </div>
     
-                </div>
+                </div> -->
 
                 <!-- ----------------------------------------- -->
 
@@ -2460,31 +2460,31 @@
 
         // ADDEVENTLIST CHECKBOX EXPANSIVOS
         // interessado arquiteto e urbanista
-        let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
-        let input_interessado_arquiteto_e_urbanista_nao = document.getElementById("input_interessado_arquiteto_e_urbanista_nao");
-        let div_interessado_arquiteto_e_urbanista_resolucoes = document.getElementById("div_interessado_arquiteto_e_urbanista_resolucoes");
+        // let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
+        // let input_interessado_arquiteto_e_urbanista_nao = document.getElementById("input_interessado_arquiteto_e_urbanista_nao");
+        // let div_interessado_arquiteto_e_urbanista_resolucoes = document.getElementById("div_interessado_arquiteto_e_urbanista_resolucoes");
 
-        input_interessado_arquiteto_e_urbanista_sim.addEventListener("change", () => {
-            if (input_interessado_arquiteto_e_urbanista_sim.checked) {
+        // input_interessado_arquiteto_e_urbanista_sim.addEventListener("change", () => {
+        //     if (input_interessado_arquiteto_e_urbanista_sim.checked) {
 
-                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "block";
-            } else {
+        //         div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "block";
+        //     } else {
 
-                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
-            }
+        //         div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+        //     }
 
-        });
+        // });
 
-        input_interessado_arquiteto_e_urbanista_nao.addEventListener("change", () => {
-            if (input_interessado_arquiteto_e_urbanista_nao.checked) {
+        // input_interessado_arquiteto_e_urbanista_nao.addEventListener("change", () => {
+        //     if (input_interessado_arquiteto_e_urbanista_nao.checked) {
 
-                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
-            } else {
+        //         div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+        //     } else {
 
-                div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
-            }
+        //         div_interessado_arquiteto_e_urbanista_resolucoes.style.display = "none";
+        //     }
 
-        });
+        // });
 
 
         let processo_com_defesa = document.getElementById("processo_com_defesa");
@@ -2697,21 +2697,21 @@
         // CHECKBOX DO INTERESSADO ARQUITETO E URBANISTA ---------------------------------------------------------------------------------
 
         // Obtém os elementos de checkbox
-        var checkboxSim_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_sim');
-        var checkboxNao_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_nao');
+        // var checkboxSim_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_sim');
+        // var checkboxNao_interessado_arquiteto_e_urbanista = document.getElementById('input_interessado_arquiteto_e_urbanista_nao');
 
-        // Adiciona os event listeners
-        checkboxSim_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
-            if (checkboxSim_interessado_arquiteto_e_urbanista.checked) {
-                checkboxNao_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
-            }
-        });
+        // // Adiciona os event listeners
+        // checkboxSim_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
+        //     if (checkboxSim_interessado_arquiteto_e_urbanista.checked) {
+        //         checkboxNao_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
+        //     }
+        // });
 
-        checkboxNao_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
-            if (checkboxNao_interessado_arquiteto_e_urbanista.checked) {
-                checkboxSim_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
-            }
-        });
+        // checkboxNao_interessado_arquiteto_e_urbanista.addEventListener('change', function () {
+        //     if (checkboxNao_interessado_arquiteto_e_urbanista.checked) {
+        //         checkboxSim_interessado_arquiteto_e_urbanista.checked = false; // Desmarca o outro checkbox
+        //     }
+        // });
 
         // CHECKBOX obra sem placa ou placa incorreta ---------------------------------------------------------------------------------
 
@@ -2881,7 +2881,7 @@
             verificarProcessoComDefesa("#processo_com_defesa", "#area_processo_com_defesa_checked_analise", "Preencher o campo com as alegações da defesa.", mensagens);
             verificarSomenteRegularizacao("#input_somente_regularizacao", "#input_somente_regularizacao_checked_1", "Data regularização em branco.", mensagens);
             verificarSomentePagamentoMulta("#input_somente_pagamento_multa", "#input_somente_pagamento_multa_checked_1", "Data do pagamento da multa em branco.", mensagens);
-            verificarCheckboxInteressadoArquiteoEUrbanista("#input_interessado_arquiteto_e_urbanista_sim", "#input_interessado_arquiteto_e_urbanista_nao", "Informe se o interessado é arquiteto e urbanista.", mensagens);
+            // verificarCheckboxInteressadoArquiteoEUrbanista("#input_interessado_arquiteto_e_urbanista_sim", "#input_interessado_arquiteto_e_urbanista_nao", "Informe se o interessado é arquiteto e urbanista.", mensagens);
             verificarAnoNotificacaoPreventiva("#inputGroupSelect01", "Ano da notificação preventiva não selecionado.", mensagens);
             verificarCheckboxRecalculo("#input_recalculo_multa_nao", "#input_recalculo_multa_sim", "Informar se houve necessidade de recálculo.", mensagens);
             verificarCampoInput("#area_razoes_decisao", "Razão da decisão em branco.", mensagens);
@@ -3538,51 +3538,51 @@
 
                 // Encaminhamento de processo: interessado arquiteto e urbanista.
 
-                let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
+                // let input_interessado_arquiteto_e_urbanista_sim = document.getElementById("input_interessado_arquiteto_e_urbanista_sim");
 
-                if (input_interessado_arquiteto_e_urbanista_sim.checked) {
-                    console.log("pf baixa renda checked.");
+                // if (input_interessado_arquiteto_e_urbanista_sim.checked) {
+                //     console.log("interessado_arquiteto_e_urbanista checked.");
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_1 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_1");
-                    let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_1.innerText;
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_1 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_1");
+                //     let span_processo_com_defesa_checked_1_final = document.getElementById("span_processo_com_defesa_checked_1_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_1.innerText;
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_2 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_2");
-                    let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_2.innerText;
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_2 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_2");
+                //     let span_processo_com_defesa_checked_2_final = document.getElementById("span_processo_com_defesa_checked_2_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_2.innerText;
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_3 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_3");
-                    let span_processo_com_defesa_checked_3_final = document.getElementById("span_processo_com_defesa_checked_3_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_3.innerText;
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_3 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_3");
+                //     let span_processo_com_defesa_checked_3_final = document.getElementById("span_processo_com_defesa_checked_3_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_3.innerText;
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_4 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_4");
-                    let span_processo_com_defesa_checked_4_final = document.getElementById("span_processo_com_defesa_checked_4_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_4.innerText;
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_4 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_4");
+                //     let span_processo_com_defesa_checked_4_final = document.getElementById("span_processo_com_defesa_checked_4_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_4.innerText;
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_5 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_5");
-                    let span_processo_com_defesa_checked_5_final = document.getElementById("span_processo_com_defesa_checked_5_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_5.innerText;
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_5 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_5");
+                //     let span_processo_com_defesa_checked_5_final = document.getElementById("span_processo_com_defesa_checked_5_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_5.innerText;
 
-                    let p_interessado_arquiteto_e_urbanista_resolucoes_6 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_6");
-                    let span_processo_com_defesa_checked_6_final = document.getElementById("span_processo_com_defesa_checked_6_final");
-                    p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_6.innerText;
-
-
-
-
-                } else {
-                    // Limpa todos os campos de _final se o checkbox não estiver marcado
-                    p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = "";
-                    p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = "";
-                    p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = "";
-                    p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = "";
-                    p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = "";
-                    p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = "";
+                //     let p_interessado_arquiteto_e_urbanista_resolucoes_6 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_6");
+                //     let span_processo_com_defesa_checked_6_final = document.getElementById("span_processo_com_defesa_checked_6_final");
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_6.innerText;
 
 
 
 
-                }
+                // } else {
+                //     // Limpa todos os campos de _final se o checkbox não estiver marcado
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = "";
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = "";
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = "";
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = "";
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = "";
+                //     p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = "";
+
+
+
+
+                // }
 
 
                 // Análises e Considerações
@@ -3786,6 +3786,12 @@
 
                 let p_resolucoes_fixo_1 = document.getElementById("p_resolucoes_fixo_1");
                 let p_resolucoes_fixo_2 = document.getElementById("p_resolucoes_fixo_2");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_1 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_1");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_2 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_2");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_3 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_3");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_4 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_4");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_5 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_5");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_6 = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_6");
                 let p_resolucoes_fixo_3 = document.getElementById("p_resolucoes_fixo_3");
                 let p_resolucoes_fixo_4 = document.getElementById("p_resolucoes_fixo_4");
                 let p_resolucoes_fixo_5 = document.getElementById("p_resolucoes_fixo_5");
@@ -3795,6 +3801,12 @@
 
                 let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
                 let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_1_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_1_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_2_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_2_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_3_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_3_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_4_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_4_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_5_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_5_final");
+                let p_interessado_arquiteto_e_urbanista_resolucoes_6_final = document.getElementById("p_interessado_arquiteto_e_urbanista_resolucoes_6_final");
                 let p_resolucoes_fixo_3_final = document.getElementById("p_resolucoes_fixo_3_final");
                 let p_resolucoes_fixo_4_final = document.getElementById("p_resolucoes_fixo_4_final");
                 let p_resolucoes_fixo_5_final = document.getElementById("p_resolucoes_fixo_5_final");
@@ -3804,6 +3816,12 @@
 
                 p_resolucoes_fixo_1_final.innerText = p_resolucoes_fixo_1.innerText;
                 p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_1_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_1.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_2_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_2.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_3_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_3.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_4_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_4.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_5_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_5.innerText;
+                p_interessado_arquiteto_e_urbanista_resolucoes_6_final.innerText = p_interessado_arquiteto_e_urbanista_resolucoes_6.innerText;
                 p_resolucoes_fixo_3_final.innerText = p_resolucoes_fixo_3.innerText;
                 p_resolucoes_fixo_4_final.innerText = p_resolucoes_fixo_4.innerText;
                 p_resolucoes_fixo_5_final.innerText = p_resolucoes_fixo_5.innerText;
